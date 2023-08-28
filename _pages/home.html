@@ -1,0 +1,14 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+number: 1
+permalink: /
+---
+
+{% for page in site.home %}
+    {% include carousel.html path=page.carousel_images_path images=page.carousel_images %}
+    {{page.content}}
+{% endfor %}
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent News" }}</h3>

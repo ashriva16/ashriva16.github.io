@@ -1,0 +1,16 @@
+---
+permalink: /resume/
+education_data: _src/_resume/education.yml
+---
+
+<h2>Education</h2>
+<div class="card-container">
+    {{education_data}}
+    {% for card in education_data %}
+    <div class="card">
+        <h2>{{ card.institution }}</h2>
+        <h3>{{ card.degree }}</h3>
+        <p>{{ card.year }}</p>
+    </div>
+    {% endfor %}
+</div>

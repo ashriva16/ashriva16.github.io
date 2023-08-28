@@ -1,0 +1,43 @@
+---
+permalink: /research/
+---
+
+<style>
+  .custom-layout {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .custom-left {
+    flex: 1;
+    margin-right: 20px;
+    /* Add spacing between the columns */
+    border-right: 1px solid #ccc;
+  }
+
+  .custom-right {
+    flex: 2;
+  }
+</style>
+
+{% if author.googlescholar %}
+  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% endif %}
+
+{% include base_path %}
+
+{% for page in site.publications %}
+<h3>{{ forloop.index }} {{ page.title }}</h3>
+
+<div class="custom-layout">
+  <div class="custom-left">
+    {% if page.carousel_images %}
+      {% include carousel.html path=page.permalink images=page.carousel_images %}
+    {% endif %}
+  </div>
+  <div class="custom-right">
+      {{ page.content | markdownify }}
+  </div>
+</div>
+
+{% endfor %}

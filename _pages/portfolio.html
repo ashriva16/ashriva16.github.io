@@ -1,0 +1,9 @@
+---
+title: "Portfolio"
+permalink: /portfolio/
+---
+<ul>
+    {% for publication in site.portfolio %}
+    <li><a href="{{ publication.url }}">{{ publication.title }}</a></li>
+    {% endfor %}
+</ul>

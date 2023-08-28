@@ -1,9 +1,21 @@
+# the urls will points to permalink in _pages
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
+    # Contains Education, Jobs roles, Professional activities (reviewers, organizer), Awards and honors
+  - title: "Resume"
+    url: /resume/
+
+    # Publications with 4 sentence, image in a collapsible card
+  - title: "Research"
+    url: /research/
+
+    # Personal projects
+  - title: "Portfolio"
+    url: /portfolio/
+
+    # Talks
+  - title: "Talks"
+    url: /talks/
+
+    # Notes, demo
+  - title: "Blog Posts"
+    url: /blog/
