@@ -1,157 +1,189 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "name": "Ankit Shrivastava",
+    "label": "Computational and Machine Learning Scientist",
+    // "image": "",
+    // "email": "",
+    // "phone": "",
+    // "url": "",
+    "summary": "Applied Mathematician specializing in scientific machine learning, uncertainty quantification, and computational modeling for solving interdisciplinary engineering problems.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      // "address": "2712 Broadway St",
+      // "postalCode": "CA 94115",
+      "city": "Knxoville",
       "countryCode": "US",
-      "region": "California"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+      "region": "Tennessee"
+    }
+    // "profiles": [
+    //   {
+    //     "network": "Twitter",
+    //     "username": "AlbertEinstein",
+    //     "url": "https://twitter.com/AlbertEinstein"
+    //   }
+    // ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "Oak Ridge National Laboratory",
+      "position": "Postdoctoral Fellow, Applied Mathematician",
+      "url": "https://www.ornl.gov",
+      "startDate": "2024-11-01",
+      "summary": "Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance.",
+      "highlights": []
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Sandia National Laboratories",
+      "position": "Postdoctoral Fellow",
+      "url": "https://www.sandia.gov",
+      "startDate": "2022-01-01",
+      "endDate": "2024-10-24",
+      "summary": "Developed machine learning and signal processing methods for materials science and mechanics.",
+      "highlights": []
     }
   ],
+  // "volunteer": [
+  //   {
+  //     "organization": "People's Climate March",
+  //     "location": "Zurich, Switzerland",
+  //     "position": "Lead Organizer",
+  //     "url": "https://example.com",
+  //     "startDate": "2014-04-01",
+  //     "endDate": "2015-07-01",
+  //     "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
+  //     "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.",
+  //     "Men of the year 2014 by Time magazine"]
+  //   }
+  // ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Carnegie Mellon University",
+      "location": "Pittsburgh, USA",
+      "url": "https://www.cmu.edu",
+      "area": "Computational Mechanics",
+      "studyType": "Doctor of Philosophy",
+      "startDate": "2017-01-01",
+      "endDate": "2021-01-01",
+      "score": "",
+      "courses": [
+        "<b>Thesis</b>: Elucidating the origin of heterogeneous stresses in granular and microstructured materials using data science methods.",
+      "<b>Advisors</b>: Prof. Kaushik Dayal, Prof. Hae Young Noh"]
+    },
+    {
+      "institution": "Carnegie Mellon University",
+      "location": "Pittsburgh, USA",
+      "url": "https://www.cmu.edu",
+      "area": "Machine Learning",
+      "studyType": "Master of Science",
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Indian Institute of Science",
+      "location": "Bangalore, India",
+      "url": "https://www.iisc.ac.in",
+      "area": "Computational Science",
+      "studyType": "Master of Technology",
+      "startDate": "2015-01-01",
+      "endDate": "2017-01-01",
+      "score": "",
+      "courses": ["<b>Thesis</b>: Numerical study of magneto-hydrodynamics for turbulent flow using the projection-based variational multiscale finite element method.",
+      "<b>Advisors</b>: Advisor: Prof. Sashikumaar Ganesan"]
+    },
+    {
+      "institution": "Indian Institute of Technology Kharagpur",
+      "location": "Kharagpur, India",
+      "url": "https://www.iitkgp.ac.in",
+      "area": "Civil Engineering",
+      "studyType": "Bachelors of Technology",
+      "startDate": "2009-01-01",
+      "endDate": "2013-01-01",
+      "score": "",
+      "courses": ["<b>Thesis</b>: Numerical computation of flow in open channel cross sections.",
+      "<b>Advisors</b>: Prof. Anirban Dhar"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "title": "NSF travel award",
+      "date": "2024-01-01",
+      "awarder": "The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics",
+      "summary": "NSF travel award, The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics"
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "title": "Conference travel award",
+      "date": "2023-01-01",
+      "awarder": "Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering",
+      "summary": "Conference travel award, Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering"
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "title": "Conference travel award",
+      "date": "2023-01-01",
+      "awarder": "US National Congress on Computational Mechanics",
+      "summary": "Conference travel award, US National Congress on Computational Mechanics"
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
+      "title": "Fenves travel grant",
+      "date": "2019-01-01",
+      "awarder": "Civil Engineering Department",
+      "summary": "Fenves travel grant, Civil Engineering Department, CMU"
     },
     {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
+      "title": "Dean's fellowship",
+      "date": "2017-01-01",
+      "awarder": "Civil Engineering Department",
+      "summary": "Dean's fellowship, Civil Engineering Department, CMU"
     },
     {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "title": "Ministry of Human Resource Development Scholarship",
+      "date": "2015-01-01",
+      "awarder": "Govt. of India",
+      "summary": "Ministry of Human Resource Development Scholarship, Govt. of India"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "title": "IBM Centennial research fellowship",
+      "date": "2012-01-01",
+      "awarder": "IIT Kharagpur",
+      "summary": "IBM Centennial research fellowship, IIT Kharagpur"
     }
   ],
   "skills": [
     {
-      "name": "Physics",
+      "name": "Machine learning",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "MLP / SVM / KNN / RF / XGBoost",
+        "CNN / ResNet ",
+        "RNN / LSTM / Transformer",
+        "VAE / GANs / BNN / GPR",
+        "PINN / GNN",
+        "TensorFlow / PyTorch / scikit-learn",
+        "Python / JAX"
+      ]
+    },
+    {
+      "name": "Scientific computing",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "MPI / CUDA"
+      ]
+    },
+    {
+      "name": "Software development",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "GIT / DVC / CI/CD / Pytest",
+        "Sphinx"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Hindi",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -163,38 +195,46 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Machine Learning",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Active Learning (BO / RL)",
+        "Physics Informed ML",
+        "Multimodal / Multifidelity / Multiscale ML",
+        "Manifold Learning",
+        "Inverse Problems",
+        "Explainable AI (XAI)"
+      ]
+    },
+    {
+      "name": "Computational Modeling",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Solid / FLuid Mechanics",
+        "Molecular dynamics",
+        "Structural dynamics",
+        "Energy Storage Modeling",
+        "Climate Modeling",
+        "Electromagntics modeling"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "<a href=\"https://www.ornl.gov/staff-profile/juan-m-restrepo\" target=\"_blank\">Dr. Juan M. Restrepo</a>",
+      "reference": "Section Head, Mathematics In Computation, Oak Ridge National Laboratory\nOak Ridge, CA, US"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
+      "name": "<a href=\"https://crf.sandia.gov/staff/habib-n-najm/\" target=\"_blank\">Dr. Habib N. Najm</a>",
+      "reference": "Senior Scientist, Sandia National Laboratories\nLivermore, CA, US"
+    },
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "<a href=\"https://www.meche.engineering.cmu.edu/directory/bios/dayal-kaushik.html\" target=\"_blank\">Prof. Kaushik Dayal</a>",
+      "reference": "Professor, Civil & Environmental Engineering, Carnegie Mellon University\nPittsburgh, PA, US"
+    },
+    {
+      "name": "<a href=\"https://cee.stanford.edu/people/haeyoung-noh\" target=\"_blank\">Prof. Hae Young Noh</a>",
+      "reference": "Associate Professor, Civil & Environmental Engineering, Stanford University\nStanford, CA, US"
     }
   ]
 }
