@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-portfolio",
           title: "portfolio",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -67,11 +67,71 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-image-enhancement-for-diabetic-retinopathy-lesion-segmentation",
+          title: 'Image Enhancement for Diabetic Retinopathy Lesion Segmentation',
+          description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/10_diagnopathy/";
+            },},{id: "projects-mpi-based-parallelization-of-a-computational-electromagnetics-problem",
+          title: 'MPI-Based Parallelization of a Computational Electromagnetics Problem',
+          description: "Accurate and Parallelized Computation of Grounding Resistance",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_electromagnetism/";
+            },},{id: "projects-finite-element-simulation-for-fluid-mechanics",
+          title: 'Finite element simulation for fluid mechanics',
+          description: "Efficient Simulation of High Reynolds MHD Flows",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_mhd/";
+            },},{id: "projects-force-chains-in-granular-materials-role-of-size-packing-amp-cohesion",
+          title: 'Force Chains in Granular Materials: Role of Size, Packing &amp;amp; Cohesion',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/13_force_chains/";
+            },},{id: "projects-multi-modal-machine-learning-for-pvd-mo-thin-films",
+          title: 'Multi-Modal Machine Learning for PVD Mo Thin Films',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_pvd_multimodal/";
+            },},{id: "projects-deep-learning-for-peak-stress-prediction-in-polycrystalline-materials",
+          title: 'Deep Learning for Peak-Stress Prediction in Polycrystalline Materials',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_encoder_decoder/";
+            },},{id: "projects-trade-offs-in-latent-representations-of-microstructure-evolution",
+          title: 'Trade-offs in Latent Representations of Microstructure Evolution',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_latent_evolution/";
+            },},{id: "projects-bayesian-optimization-for-robust-mo-thin-film-properties",
+          title: 'Bayesian Optimization for Robust Mo Thin-Film Properties',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_pvd_bayesopt/";
+            },},{id: "projects-physics-informed-spatio-temporal-super-resolution-of-dynamical-systems",
+          title: 'Physics-Informed Spatio‑Temporal Super‑Resolution of Dynamical Systems',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_spatio_temporal/";
+            },},{id: "projects-cuda-based-evolutionary-optimization",
+          title: 'CUDA based evolutionary optimization',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_ant_rfd_tsp/";
+            },},{id: "projects-active-learning-in-graph-based-semi-supervised-learning",
+          title: 'Active learning in graph-based semi-supervised learning',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_graph_ssl/";
+            },},{id: "projects-semantic-similarity-detection-using-deep-learning-and-feature-engineering",
+          title: 'Semantic Similarity Detection Using Deep Learning and Feature Engineering',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_siames_lstm/";
+            },},{id: "projects-semantic-similarity-detection-using-deep-learning-and-feature-engineering",
+          title: 'Semantic Similarity Detection Using Deep Learning and Feature Engineering',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_adversarial_cnn/";
             },},{
         id: 'social-github',
         title: 'GitHub',

@@ -1,0 +1,15 @@
+body {
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.95) 0%,     /* center: nearly opaque */
+      rgba(255, 255, 255, 0.8) 80%,     /* mid: semi-transparent */
+      rgba(255, 255, 255, 0) 100%       /* edges: fully transparent */
+    ),
+    url('/assets/img/background.png'); /* your image */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional parallax effect */
+}
