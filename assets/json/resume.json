@@ -1,27 +1,27 @@
 {
-  "basics": {
-    "name": "Ankit Shrivastava",
-    "label": "Computational and Machine Learning Scientist",
-    // "image": "",
-    // "email": "",
-    // "phone": "",
-    // "url": "",
-    "summary": "Applied Mathematician specializing in scientific machine learning, uncertainty quantification, and computational modeling for solving interdisciplinary engineering problems.",
-    "location": {
-      // "address": "2712 Broadway St",
-      // "postalCode": "CA 94115",
-      "city": "Knxoville",
-      "countryCode": "US",
-      "region": "Tennessee"
-    }
-    // "profiles": [
-    //   {
-    //     "network": "Twitter",
-    //     "username": "AlbertEinstein",
-    //     "url": "https://twitter.com/AlbertEinstein"
-    //   }
-    // ]
-  },
+  // "basics": {
+  //   "name": "Ankit Shrivastava",
+  //   "label": "Computational and Machine Learning Scientist",
+  //   // "image": "",
+  //   // "email": "",
+  //   // "phone": "",
+  //   // "url": "",
+  //   "summary": "Applied Mathematician specializing in scientific machine learning, uncertainty quantification, and computational modeling for solving interdisciplinary engineering problems.",
+  //   "location": {
+  //     // "address": "2712 Broadway St",
+  //     // "postalCode": "CA 94115",
+  //     "city": "Knxoville",
+  //     "countryCode": "US",
+  //     "region": "Tennessee"
+  //   }
+  //   // "profiles": [
+  //   //   {
+  //   //     "network": "Twitter",
+  //   //     "username": "AlbertEinstein",
+  //   //     "url": "https://twitter.com/AlbertEinstein"
+  //   //   }
+  //   // ]
+  // },
   "work": [
     {
       "name": "Oak Ridge National Laboratory",
@@ -148,39 +148,39 @@
       "summary": "IBM Centennial research fellowship, IIT Kharagpur"
     }
   ],
-  "skills": [
-    {
-      "name": "Machine learning",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "MLP / SVM / KNN / RF / XGBoost",
-        "CNN / ResNet ",
-        "RNN / LSTM / Transformer",
-        "VAE / GANs / BNN / GPR",
-        "PINN / GNN",
-        "TensorFlow / PyTorch / scikit-learn",
-        "Python / JAX"
-      ]
-    },
-    {
-      "name": "Scientific computing",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "MPI / CUDA"
-      ]
-    },
-    {
-      "name": "Software development",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "GIT / DVC / CI/CD / Pytest",
-        "Sphinx"
-      ]
-    }
-  ],
+  // "skills": [
+  //   {
+  //     "name": "Machine learning",
+  //     "level": "Master",
+  //     "icon": "fa-solid fa-hashtag",
+  //     "keywords": [
+  //       "MLP / SVM / KNN / RF / XGBoost",
+  //       "CNN / ResNet ",
+  //       "RNN / LSTM / Transformer",
+  //       "VAE / GANs / BNN / GPR",
+  //       "PINN / GNN",
+  //       "TensorFlow / PyTorch / scikit-learn",
+  //       "Python / JAX"
+  //     ]
+  //   },
+  //   {
+  //     "name": "Scientific computing",
+  //     "level": "Master",
+  //     "icon": "fa-solid fa-hashtag",
+  //     "keywords": [
+  //       "MPI / CUDA"
+  //     ]
+  //   },
+  //   {
+  //     "name": "Software development",
+  //     "level": "Master",
+  //     "icon": "fa-solid fa-hashtag",
+  //     "keywords": [
+  //       "GIT / DVC / CI/CD / Pytest",
+  //       "Sphinx"
+  //     ]
+  //   }
+  // ],
   "languages": [
     {
       "language": "Hindi",
@@ -193,32 +193,32 @@
       "icon": ""
     }
   ],
-  "interests": [
-    {
-      "name": "Machine Learning",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Active Learning (BO / RL)",
-        "Physics Informed ML",
-        "Multimodal / Multifidelity / Multiscale ML",
-        "Manifold Learning",
-        "Inverse Problems",
-        "Explainable AI (XAI)"
-      ]
-    },
-    {
-      "name": "Computational Modeling",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Solid / FLuid Mechanics",
-        "Molecular dynamics",
-        "Structural dynamics",
-        "Energy Storage Modeling",
-        "Climate Modeling",
-        "Electromagntics modeling"
-      ]
-    }
-  ],
+  // "interests": [
+  //   {
+  //     "name": "Machine Learning",
+  //     "icon": "fa-solid fa-tag",
+  //     "keywords": [
+  //       "Active Learning (BO / RL)",
+  //       "Physics Informed ML",
+  //       "Multimodal / Multifidelity / Multiscale ML",
+  //       "Manifold Learning",
+  //       "Inverse Problems",
+  //       "Explainable AI (XAI)"
+  //     ]
+  //   },
+  //   {
+  //     "name": "Computational Modeling",
+  //     "icon": "fa-solid fa-tag",
+  //     "keywords": [
+  //       "Solid / FLuid Mechanics",
+  //       "Molecular dynamics",
+  //       "Structural dynamics",
+  //       "Energy Storage Modeling",
+  //       "Climate Modeling",
+  //       "Electromagntics modeling"
+  //     ]
+  //   }
+  // ],
   "references": [
     {
       "name": "<a href=\"https://www.ornl.gov/staff-profile/juan-m-restrepo\" target=\"_blank\">Dr. Juan M. Restrepo</a>",
