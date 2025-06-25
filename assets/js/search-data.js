@@ -74,12 +74,12 @@ ninja.data = [{
               window.location.href = "/projects/10_diagnopathy/";
             },},{id: "projects-mpi-based-parallelization-of-a-computational-electromagnetics-problem",
           title: 'MPI-Based Parallelization of a Computational Electromagnetics Problem',
-          description: "Accurate and Parallelized Computation of Grounding Resistance",
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_electromagnetism/";
             },},{id: "projects-finite-element-simulation-for-fluid-mechanics",
           title: 'Finite element simulation for fluid mechanics',
-          description: "Efficient Simulation of High Reynolds MHD Flows",
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/12_mhd/";
             },},{id: "projects-force-chains-in-granular-materials-role-of-size-packing-amp-cohesion",
@@ -127,8 +127,8 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_siames_lstm/";
-            },},{id: "projects-semantic-similarity-detection-using-deep-learning-and-feature-engineering",
-          title: 'Semantic Similarity Detection Using Deep Learning and Feature Engineering',
+            },},{id: "projects-interpreting-cnns-under-adversarial-attacks",
+          title: 'Interpreting CNNs Under Adversarial Attacks',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_adversarial_cnn/";

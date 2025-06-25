@@ -28,8 +28,8 @@
       "position": "Postdoctoral Fellow, Applied Mathematician",
       "url": "https://www.ornl.gov",
       "startDate": "2024-11-01",
-      "summary": "Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance.",
-      "highlights": []
+      // "summary": "Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance.",
+      "highlights": ["Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance."]
     },
     {
       "name": "Sandia National Laboratories",
@@ -37,8 +37,8 @@
       "url": "https://www.sandia.gov",
       "startDate": "2022-01-01",
       "endDate": "2024-10-24",
-      "summary": "Developed machine learning and signal processing methods for materials science and mechanics.",
-      "highlights": []
+      // "summary": "Developed machine learning and signal processing methods for materials science and mechanics.",
+      "highlights": ["Developed machine learning and signal processing methods for materials science and mechanics."]
     }
   ],
   // "volunteer": [
@@ -107,45 +107,38 @@
   "awards": [
     {
       "title": "NSF travel award",
-      "date": "2024-01-01",
-      "awarder": "The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics",
-      "summary": "NSF travel award, The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics"
+      "date": "2024",
+      "awarder": "The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics"
     },
     {
       "title": "Conference travel award",
-      "date": "2023-01-01",
-      "awarder": "Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering",
-      "summary": "Conference travel award, Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering"
+      "date": "2023",
+      "awarder": "Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering"
     },
     {
       "title": "Conference travel award",
-      "date": "2023-01-01",
-      "awarder": "US National Congress on Computational Mechanics",
-      "summary": "Conference travel award, US National Congress on Computational Mechanics"
+      "date": "2023",
+      "awarder": "US National Congress on Computational Mechanics"
     },
     {
       "title": "Fenves travel grant",
-      "date": "2019-01-01",
-      "awarder": "Civil Engineering Department",
-      "summary": "Fenves travel grant, Civil Engineering Department, CMU"
+      "date": "2019",
+      "awarder": "Civil Engineering Department"
     },
     {
       "title": "Dean's fellowship",
-      "date": "2017-01-01",
-      "awarder": "Civil Engineering Department",
-      "summary": "Dean's fellowship, Civil Engineering Department, CMU"
+      "date": "2017",
+      "awarder": "Civil Engineering Department"
     },
     {
       "title": "Ministry of Human Resource Development Scholarship",
-      "date": "2015-01-01",
-      "awarder": "Govt. of India",
-      "summary": "Ministry of Human Resource Development Scholarship, Govt. of India"
+      "date": "2015",
+      "awarder": "Govt. of India"
     },
     {
       "title": "IBM Centennial research fellowship",
-      "date": "2012-01-01",
-      "awarder": "IIT Kharagpur",
-      "summary": "IBM Centennial research fellowship, IIT Kharagpur"
+      "date": "2012",
+      "awarder": "IIT Kharagpur"
     }
   ],
   // "skills": [
