@@ -82,6 +82,7 @@
 
 
 
+
   </head>
 
   <!-- Body -->
@@ -149,32 +150,6 @@
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
               
                 
                 <li class="nav-item ">
@@ -186,21 +161,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/skills/">Skills
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">Portfolio
+                  <a class="nav-link" href="/projects/">Projects
                     
                       <span class="sr-only">(current)</span>
                     
@@ -221,21 +187,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/talks/">Talks
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/activities/">Activities
+                  <a class="nav-link" href="/activities/">Events
                     
                   </a>
                 </li>
@@ -299,21 +256,92 @@
       
         
 
+
+
+
+
+
 <div class="post">
+  
+  
+
+  <div class="breadcrumb-responsive">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">
+        <i class="fa fa-home"></i>
+      </a>
+      <span class="divider">»</span>
+      <a href="/projects/">Projects</a>
+      <span class="divider">»</span>
+    </nav>
+    <button class="breadcrumb-toggler" aria-label="Show navigation" onclick="document.getElementById('breadcrumb-menu').classList.toggle('show');">
+      📍 Navigation
+    </button>
+    <ul id="breadcrumb-menu" class="breadcrumb-menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/projects/">Projects</a>
+      </li>
+      <li>
+        <span>Active learning in graph-based semi-supervised learning</span>
+      </li>
+    </ul>
+  </div>
+
   <header class="post-header">
     <h1 class="post-title">Active learning in graph-based semi-supervised learning</h1>
-    <p class="post-description"></p>
+    <p class="post-meta">
+      Created on June 30, 2025
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i>
+        2025
+      
+      
+
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-tag fa-sm"></i>
+            Active Learning
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <p>Designed and evaluated an active learning framework for graph-based semi-supervised learning (GSSL) that intelligently selects the most informative data points to label. The approach combines uncertainty metrics (like least-confidence and entropy) with graph-theoretic centrality measures (e.g., betweenness, pagerank, and a novel clique-overlap centrality) to enhance diversity in selected instances. Experimental results on benchmark datasets demonstrate that least-confidence uncertainty with clique-overlap centrality significantly improves labeling efficiency and prediction accuracy. The framework was tested using multiple GSSL methods, including Label Propagation, Modified Adsorption, and Local &amp; Global Consistency.</p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>Designed and evaluated an active learning framework for graph-based semi-supervised learning (GSSL) that intelligently selects the most informative data points to label. The approach combines uncertainty metrics (like least-confidence and entropy) with graph-theoretic centrality measures (e.g., betweenness, pagerank, and a novel clique-overlap centrality) to enhance diversity in selected instances. Experimental results on benchmark datasets demonstrate that least-confidence uncertainty with clique-overlap centrality significantly improves labeling efficiency and prediction accuracy. The framework was tested using multiple GSSL methods, including Label Propagation, Modified Adsorption, and Local &amp; Global Consistency.</p>
 
 <p>For details <a href="/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank">View Report</a></p>
 
+    </div>
   </article>
 
   
 
+  
+
+  
+    
+      
+
+
+
+    
+  
+
+  
   
 </div>
 
@@ -389,7 +417,7 @@
 
 <!-- Load Common JS -->
 <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
-<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script>
 <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
 
 <!-- Jupyter Open External Links New Tab -->
@@ -445,6 +473,23 @@
 
 
 
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const shrinkOn = 10;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > shrinkOn) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
 
   </body>
 </html>

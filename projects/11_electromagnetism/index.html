@@ -82,6 +82,7 @@
 
 
 
+
   </head>
 
   <!-- Body -->
@@ -149,32 +150,6 @@
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
               
                 
                 <li class="nav-item ">
@@ -186,21 +161,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/skills/">Skills
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">Portfolio
+                  <a class="nav-link" href="/projects/">Projects
                     
                       <span class="sr-only">(current)</span>
                     
@@ -221,21 +187,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/talks/">Talks
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/activities/">Activities
+                  <a class="nav-link" href="/activities/">Events
                     
                   </a>
                 </li>
@@ -299,26 +256,86 @@
       
         
 
+
+
+
+
+
 <div class="post">
+  
+  
+
+  <div class="breadcrumb-responsive">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">
+        <i class="fa fa-home"></i>
+      </a>
+      <span class="divider">»</span>
+      <a href="/projects/">Projects</a>
+      <span class="divider">»</span>
+    </nav>
+    <button class="breadcrumb-toggler" aria-label="Show navigation" onclick="document.getElementById('breadcrumb-menu').classList.toggle('show');">
+      📍 Navigation
+    </button>
+    <ul id="breadcrumb-menu" class="breadcrumb-menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/projects/">Projects</a>
+      </li>
+      <li>
+        <span>MPI-Based Parallelization of a Computational Electromagnetics Problem</span>
+      </li>
+    </ul>
+  </div>
+
   <header class="post-header">
     <h1 class="post-title">MPI-Based Parallelization of a Computational Electromagnetics Problem</h1>
-    <p class="post-description"></p>
+    <p class="post-meta">
+      Created on June 30, 2025
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i>
+        2025
+      
+      
+
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-tag fa-sm"></i>
+            High Performance Computing
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <p>This project focused on calculating the electrical resistance of grounding electrodes using Galerkin’s Method of Moments, a technique that transforms physical models into solvable matrix equations. The method accounts for soil-air interface effects via the method of images and uses pulse basis functions to simplify complex geometries.</p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>This project focused on calculating the electrical resistance of grounding electrodes using Galerkin’s Method of Moments, a technique that transforms physical models into solvable matrix equations. The method accounts for soil-air interface effects via the method of images and uses pulse basis functions to simplify complex geometries.</p>
 
 <p>To handle large system matrices, we implemented a parallelized solver using MPI and a conjugate gradient method, distributing computation across multiple processors. The result: significant reduction in computation time—up to 5.8× speedup with 16 processors—while maintaining high accuracy in resistance estimates for various electrode shapes (rod, star, circular).</p>
 
-<p>Refer paper <a class="citation" href="#muhammed2021parallel"><span style="vertical-align: super">1</span></a> for details.</p>
+<p>Refer paper <a class="citation" href="#muhammed2021parallel">(Muhammed et al., 2021)</a> for details.</p>
 
+    </div>
   </article>
+
+  
 
   
     <h2>References</h2>
     <div class="publications">
-      <h2 class="bibliography">2021</h2>
-<ol class="bibliography"><li>
+      <ol class="bibliography"><li>
 <div class="row">
   
 
@@ -332,8 +349,8 @@
 
       
       A.
-            Muhammed, <a href="www.ashriva.in">A.
-              Shrivastava</a>, and B.
+            Muhammed, <em>Ankit
+            Shrivastava</em>, and B.
             Biswas
       
     </div>
@@ -407,6 +424,16 @@
     </div>
   
 
+  
+    
+      
+
+
+
+    
+  
+
+  
   
 </div>
 
@@ -482,7 +509,7 @@
 
 <!-- Load Common JS -->
 <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
-<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script>
 <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
 
 <!-- Jupyter Open External Links New Tab -->
@@ -538,6 +565,23 @@
 
 
 
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const shrinkOn = 10;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > shrinkOn) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
 
   </body>
 </html>

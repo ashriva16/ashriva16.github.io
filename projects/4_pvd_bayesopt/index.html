@@ -82,6 +82,7 @@
 
 
 
+
   </head>
 
   <!-- Body -->
@@ -149,32 +150,6 @@
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
               
                 
                 <li class="nav-item ">
@@ -186,21 +161,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/skills/">Skills
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">Portfolio
+                  <a class="nav-link" href="/projects/">Projects
                     
                       <span class="sr-only">(current)</span>
                     
@@ -221,21 +187,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/talks/">Talks
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/activities/">Activities
+                  <a class="nav-link" href="/activities/">Events
                     
                   </a>
                 </li>
@@ -299,16 +256,74 @@
       
         
 
+
+
+
+
+
 <div class="post">
+  
+  
+
+  <div class="breadcrumb-responsive">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">
+        <i class="fa fa-home"></i>
+      </a>
+      <span class="divider">»</span>
+      <a href="/projects/">Projects</a>
+      <span class="divider">»</span>
+    </nav>
+    <button class="breadcrumb-toggler" aria-label="Show navigation" onclick="document.getElementById('breadcrumb-menu').classList.toggle('show');">
+      📍 Navigation
+    </button>
+    <ul id="breadcrumb-menu" class="breadcrumb-menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/projects/">Projects</a>
+      </li>
+      <li>
+        <span>Bayesian Optimization for Robust Mo Thin-Film Properties</span>
+      </li>
+    </ul>
+  </div>
+
   <header class="post-header">
     <h1 class="post-title">Bayesian Optimization for Robust Mo Thin-Film Properties</h1>
-    <p class="post-description"></p>
+    <p class="post-meta">
+      Created on June 30, 2025
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i>
+        2025
+      
+      
+
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-tag fa-sm"></i>
+            Active Learning
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <p>Developed a Bayesian optimization framework to fine-tune sputter deposition process conditions—specifically power and pressure—to achieve target residual stress and sheet resistance in molybdenum (Mo) thin films, while prioritizing robustness against process variability. By incorporating an objective function that balances mean properties and their fluctuations, this method efficiently explores the design space and identifies stable configurations under stochastic process noise</p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>Developed a Bayesian optimization framework to fine-tune sputter deposition process conditions—specifically power and pressure—to achieve target residual stress and sheet resistance in molybdenum (Mo) thin films, while prioritizing robustness against process variability. By incorporating an objective function that balances mean properties and their fluctuations, this method efficiently explores the design space and identifies stable configurations under stochastic process noise</p>
 
-<p>Refer paper <a class="citation" href="#10.1116/6.0003418"><span style="vertical-align: super">1</span></a> for details.</p>
+<p>Refer paper <a class="citation" href="#10.1116/6.0003418">(Shrivastava et al., 2024)</a> for details.</p>
 
 <p>For code refer <a href="https://github.com/ashriva16/bayesian-optimization-sputter-deposition" rel="external nofollow noopener" target="_blank">GitHub Repository</a>.</p>
 
@@ -325,10 +340,6 @@
       See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
-    
-      
-        <source class="responsive-img-srcset" srcset="/assets/reports/pvd_bayesian_optimization/Picture1-480.webp 480w,/assets/reports/pvd_bayesian_optimization/Picture1-800.webp 800w,/assets/reports/pvd_bayesian_optimization/Picture1-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
-      
     
     <img src="/assets/reports/pvd_bayesian_optimization/Picture1.jpg" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" width="100%" height="auto" title="overview image" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
@@ -355,10 +366,6 @@
       See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
-    
-      
-        <source class="responsive-img-srcset" srcset="/assets/reports/pvd_bayesian_optimization/gp-480.webp 480w,/assets/reports/pvd_bayesian_optimization/gp-800.webp 800w,/assets/reports/pvd_bayesian_optimization/gp-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
-      
     
     <img src="/assets/reports/pvd_bayesian_optimization/gp.gif" class="img-fluid rounded z-depth-1 w-60 mx-auto d-block" width="100%" height="auto" title="overview image" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
@@ -403,10 +410,6 @@ Together, these visualizations reveal how the model navigates the trade-off betw
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
     
-      
-        <source class="responsive-img-srcset" srcset="/assets/reports/pvd_bayesian_optimization/obj-480.webp 480w,/assets/reports/pvd_bayesian_optimization/obj-800.webp 800w,/assets/reports/pvd_bayesian_optimization/obj-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
-      
-    
     <img src="/assets/reports/pvd_bayesian_optimization/obj.gif" class="img-fluid rounded z-depth-1 w-60 mx-auto d-block" width="100%" height="auto" title="overview image" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
 
@@ -419,13 +422,15 @@ Together, these visualizations reveal how the model navigates the trade-off betw
     Caption: multi-objective surface.
 </div>
 
+    </div>
   </article>
+
+  
 
   
     <h2>References</h2>
     <div class="publications">
-      <h2 class="bibliography">2024</h2>
-<ol class="bibliography"><li>
+      <ol class="bibliography"><li>
 <div class="row">
   
 
@@ -438,8 +443,8 @@ Together, these visualizations reveal how the model navigates the trade-off betw
       
 
       
-      <a href="www.ashriva.in">Ankit
-              Shrivastava</a>, Matias
+      <em>Ankit
+            Shrivastava</em>, Matias
             Kalaswad, Joyce O.
             Custer, and
         <span class="more-authors" title="click to view 2 more authors" onclick="
@@ -539,6 +544,16 @@ Together, these visualizations reveal how the model navigates the trade-off betw
   
 
   
+    
+      
+
+
+
+    
+  
+
+  
+  
 </div>
 
       
@@ -613,7 +628,7 @@ Together, these visualizations reveal how the model navigates the trade-off betw
 
 <!-- Load Common JS -->
 <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
-<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script>
 <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
 
 <!-- Jupyter Open External Links New Tab -->
@@ -669,6 +684,23 @@ Together, these visualizations reveal how the model navigates the trade-off betw
 
 
 
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const shrinkOn = 10;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > shrinkOn) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
 
   </body>
 </html>

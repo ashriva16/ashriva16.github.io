@@ -26,14 +26,18 @@
     {
       "name": "Oak Ridge National Laboratory",
       "position": "Postdoctoral Fellow, Applied Mathematician",
+      "location": "Oak Ridge, TN, USA",
       "url": "https://www.ornl.gov",
       "startDate": "2024-11-01",
       // "summary": "Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance.",
-      "highlights": ["Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance."]
+      "highlights": [
+        "Developing active learning microservices for experimental design and machine learning-based control systems for power grid blackout avoidance."
+      ]
     },
     {
       "name": "Sandia National Laboratories",
       "position": "Postdoctoral Fellow",
+      "location": "Livermore, CA, USA",
       "url": "https://www.sandia.gov",
       "startDate": "2022-01-01",
       "endDate": "2024-10-24",
@@ -66,7 +70,8 @@
       "score": "",
       "courses": [
         "<b>Thesis</b>: Elucidating the origin of heterogeneous stresses in granular and microstructured materials using data science methods.",
-      "<b>Advisors</b>: Prof. Kaushik Dayal, Prof. Hae Young Noh"]
+        "<b>Advisors</b>: Prof. Kaushik Dayal, Prof. Hae Young Noh"
+      ]
     },
     {
       "institution": "Carnegie Mellon University",
@@ -88,8 +93,10 @@
       "startDate": "2015-01-01",
       "endDate": "2017-01-01",
       "score": "",
-      "courses": ["<b>Thesis</b>: Numerical study of magneto-hydrodynamics for turbulent flow using the projection-based variational multiscale finite element method.",
-      "<b>Advisors</b>: Advisor: Prof. Sashikumaar Ganesan"]
+      "courses": [
+        "<b>Thesis</b>: Numerical study of magneto-hydrodynamics for turbulent flow using the projection-based variational multiscale finite element method.",
+        "<b>Advisors</b>: Advisor: Prof. Sashikumaar Ganesan"
+      ]
     },
     {
       "institution": "Indian Institute of Technology Kharagpur",
@@ -100,47 +107,46 @@
       "startDate": "2009-01-01",
       "endDate": "2013-01-01",
       "score": "",
-      "courses": ["<b>Thesis</b>: Numerical computation of flow in open channel cross sections.",
-      "<b>Advisors</b>: Prof. Anirban Dhar"]
+      "courses": ["<b>Thesis</b>: Numerical computation of flow in open channel cross sections.", "<b>Advisors</b>: Prof. Anirban Dhar"]
     }
   ],
-  "awards": [
-    {
-      "title": "NSF travel award",
-      "date": "2024",
-      "awarder": "The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics"
-    },
-    {
-      "title": "Conference travel award",
-      "date": "2023",
-      "awarder": "Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering"
-    },
-    {
-      "title": "Conference travel award",
-      "date": "2023",
-      "awarder": "US National Congress on Computational Mechanics"
-    },
-    {
-      "title": "Fenves travel grant",
-      "date": "2019",
-      "awarder": "Civil Engineering Department"
-    },
-    {
-      "title": "Dean's fellowship",
-      "date": "2017",
-      "awarder": "Civil Engineering Department"
-    },
-    {
-      "title": "Ministry of Human Resource Development Scholarship",
-      "date": "2015",
-      "awarder": "Govt. of India"
-    },
-    {
-      "title": "IBM Centennial research fellowship",
-      "date": "2012",
-      "awarder": "IIT Kharagpur"
-    }
-  ],
+  // "awards": [
+  //   {
+  //     "title": "NSF travel award",
+  //     "date": "2024",
+  //     "awarder": "The Industrialization of SciML by the Institute for Computational and Experimental Research in Mathematics"
+  //   },
+  //   {
+  //     "title": "Conference travel award",
+  //     "date": "2023",
+  //     "awarder": "Mechanistic Machine Learning and Digital Engineering for Computational Science Engineering"
+  //   },
+  //   {
+  //     "title": "Conference travel award",
+  //     "date": "2023",
+  //     "awarder": "US National Congress on Computational Mechanics"
+  //   },
+  //   {
+  //     "title": "Fenves travel grant",
+  //     "date": "2019",
+  //     "awarder": "Civil Engineering Department"
+  //   },
+  //   {
+  //     "title": "Dean's fellowship",
+  //     "date": "2017",
+  //     "awarder": "Civil Engineering Department"
+  //   },
+  //   {
+  //     "title": "Ministry of Human Resource Development Scholarship",
+  //     "date": "2015",
+  //     "awarder": "Govt. of India"
+  //   },
+  //   {
+  //     "title": "IBM Centennial research fellowship",
+  //     "date": "2012",
+  //     "awarder": "IIT Kharagpur"
+  //   }
+  // ],
   // "skills": [
   //   {
   //     "name": "Machine learning",
@@ -174,18 +180,18 @@
   //     ]
   //   }
   // ],
-  "languages": [
-    {
-      "language": "Hindi",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
+  // "languages": [
+  //   {
+  //     "language": "Hindi",
+  //     "fluency": "Native speaker",
+  //     "icon": ""
+  //   },
+  //   {
+  //     "language": "English",
+  //     "fluency": "Fluent",
+  //     "icon": ""
+  //   }
+  // ],
   // "interests": [
   //   {
   //     "name": "Machine Learning",

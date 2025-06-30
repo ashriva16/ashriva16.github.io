@@ -82,6 +82,7 @@
 
 
 
+
   </head>
 
   <!-- Body -->
@@ -149,32 +150,6 @@
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
               
                 
                 <li class="nav-item ">
@@ -186,21 +161,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/skills/">Skills
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">Portfolio
+                  <a class="nav-link" href="/projects/">Projects
                     
                       <span class="sr-only">(current)</span>
                     
@@ -221,21 +187,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/talks/">Talks
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/activities/">Activities
+                  <a class="nav-link" href="/activities/">Events
                     
                   </a>
                 </li>
@@ -299,14 +256,72 @@
       
         
 
+
+
+
+
+
 <div class="post">
+  
+  
+
+  <div class="breadcrumb-responsive">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="/">
+        <i class="fa fa-home"></i>
+      </a>
+      <span class="divider">»</span>
+      <a href="/projects/">Projects</a>
+      <span class="divider">»</span>
+    </nav>
+    <button class="breadcrumb-toggler" aria-label="Show navigation" onclick="document.getElementById('breadcrumb-menu').classList.toggle('show');">
+      📍 Navigation
+    </button>
+    <ul id="breadcrumb-menu" class="breadcrumb-menu">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/projects/">Projects</a>
+      </li>
+      <li>
+        <span>Semantic Similarity Detection Using Deep Learning and Feature Engineering</span>
+      </li>
+    </ul>
+  </div>
+
   <header class="post-header">
     <h1 class="post-title">Semantic Similarity Detection Using Deep Learning and Feature Engineering</h1>
-    <p class="post-description"></p>
+    <p class="post-meta">
+      Created on June 30, 2025
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <i class="fa-solid fa-calendar fa-sm"></i>
+        2025
+      
+      
+
+      
+          ·  
+        
+          
+            <i class="fa-solid fa-tag fa-sm"></i>
+            Deep Learning
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <p>Built and evaluated multiple machine learning models to detect semantically duplicate questions using the Quora dataset. Compared traditional classifiers using hand-engineered similarity features with deep learning models including Siamese LSTM and Bilateral Multi-Perspective Matching (BiMPM). Explored GloVe and Word2Vec embeddings and developed a hybrid architecture combining CNN, LSTM, and engineered features. The best model—fine-tuned GloVe with LSTM+CNN and baseline features—achieved a log-loss of 0.21 on the Kaggle test set, significantly outperforming standard approaches. This project highlights the effectiveness of blending deep learning with traditional NLP features for semantic similarity tasks.</p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p>Built and evaluated multiple machine learning models to detect semantically duplicate questions using the Quora dataset. Compared traditional classifiers using hand-engineered similarity features with deep learning models including Siamese LSTM and Bilateral Multi-Perspective Matching (BiMPM). Explored GloVe and Word2Vec embeddings and developed a hybrid architecture combining CNN, LSTM, and engineered features. The best model—fine-tuned GloVe with LSTM+CNN and baseline features—achieved a log-loss of 0.21 on the Kaggle test set, significantly outperforming standard approaches. This project highlights the effectiveness of blending deep learning with traditional NLP features for semantic similarity tasks.</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -322,10 +337,6 @@
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
     
-      
-        <source class="responsive-img-srcset" srcset="/assets/reports/siamese_lstm/Picture6-480.webp 480w,/assets/reports/siamese_lstm/Picture6-800.webp 800w,/assets/reports/siamese_lstm/Picture6-1400.webp 1400w," type="image/webp" sizes="95vw"></source>
-      
-    
     <img src="/assets/reports/siamese_lstm/Picture6.png" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" width="100%" height="auto" title="overview image" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
   </picture>
 
@@ -340,10 +351,23 @@
 
 <p>For details <a href="/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank">View Report</a></p>
 
+    </div>
   </article>
 
   
 
+  
+
+  
+    
+      
+
+
+
+    
+  
+
+  
   
 </div>
 
@@ -419,7 +443,7 @@
 
 <!-- Load Common JS -->
 <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
-<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script>
 <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
 
 <!-- Jupyter Open External Links New Tab -->
@@ -475,6 +499,23 @@
 
 
 
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const shrinkOn = 10;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > shrinkOn) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
 
   </body>
 </html>

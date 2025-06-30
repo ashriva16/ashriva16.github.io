@@ -81,6 +81,7 @@
 
 
 
+
   </head>
 
   <!-- Body -->
@@ -150,32 +151,6 @@
             
           
             
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
               
                 
                 <li class="nav-item ">
@@ -187,21 +162,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/skills/">Skills
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">Portfolio
+                  <a class="nav-link" href="/projects/">Projects
                     
                   </a>
                 </li>
@@ -220,21 +186,12 @@
             
           
             
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/talks/">Talks
-                    
-                  </a>
-                </li>
-              
-            
           
             
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/activities/">Activities
+                  <a class="nav-link" href="/activities/">Events
                     
                   </a>
                 </li>
@@ -327,12 +284,8 @@
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
     
-      
-        <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw">
-      
-    
     <img src="/assets/img/prof_pic.jpg" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-  </source></picture>
+  </picture>
 
   
 </figure>
@@ -371,12 +324,8 @@
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
     
-      
-        <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="(min-width: 930px) 270.0px, (min-width: 576px) 30vw, 95vw">
-      
-    
     <img src="/assets/img/prof_pic.jpg" class="img-fluid z-depth-1 rounded" width="100%" height="auto" alt="prof_pic.jpg" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-  </source></picture>
+  </picture>
 
   
 </figure>
@@ -480,7 +429,7 @@
 
 <!-- Load Common JS -->
 <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
-<script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script>
+<script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script>
 <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
 
 <!-- Jupyter Open External Links New Tab -->
@@ -536,6 +485,23 @@
 
 
 
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    const shrinkOn = 10;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > shrinkOn) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
 
   </body>
 </html>
