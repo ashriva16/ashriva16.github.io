@@ -22,9 +22,6 @@ env:
 
 # TRIGGERS
 on:
-  push:
-    branches:
-      - gh-pages
   schedule:
     - cron: "55 23 * * 0" # weekly
   workflow_dispatch:
