@@ -1,18 +1,613 @@
-<!DOCTYPE html> <html lang="en" data-theme="dark"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="5RskK5M5U6_SdMV90abtTG4vlBwkVG5sXltlDuh8U3Q"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Metaheuristics Optimization on CUDA | Ankit Shrivastava </title> <meta name="author" content="Ankit Shrivastava"> <meta name="description" content="Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem."> <meta name="keywords" content="machine learning, scientific computing, uncertainty quantification"> <meta property="og:site_name" content="Ankit Shrivastava"> <meta property="og:type" content="website"> <meta property="og:title" content="Ankit Shrivastava | Metaheuristics Optimization on CUDA"> <meta property="og:url" content="https://www.ashriva.in/projects/6_ant_rfd_tsp/"> <meta property="og:description" content="Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Metaheuristics Optimization on CUDA"> <meta name="twitter:description" content="Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem."> <script type="application/ld+json">
-    {
-        "author":
-        {
-            "@type": "Person",
-            "name": "Ankit Shrivastava"
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="5RskK5M5U6_SdMV90abtTG4vlBwkVG5sXltlDuh8U3Q"
+    />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Metaheuristics Optimization on CUDA | Ankit Shrivastava</title>
+    <meta name="author" content="Ankit Shrivastava" />
+    <meta
+      name="description"
+      content="Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem."
+    />
+    <meta
+      name="keywords"
+      content="machine learning, scientific computing, uncertainty quantification"
+    />
+    <meta property="og:site_name" content="Ankit Shrivastava" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ankit Shrivastava | Metaheuristics Optimization on CUDA"
+    />
+    <meta
+      property="og:url"
+      content="https://www.ashriva.in/projects/6_ant_rfd_tsp/"
+    />
+    <meta
+      property="og:description"
+      content="Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem."
+    />
+    <meta property="og:locale" content="en" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Metaheuristics Optimization on CUDA" />
+    <meta
+      name="twitter:description"
+      content="Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem."
+    />
+    <script type="application/ld+json">
+      {
+        "author": {
+          "@type": "Person",
+          "name": "Ankit Shrivastava"
         },
         "url": "https://www.ashriva.in/projects/6_ant_rfd_tsp/",
         "@type": "WebSite",
         "description": "Designed a GPU-accelerated hybrid of Ant Colony Optimization and River Flow Dynamics for the Traveling Salesman Problem.",
         "headline": "Metaheuristics Optimization on CUDA",
-        
-        "sameAs": ["https://github.com/ashriva16","https://www.linkedin.com/in/ashriva16","https://orcid.org/0000-0003-4445-8817","https://scholar.google.com/citations?user=Zx4v13gAAAAJ\u0026hl=en"],
-        
+
+        "sameAs": [
+          "https://github.com/ashriva16",
+          "https://www.linkedin.com/in/ashriva16",
+          "https://orcid.org/0000-0003-4445-8817",
+          "https://scholar.google.com/citations?user=Zx4v13gAAAAJ\u0026hl=en"
+        ],
+
         "name": "Ankit Shrivastava",
         "@context": "https://schema.org"
-    }
-  </script> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin> <link rel="dns-prefetch" href="https://fonts.googleapis.com"> <link rel="dns-prefetch" href="https://fonts.gstatic.com"> <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" integrity="sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c=" crossorigin="anonymous"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5" media="print" onload="this.media='all'"> <link rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772" media="print" onload="this.media='all'"> <noscript> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> </noscript> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Roboto+Slab:wght@400;700&amp;display=swap"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="print" onload="this.media='all'" id="highlight_theme_light"> <noscript><link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"></noscript> <link rel="shortcut icon" href="/assets/img/favicon.ico?26a5b7cc44c793898adee5e9395e9cb0"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://www.ashriva.in/projects/6_ant_rfd_tsp/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> </head> <body class="fixed-top-nav posts"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ankit</span> Shrivastava </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/background/">Background </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/index.html">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/posts/index.html">Blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/activities/">Events </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search"> <span class="nav-link">ctrl+k<i class="ti ti-search"></i></span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0" max="100" role="presentation" aria-hidden="true"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <p class="post-meta"> <span class="read-time">4 min read</span> <span class="dot-separator"> · </span> </p> <h1 class="post-title">Metaheuristics Optimization on CUDA</h1> <p class="post-meta"> Created on April 01, 2016 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2016   ·   <i class="fa-solid fa-hashtag fa-sm"></i> Optimization   <i class="fa-solid fa-hashtag fa-sm"></i> CUDA   ·   <i class="fa-solid fa-tag fa-sm"></i> High Performance Computing </p> </header> <article class="post-content"> <div id="markdown-content"> <p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"> <img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"> <img src="https://img.shields.io/badge/CUDA-76B900?style=flat&amp;logo=nvidia&amp;logoColor=white"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"> </p> <h2 id="the-travelling-salesmans-dilemma">The Travelling Salesman’s Dilemma</h2> <p>Imagine a pizza delivery driver with orders to drop off at 5 different locations across town. The challenge for the driver is to find the most efficient route that covers every stop once. This is a classic operations research and computer science puzzle, famously known as the Travelling Salesman Problem (TSP). Finding the perfect route for the pizza delivery guy may be easy with just a few stops. Still, as the number of locations grows, it quickly becomes challenging to figure out the best path.</p> <p>The TSP shows up in many industrial and scientific applications whenever efficiency matters. For example</p> <ul> <li> <strong>Manufacturing &amp; Supply Chains</strong>: Scheduling movement of goods between machines, warehouse picking routes, and distribution planning.</li> <li> <strong>Astronomy</strong>: Telescopes optimize the order of star or planet observations to minimize the time spent repositioning.</li> <li> <strong>3D Printing &amp; Chip Design</strong>: Printers and circuit designers plan paths that reduce wasted motion, speeding up manufacturing.</li> </ul> <p>In today’s competitive environment, this route optimization isn’t just an academic puzzle but also an essential problem for cost optimization, sustainability, and better customer experience. So how do we actually solve such a complex problem?</p> <h2 id="hacking-the-tsp">Hacking the TSP</h2> <p>A variety of strategies exist to tackle the TSP, such as exact optimization, rule-based heuristics, local search, metaheuristics, and emerging learning-based models. Each takes a different path to balance speed and solution quality, as summarized below.</p> <table> <thead> <tr> <th><strong>Approach</strong></th> <th><strong>What it Does</strong></th> <th><strong>Scalability</strong></th> <th><strong>Quality</strong></th> </tr> </thead> <tbody> <tr> <td>Exact Methods</td> <td>Guarantee shortest route (dynamic programming, ILP, Concorde)</td> <td>❌</td> <td>✅</td> </tr> <tr> <td>Heuristics</td> <td>Quick rules (e.g., nearest neighbor, Christofides)</td> <td>✅</td> <td>❌</td> </tr> <tr> <td>Local Search</td> <td>Improves routes step by step (2-opt, 3-opt, LK)</td> <td>✅</td> <td>⚠️ <em>(good, but not global)</em> </td> </tr> <tr> <td>Metaheuristics</td> <td>Nature-inspired (GA, SA, ACO, RFD, Tabu)</td> <td>✅</td> <td>✅</td> </tr> <tr> <td>Learning-Based</td> <td>AI/ML learns routing patterns (RL, GNNs)</td> <td>✅ <em>(after training)</em> </td> <td>⚠️ <em>(still emerging)</em> </td> </tr> </tbody> </table> <p class="table table-hover table-striped">This spectrum makes clear: there’s no one-size-fits-all for TSP. The correct method depends on problem size, constraints, and how much perfection you can afford to sacrifice for speed.</p> <h2 id="when-approximate-is-enough">“When Approximate is Enough”</h2> <blockquote> <p>When a near-optimal solution is sufficient, don’t let the pursuit of perfection get in the way of progress</p> </blockquote> <p>Of all existing approaches, metaheuristic algorithms scale better in practice because they are highly parallelization-friendly, unlike heuristics and local search, which are inherently more sequential. A metaheuristic is a higher-level, problem-independent strategy that guides problem-specific heuristics in the search for good solutions. These methods often combine randomness, memory, and adaptive rules to balance exploration and exploitation. While many metaheuristics are inspired by natural processes (e.g., evolution, swarm behavior, or physics), others are purely algorithmic. They typically produce near-optimal solutions, though they require parameter tuning and often benefit from multiple randomized initial starts.</p> <p>Some of the most common metaheuristic algorithms applied to the TSP include Ant Colony Optimization (ACO), Genetic Algorithms (GA), Simulated Annealing (SA), and Particle Swarm Optimization (PSO). Comparative studies (e.g., <a class="citation" href="#zhang2025comparative">[1]</a>) report that GA often achieves better computational efficiency, while ACO tends to yield higher-quality tours. However, a drawback of ACO is its tendency to stagnate in local minima. To address this, <a class="citation" href="#stutzle1999aco">[2]</a> proposed hybridization strategies, and subsequent work introduced the ACO–RFD hybrid, which leverages river flow dynamics to help ACO escape local optima and improve performance.</p> <p>With the rise of GPU computing, large-scale optimization problems can now be tackled more efficiently. We propose that the hybrid ACO–RFD algorithm can be further scaled on GPUs, enabling larger problem instances to be solved with significantly better performance.</p> <h2 id="turbocharging-hybrid-metaheuristics-with-gpus">Turbocharging Hybrid Metaheuristics with GPUs</h2> <p>In this work, we extended the hybrid Ant Colony Optimization–River Flow Dynamics (ACO–RFD) algorithm for solving the Traveling Salesman Problem (TSP) on GPUs. To achieve this, we introduced an ‘ant-drop’ entity that fuses ACO’s constructive speed with RFD’s resilience against local minima. We explored two GPU parallelization strategies: HB1 (task-parallel) and HB2 (combining task- and data-parallelism).</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/reports/ant_rfd_tsp/Picture12-320.webp 320w,/assets/reports/ant_rfd_tsp/Picture12-480.webp 480w,/assets/reports/ant_rfd_tsp/Picture12-800.webp 800w,/assets/reports/ant_rfd_tsp/Picture12-1280.webp 1280w," type="image/webp" sizes="95vw"></source> <img src="/assets/reports/ant_rfd_tsp/Picture12.png" class="img-fluid rounded z-depth-1 w-50 mx-auto d-block" width="100%" height="auto" title="overview image" loading="lazy" data-handle-error="remove-responsive-srcset"> </picture> </figure> </div> </div> <p><span class="caption"> Overview of proposed approach. </span></p> <p>Key outcomes of our work include:</p> <ul> <li> <strong>Improved solution quality</strong> compared to standalone ACO.</li> <li> <strong>Significant GPU speedups</strong> over serial and prior parallel versions, reaching full multiprocessor occupancy with HB2.</li> <li> <strong>HB2 (data-parallel strategy)</strong> proved most efficient, benefiting from shared memory usage and memory coalescing.</li> </ul> <h2 id="further-read">Further read</h2> <ul> <li>📄 <a href="/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank">Full Technical Report</a> </li> </ul> </div> </article> <h2>References</h2> <div class="publications"> <ol class="bibliography"> <li> <div class="row"> <div id="zhang2025comparative" class="col-sm-10"> <div class="title">Comparative Study of Ant Colony Algorithm and Genetic Algorithm in Path Planning</div> <div class="author"> Zhikun Zhang </div> <div class="periodical"> <em>In 2025 5th International Conference on Neural Networks, Information and Communication Engineering (NNICE)</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> </div> </div> </div> </li> <li> <div class="row"> <div id="stutzle1999aco" class="col-sm-10"> <div class="title">ACO algorithms for the traveling salesman problem</div> <div class="author"> Thomas Stützle, Marco Dorigo, and others </div> <div class="periodical"> <em>Evolutionary algorithms in engineering and computer science</em>, 1999 </div> <div class="periodical"> </div> <div class="links"> </div> </div> </div> </li> </ol> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 Ankit Shrivastava. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: December 24, 2025. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?53023e960fbc64cccb90d32e9363de2b"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js" integrity="sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script src="/assets/js/addbacktotop.js"></script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> <script src="/assets/js/default.js"></script> <script src="/assets/js/custom/navbar.js"></script> <script src="/assets/js/custom/hero.js"></script> </body> </html>
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+      integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css"
+      integrity="sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"
+      />
+      <link
+        rel="stylesheet"
+        href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"
+      />
+    </noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Roboto+Slab:wght@400;700&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"
+      media="print"
+      onload="this.media = 'all'"
+      id="highlight_theme_light"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"
+    /></noscript>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.ico?26a5b7cc44c793898adee5e9395e9cb0"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"
+    />
+    <link
+      rel="canonical"
+      href="https://www.ashriva.in/projects/6_ant_rfd_tsp/"
+    />
+    <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script>
+    <link
+      rel="stylesheet"
+      href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca"
+      media="none"
+      id="highlight_theme_dark"
+    />
+  </head>
+  <body class="fixed-top-nav posts">
+    <header>
+      <nav
+        id="navbar"
+        class="navbar navbar-light navbar-expand-md fixed-top"
+        role="navigation"
+      >
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/">
+            <span class="font-weight-bold">Ankit</span> Shrivastava
+          </a>
+          <button
+            class="navbar-toggler collapsed ml-auto"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+              <li class="nav-item"><a class="nav-link" href="/">About </a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/background/">Background </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/projects/index.html">Projects </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/posts/index.html">Blog </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/publications/">Publications </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/activities/">Events </a>
+              </li>
+              <li class="nav-item">
+                <button id="search-toggle" title="Search">
+                  <span class="nav-link"
+                    >ctrl+k<i class="ti ti-search"></i
+                  ></span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <progress
+        id="progress"
+        value="0"
+        max="100"
+        role="presentation"
+        aria-hidden="true"
+      >
+        <div class="progress-container"><span class="progress-bar"></span></div>
+      </progress>
+    </header>
+    <div class="container mt-5" role="main">
+      <div class="post">
+        <header class="post-header">
+          <p class="post-meta">
+            <span class="read-time">4 min read</span>
+            <span class="dot-separator"> · </span>
+          </p>
+          <h1 class="post-title">Metaheuristics Optimization on CUDA</h1>
+          <p class="post-meta">Created on April 01, 2016</p>
+          <p class="post-tags">
+            <i class="fa-solid fa-calendar fa-sm"></i> 2016   ·  
+            <i class="fa-solid fa-hashtag fa-sm"></i> Optimization  
+            <i class="fa-solid fa-hashtag fa-sm"></i> CUDA   ·  
+            <i class="fa-solid fa-tag fa-sm"></i> High Performance Computing
+          </p>
+        </header>
+        <article class="post-content">
+          <div id="markdown-content">
+            <p
+              align="center"
+              style="display: inline-flex; flex-wrap: wrap; gap: 6px"
+            >
+              <img
+                src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/CUDA-76B900?style=flat&amp;logo=nvidia&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"
+              />
+            </p>
+            <h2 id="the-travelling-salesmans-dilemma">
+              The Travelling Salesman’s Dilemma
+            </h2>
+            <p>
+              Imagine a pizza delivery driver with orders to drop off at 5
+              different locations across town. The challenge for the driver is
+              to find the most efficient route that covers every stop once. This
+              is a classic operations research and computer science puzzle,
+              famously known as the Travelling Salesman Problem (TSP). Finding
+              the perfect route for the pizza delivery guy may be easy with just
+              a few stops. Still, as the number of locations grows, it quickly
+              becomes challenging to figure out the best path.
+            </p>
+            <p>
+              The TSP shows up in many industrial and scientific applications
+              whenever efficiency matters. For example
+            </p>
+            <ul>
+              <li>
+                <strong>Manufacturing &amp; Supply Chains</strong>: Scheduling
+                movement of goods between machines, warehouse picking routes,
+                and distribution planning.
+              </li>
+              <li>
+                <strong>Astronomy</strong>: Telescopes optimize the order of
+                star or planet observations to minimize the time spent
+                repositioning.
+              </li>
+              <li>
+                <strong>3D Printing &amp; Chip Design</strong>: Printers and
+                circuit designers plan paths that reduce wasted motion, speeding
+                up manufacturing.
+              </li>
+            </ul>
+            <p>
+              In today’s competitive environment, this route optimization isn’t
+              just an academic puzzle but also an essential problem for cost
+              optimization, sustainability, and better customer experience. So
+              how do we actually solve such a complex problem?
+            </p>
+            <h2 id="hacking-the-tsp">Hacking the TSP</h2>
+            <p>
+              A variety of strategies exist to tackle the TSP, such as exact
+              optimization, rule-based heuristics, local search, metaheuristics,
+              and emerging learning-based models. Each takes a different path to
+              balance speed and solution quality, as summarized below.
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th><strong>Approach</strong></th>
+                  <th><strong>What it Does</strong></th>
+                  <th><strong>Scalability</strong></th>
+                  <th><strong>Quality</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Exact Methods</td>
+                  <td>
+                    Guarantee shortest route (dynamic programming, ILP,
+                    Concorde)
+                  </td>
+                  <td>❌</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <td>Heuristics</td>
+                  <td>Quick rules (e.g., nearest neighbor, Christofides)</td>
+                  <td>✅</td>
+                  <td>❌</td>
+                </tr>
+                <tr>
+                  <td>Local Search</td>
+                  <td>Improves routes step by step (2-opt, 3-opt, LK)</td>
+                  <td>✅</td>
+                  <td>⚠️ <em>(good, but not global)</em></td>
+                </tr>
+                <tr>
+                  <td>Metaheuristics</td>
+                  <td>Nature-inspired (GA, SA, ACO, RFD, Tabu)</td>
+                  <td>✅</td>
+                  <td>✅</td>
+                </tr>
+                <tr>
+                  <td>Learning-Based</td>
+                  <td>AI/ML learns routing patterns (RL, GNNs)</td>
+                  <td>✅ <em>(after training)</em></td>
+                  <td>⚠️ <em>(still emerging)</em></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table table-hover table-striped">
+              This spectrum makes clear: there’s no one-size-fits-all for TSP.
+              The correct method depends on problem size, constraints, and how
+              much perfection you can afford to sacrifice for speed.
+            </p>
+            <h2 id="when-approximate-is-enough">
+              “When Approximate is Enough”
+            </h2>
+            <blockquote>
+              <p>
+                When a near-optimal solution is sufficient, don’t let the
+                pursuit of perfection get in the way of progress
+              </p>
+            </blockquote>
+            <p>
+              Of all existing approaches, metaheuristic algorithms scale better
+              in practice because they are highly parallelization-friendly,
+              unlike heuristics and local search, which are inherently more
+              sequential. A metaheuristic is a higher-level, problem-independent
+              strategy that guides problem-specific heuristics in the search for
+              good solutions. These methods often combine randomness, memory,
+              and adaptive rules to balance exploration and exploitation. While
+              many metaheuristics are inspired by natural processes (e.g.,
+              evolution, swarm behavior, or physics), others are purely
+              algorithmic. They typically produce near-optimal solutions, though
+              they require parameter tuning and often benefit from multiple
+              randomized initial starts.
+            </p>
+            <p>
+              Some of the most common metaheuristic algorithms applied to the
+              TSP include Ant Colony Optimization (ACO), Genetic Algorithms
+              (GA), Simulated Annealing (SA), and Particle Swarm Optimization
+              (PSO). Comparative studies (e.g.,
+              <a class="citation" href="#zhang2025comparative">[1]</a>) report
+              that GA often achieves better computational efficiency, while ACO
+              tends to yield higher-quality tours. However, a drawback of ACO is
+              its tendency to stagnate in local minima. To address this,
+              <a class="citation" href="#stutzle1999aco">[2]</a> proposed
+              hybridization strategies, and subsequent work introduced the
+              ACO–RFD hybrid, which leverages river flow dynamics to help ACO
+              escape local optima and improve performance.
+            </p>
+            <p>
+              With the rise of GPU computing, large-scale optimization problems
+              can now be tackled more efficiently. We propose that the hybrid
+              ACO–RFD algorithm can be further scaled on GPUs, enabling larger
+              problem instances to be solved with significantly better
+              performance.
+            </p>
+            <h2 id="turbocharging-hybrid-metaheuristics-with-gpus">
+              Turbocharging Hybrid Metaheuristics with GPUs
+            </h2>
+            <p>
+              In this work, we extended the hybrid Ant Colony Optimization–River
+              Flow Dynamics (ACO–RFD) algorithm for solving the Traveling
+              Salesman Problem (TSP) on GPUs. To achieve this, we introduced an
+              ‘ant-drop’ entity that fuses ACO’s constructive speed with RFD’s
+              resilience against local minima. We explored two GPU
+              parallelization strategies: HB1 (task-parallel) and HB2 (combining
+              task- and data-parallelism).
+            </p>
+            <div class="row">
+              <div class="col-sm mt-3 mt-md-0">
+                <figure>
+                  <picture>
+                    <source
+                      class="responsive-img-srcset"
+                      srcset="
+                        /assets/reports/ant_rfd_tsp/Picture12-320.webp   320w,
+                        /assets/reports/ant_rfd_tsp/Picture12-480.webp   480w,
+                        /assets/reports/ant_rfd_tsp/Picture12-800.webp   800w,
+                        /assets/reports/ant_rfd_tsp/Picture12-1280.webp 1280w
+                      "
+                      type="image/webp"
+                      sizes="95vw"
+                    />
+                    <img
+                      src="/assets/reports/ant_rfd_tsp/Picture12.png"
+                      class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"
+                      width="100%"
+                      height="auto"
+                      title="overview image"
+                      loading="lazy"
+                      data-handle-error="remove-responsive-srcset"
+                    />
+                  </picture>
+                </figure>
+              </div>
+            </div>
+            <p><span class="caption"> Overview of proposed approach. </span></p>
+            <p>Key outcomes of our work include:</p>
+            <ul>
+              <li>
+                <strong>Improved solution quality</strong> compared to
+                standalone ACO.
+              </li>
+              <li>
+                <strong>Significant GPU speedups</strong> over serial and prior
+                parallel versions, reaching full multiprocessor occupancy with
+                HB2.
+              </li>
+              <li>
+                <strong>HB2 (data-parallel strategy)</strong> proved most
+                efficient, benefiting from shared memory usage and memory
+                coalescing.
+              </li>
+            </ul>
+            <h2 id="further-read">Further read</h2>
+            <ul>
+              <li>
+                📄
+                <a
+                  href="/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf"
+                  target="_blank"
+                  >Full Technical Report</a
+                >
+              </li>
+            </ul>
+          </div>
+        </article>
+        <h2>References</h2>
+        <div class="publications">
+          <ol class="bibliography">
+            <li>
+              <div class="row">
+                <div id="zhang2025comparative" class="col-sm-10">
+                  <div class="title">
+                    Comparative Study of Ant Colony Algorithm and Genetic
+                    Algorithm in Path Planning
+                  </div>
+                  <div class="author">Zhikun Zhang</div>
+                  <div class="periodical">
+                    <em
+                      >In 2025 5th International Conference on Neural Networks,
+                      Information and Communication Engineering (NNICE)</em
+                    >, 2025
+                  </div>
+                  <div class="periodical"></div>
+                  <div class="links"></div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div id="stutzle1999aco" class="col-sm-10">
+                  <div class="title">
+                    ACO algorithms for the traveling salesman problem
+                  </div>
+                  <div class="author">
+                    Thomas Stützle, Marco Dorigo, and others
+                  </div>
+                  <div class="periodical">
+                    <em
+                      >Evolutionary algorithms in engineering and computer
+                      science</em
+                    >, 1999
+                  </div>
+                  <div class="periodical"></div>
+                  <div class="links"></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <footer class="fixed-bottom" role="contentinfo">
+      <div class="container mt-0">
+        © Copyright 2025 Ankit Shrivastava. Powered by
+        <a
+          href="https://jekyllrb.com/"
+          target="_blank"
+          rel="external nofollow noopener"
+          >Jekyll</a
+        >
+        with
+        <a
+          href="https://github.com/alshedivat/al-folio"
+          rel="external nofollow noopener"
+          target="_blank"
+          >al-folio</a
+        >
+        theme. Hosted by
+        <a
+          href="https://pages.github.com/"
+          target="_blank"
+          rel="external nofollow noopener"
+          >GitHub Pages</a
+        >. Last updated: December 24, 2025.
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+      integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"
+      integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf"
+      type="text/javascript"
+    ></script>
+    <script src="/assets/js/tooltips-setup.js?53023e960fbc64cccb90d32e9363de2b"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+      integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"
+      integrity="sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
+    <script
+      defer
+      src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"
+    ></script>
+    <script
+      defer
+      src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df"
+      type="text/javascript"
+    ></script>
+    <script
+      defer
+      src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"
+    ></script>
+    <script
+      defer
+      src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a"
+      type="text/javascript"
+    ></script>
+    <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script>
+    <script src="/assets/js/addbacktotop.js"></script>
+    <script
+      type="module"
+      src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"
+    ></script>
+    <ninja-keys
+      hidebreadcrumbs
+      noautoloadmdicons
+      placeholder="Type to start searching"
+    ></ninja-keys>
+    <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script>
+    <script src="/assets/js/search-data.js"></script>
+    <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script>
+    <script src="/assets/js/default.js"></script>
+    <script src="/assets/js/custom/navbar.js"></script>
+    <script src="/assets/js/custom/hero.js"></script>
+  </body>
+</html>

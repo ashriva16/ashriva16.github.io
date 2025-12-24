@@ -1,31 +1,894 @@
-<!DOCTYPE html> <html lang="en" data-theme="dark"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="5RskK5M5U6_SdMV90abtTG4vlBwkVG5sXltlDuh8U3Q"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Semantic Similarity Using NLP | Ankit Shrivastava </title> <meta name="author" content="Ankit Shrivastava"> <meta name="description" content="Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures"> <meta name="keywords" content="machine learning, scientific computing, uncertainty quantification"> <meta property="og:site_name" content="Ankit Shrivastava"> <meta property="og:type" content="website"> <meta property="og:title" content="Ankit Shrivastava | Semantic Similarity Using NLP"> <meta property="og:url" content="https://www.ashriva.in/projects/8_siames_lstm/"> <meta property="og:description" content="Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Semantic Similarity Using NLP"> <meta name="twitter:description" content="Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures"> <script type="application/ld+json">
-    {
-        "author":
-        {
-            "@type": "Person",
-            "name": "Ankit Shrivastava"
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="5RskK5M5U6_SdMV90abtTG4vlBwkVG5sXltlDuh8U3Q"
+    />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Semantic Similarity Using NLP | Ankit Shrivastava</title>
+    <meta name="author" content="Ankit Shrivastava" />
+    <meta
+      name="description"
+      content="Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures"
+    />
+    <meta
+      name="keywords"
+      content="machine learning, scientific computing, uncertainty quantification"
+    />
+    <meta property="og:site_name" content="Ankit Shrivastava" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ankit Shrivastava | Semantic Similarity Using NLP"
+    />
+    <meta
+      property="og:url"
+      content="https://www.ashriva.in/projects/8_siames_lstm/"
+    />
+    <meta
+      property="og:description"
+      content="Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures"
+    />
+    <meta property="og:locale" content="en" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Semantic Similarity Using NLP" />
+    <meta
+      name="twitter:description"
+      content="Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures"
+    />
+    <script type="application/ld+json">
+      {
+        "author": {
+          "@type": "Person",
+          "name": "Ankit Shrivastava"
         },
         "url": "https://www.ashriva.in/projects/8_siames_lstm/",
         "@type": "WebSite",
         "description": "Built deep learning models to detect when two sentences mean the same thing, using word embeddings and Siamese LSTM architectures",
         "headline": "Semantic Similarity Using NLP",
-        
-        "sameAs": ["https://github.com/ashriva16","https://www.linkedin.com/in/ashriva16","https://orcid.org/0000-0003-4445-8817","https://scholar.google.com/citations?user=Zx4v13gAAAAJ\u0026hl=en"],
-        
+
+        "sameAs": [
+          "https://github.com/ashriva16",
+          "https://www.linkedin.com/in/ashriva16",
+          "https://orcid.org/0000-0003-4445-8817",
+          "https://scholar.google.com/citations?user=Zx4v13gAAAAJ\u0026hl=en"
+        ],
+
         "name": "Ankit Shrivastava",
         "@context": "https://schema.org"
-    }
-  </script> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin> <link rel="dns-prefetch" href="https://fonts.googleapis.com"> <link rel="dns-prefetch" href="https://fonts.gstatic.com"> <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css" integrity="sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c=" crossorigin="anonymous"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5" media="print" onload="this.media='all'"> <link rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772" media="print" onload="this.media='all'"> <noscript> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> </noscript> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Roboto+Slab:wght@400;700&amp;display=swap"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="print" onload="this.media='all'" id="highlight_theme_light"> <noscript><link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"></noscript> <link rel="shortcut icon" href="/assets/img/favicon.ico?26a5b7cc44c793898adee5e9395e9cb0"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://www.ashriva.in/projects/8_siames_lstm/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> </head> <body class="fixed-top-nav posts"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Ankit</span> Shrivastava </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/background/">Background </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/index.html">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/posts/index.html">Blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/activities/">Events </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search"> <span class="nav-link">ctrl+k<i class="ti ti-search"></i></span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0" max="100" role="presentation" aria-hidden="true"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <p class="post-meta"> <span class="read-time">9 min read</span> <span class="dot-separator"> · </span> </p> <h1 class="post-title">Semantic Similarity Using NLP</h1> <p class="post-meta"> Created on December 01, 2018 </p> <p class="post-tags"> <i class="fa-solid fa-calendar fa-sm"></i> 2018   ·   <i class="fa-solid fa-hashtag fa-sm"></i> Natural Language Processing   ·   <i class="fa-solid fa-tag fa-sm"></i> Deep Learning </p> </header> <article class="post-content"> <div id="markdown-content"> <p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"> <img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"> </p> <p>This project explores how machines can understand when two sentences mean the same thing, even if they use different words. Using word and sentence embeddings, we built models that capture semantic equivalence beyond simple keyword overlap. We compare classical baselines with Siamese LSTM and BiMPM architectures on the Quora Question Pairs dataset.</p> <h2 id="when-meaning-matters-more-than-words">When Meaning Matters More Than Words</h2> <p>Human language enables people to convey the same meaning (semantic equivalence) in numerous ways, such as through different words, sentence structures, or regional phrasing. For instance:</p> <blockquote> <p>“Which smartphone takes the best photos?” <br> “What phone has the highest camera quality?”</p> </blockquote> <p>Both questions convey the exact intent yet share only a few words in common. This variation extends across regions as well:</p> <blockquote> <p>🇬🇧 “Can we bring the meeting forward?” <br> 🇺🇸 “Can we move the meeting up?” <br> 🇮🇳 “Can we prepone the meeting?” (Indian English for ‘move earlier’)</p> </blockquote> <p>Humans effortlessly recognize these as identical in meaning. For machines, however, this semantic equivalence is far from obvious. The ability to detect such equivalence offers several key advantages:</p> <ul> <li> <p><strong>Improved Search</strong>: Groups sentences or documents with the same meaning, making it easier for users to find all relevant answers in one place and helping writers reach a broader audience.</p> </li> <li> <p><strong>Smarter Chatbots</strong>: Recognizes when users phrase the same question in different ways, enabling more natural and accurate responses.</p> </li> <li> <p><strong>Deeper Language Understanding</strong>: Supports advanced tasks such as summarization, comparison, and translation by capturing the true meaning behind words and phrases.</p> </li> </ul> <p>The challenge is to build an algorithm that compares <strong>meaning</strong>, not just match words.</p> <h2 id="comparing-meaning-is-a-two-step-process">Comparing Meaning is a Two-Step Process</h2> <p>The basic structure of algorithms measuring semantic similarity follows a straightforward process: first, represent the meanings of sentences or phrases in a form that machines can process; second, compare these representations to evaluate similarity. This goal has two steps.</p> <ol> <li> <p><strong><u>Representation: Turning Meaning into Numbers</u></strong> Machines don’t understand words directly, so the first step is to represent language as numbers. This step converts words and sentences into numerical forms that preserve their meaning, often using data from documents, web pages, or dictionaries.</p> </li> <li> <p><strong><u>Comparison: Measuring the Similarity Between Meanings</u></strong></p> </li> </ol> <p>Comparison concerns how these representations are evaluated to measure similarity. It determines whether two sentences express ideas that are close in meaning, even if their words differ.</p> <h3 id="representation-of-words">Representation of Words</h3> <blockquote> <p>The goal of representation is to convert raw text into numerical form so that machines can capture and reason about meaning.</p> </blockquote> <pre><code class="language-mermaid">flowchart LR
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css"
+      integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.css"
+      integrity="sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"
+      />
+      <link
+        rel="stylesheet"
+        href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"
+      />
+    </noscript>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Roboto+Slab:wght@400;700&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"
+      media="print"
+      onload="this.media = 'all'"
+      id="highlight_theme_light"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99"
+    /></noscript>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/favicon.ico?26a5b7cc44c793898adee5e9395e9cb0"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"
+    />
+    <link
+      rel="canonical"
+      href="https://www.ashriva.in/projects/8_siames_lstm/"
+    />
+    <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script>
+    <link
+      rel="stylesheet"
+      href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca"
+      media="none"
+      id="highlight_theme_dark"
+    />
+  </head>
+  <body class="fixed-top-nav posts">
+    <header>
+      <nav
+        id="navbar"
+        class="navbar navbar-light navbar-expand-md fixed-top"
+        role="navigation"
+      >
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/">
+            <span class="font-weight-bold">Ankit</span> Shrivastava
+          </a>
+          <button
+            class="navbar-toggler collapsed ml-auto"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+              <li class="nav-item"><a class="nav-link" href="/">About </a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/background/">Background </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/projects/index.html">Projects </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/posts/index.html">Blog </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/publications/">Publications </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/activities/">Events </a>
+              </li>
+              <li class="nav-item">
+                <button id="search-toggle" title="Search">
+                  <span class="nav-link"
+                    >ctrl+k<i class="ti ti-search"></i
+                  ></span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <progress
+        id="progress"
+        value="0"
+        max="100"
+        role="presentation"
+        aria-hidden="true"
+      >
+        <div class="progress-container"><span class="progress-bar"></span></div>
+      </progress>
+    </header>
+    <div class="container mt-5" role="main">
+      <div class="post">
+        <header class="post-header">
+          <p class="post-meta">
+            <span class="read-time">9 min read</span>
+            <span class="dot-separator"> · </span>
+          </p>
+          <h1 class="post-title">Semantic Similarity Using NLP</h1>
+          <p class="post-meta">Created on December 01, 2018</p>
+          <p class="post-tags">
+            <i class="fa-solid fa-calendar fa-sm"></i> 2018   ·  
+            <i class="fa-solid fa-hashtag fa-sm"></i> Natural Language
+            Processing   ·   <i class="fa-solid fa-tag fa-sm"></i> Deep Learning
+          </p>
+        </header>
+        <article class="post-content">
+          <div id="markdown-content">
+            <p
+              align="center"
+              style="display: inline-flex; flex-wrap: wrap; gap: 6px"
+            >
+              <img
+                src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"
+              />
+              <img
+                src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"
+              />
+            </p>
+            <p>
+              This project explores how machines can understand when two
+              sentences mean the same thing, even if they use different words.
+              Using word and sentence embeddings, we built models that capture
+              semantic equivalence beyond simple keyword overlap. We compare
+              classical baselines with Siamese LSTM and BiMPM architectures on
+              the Quora Question Pairs dataset.
+            </p>
+            <h2 id="when-meaning-matters-more-than-words">
+              When Meaning Matters More Than Words
+            </h2>
+            <p>
+              Human language enables people to convey the same meaning (semantic
+              equivalence) in numerous ways, such as through different words,
+              sentence structures, or regional phrasing. For instance:
+            </p>
+            <blockquote>
+              <p>
+                “Which smartphone takes the best photos?” <br />
+                “What phone has the highest camera quality?”
+              </p>
+            </blockquote>
+            <p>
+              Both questions convey the exact intent yet share only a few words
+              in common. This variation extends across regions as well:
+            </p>
+            <blockquote>
+              <p>
+                🇬🇧 “Can we bring the meeting forward?” <br />
+                🇺🇸 “Can we move the meeting up?” <br />
+                🇮🇳 “Can we prepone the meeting?” (Indian English for ‘move
+                earlier’)
+              </p>
+            </blockquote>
+            <p>
+              Humans effortlessly recognize these as identical in meaning. For
+              machines, however, this semantic equivalence is far from obvious.
+              The ability to detect such equivalence offers several key
+              advantages:
+            </p>
+            <ul>
+              <li>
+                <p>
+                  <strong>Improved Search</strong>: Groups sentences or
+                  documents with the same meaning, making it easier for users to
+                  find all relevant answers in one place and helping writers
+                  reach a broader audience.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Smarter Chatbots</strong>: Recognizes when users
+                  phrase the same question in different ways, enabling more
+                  natural and accurate responses.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Deeper Language Understanding</strong>: Supports
+                  advanced tasks such as summarization, comparison, and
+                  translation by capturing the true meaning behind words and
+                  phrases.
+                </p>
+              </li>
+            </ul>
+            <p>
+              The challenge is to build an algorithm that compares
+              <strong>meaning</strong>, not just match words.
+            </p>
+            <h2 id="comparing-meaning-is-a-two-step-process">
+              Comparing Meaning is a Two-Step Process
+            </h2>
+            <p>
+              The basic structure of algorithms measuring semantic similarity
+              follows a straightforward process: first, represent the meanings
+              of sentences or phrases in a form that machines can process;
+              second, compare these representations to evaluate similarity. This
+              goal has two steps.
+            </p>
+            <ol>
+              <li>
+                <p>
+                  <strong
+                    ><u>Representation: Turning Meaning into Numbers</u></strong
+                  >
+                  Machines don’t understand words directly, so the first step is
+                  to represent language as numbers. This step converts words and
+                  sentences into numerical forms that preserve their meaning,
+                  often using data from documents, web pages, or dictionaries.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong
+                    ><u
+                      >Comparison: Measuring the Similarity Between Meanings</u
+                    ></strong
+                  >
+                </p>
+              </li>
+            </ol>
+            <p>
+              Comparison concerns how these representations are evaluated to
+              measure similarity. It determines whether two sentences express
+              ideas that are close in meaning, even if their words differ.
+            </p>
+            <h3 id="representation-of-words">Representation of Words</h3>
+            <blockquote>
+              <p>
+                The goal of representation is to convert raw text into numerical
+                form so that machines can capture and reason about meaning.
+              </p>
+            </blockquote>
+            <pre><code class="language-mermaid">flowchart LR
  Text --&gt; P[Preprocess]
  P --&gt; B[Tokenize]
  B --&gt; C[Build context]
  C --&gt; D[Train Embedding]
  D --&gt; O[Embedding]
-</code></pre> <p class="text-center text-muted"><em>Figure 1. The steps of converting raw text to machine representation.</em></p> <p>As shown in Figure 1, the steps are as follows:</p> <ol> <li> <strong>Collect and Prepare Text Data</strong> <ul> <li>Gather a large text corpus (e.g., Wikipedia, news, or domain-specific data).</li> <li>Clean the text by removing punctuation, numbers, and special symbols.</li> <li>Convert to lowercase and optionally remove stopwords.</li> </ul> </li> <li> <strong>Tokenization</strong> <ul> <li> <p>Split text into smaller units (<strong>tokens</strong>) such as words, subwords, or characters.</p> <table> <thead> <tr> <th>Tokenization Type</th> <th>Example Tokens</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><strong>Word-level</strong></td> <td><code class="language-plaintext highlighter-rouge">["The", "king", "ate", "an", "apple"]</code></td> <td>Treats each word as a separate token. Simple and intuitive, but fails on rare or unseen words.</td> </tr> <tr> <td><strong>Character-level</strong></td> <td><code class="language-plaintext highlighter-rouge">["T", "h", "e", " ", "k", "i", "n", "g", ...]</code></td> <td>Splits text into individual characters. Helps handle typos but loses word-level meaning.</td> </tr> <tr> <td><strong>Subword-level</strong></td> <td><code class="language-plaintext highlighter-rouge">["The", "king", "ate", "an", "app", "le"]</code></td> <td>Breaks rare words into frequent parts (e.g., <em>“app”</em> + <em>“le”</em>). Handles vocabulary growth efficiently.</td> </tr> <tr> <td><strong>n-gram tokens</strong></td> <td> <em>Bigrams:</em> <code class="language-plaintext highlighter-rouge">["The king", "king ate", "ate an", "an apple"]</code> </td> <td>Combines <em>n</em> consecutive words to capture local context and co-occurrence patterns. Vocabulary grows quickly as <em>n</em> increases.</td> </tr> </tbody> </table> <p class="text-center text-muted"><em>Table 1. Tokenization of words.</em></p> <p>Each method reflects a trade-off between granularity (how small the pieces are) and context capture (how much relational meaning is retained).</p> </li> <li> <p>Build a <strong>vocabulary</strong>, the list of all unique tokens in the dataset.</p> </li> </ul> </li> <li> <strong>Define Context</strong> Decide how words “co-occur” in sentences, for example <ul> <li> <strong>Word2Vec:</strong> Uses a sliding context window around each word.</li> <li> <strong>GloVe:</strong> Builds a co-occurrence matrix counting how often words appear together.</li> </ul> </li> <li> <strong>Train the Embedding Model</strong> Learn numeric representations that capture semantic relationships between words. This means that words with similar meanings are placed close together in vector space. Common algorithms include: <ul> <li>Word2Vec: Learns by predicting a word from its surrounding context using a shallow neural network (CBOW or Skip-gram).</li> <li>GloVe: Learns by reconstructing how frequently words appear together across the entire text corpus using weighted least-squares regression.</li> <li>FastText / BERT: Learn richer subword or contextual embeddings that consider how a word’s meaning changes depending on the sentence (used in transformer-based models).</li> </ul> </li> <li> <strong>Extract and Store Embeddings</strong> <ul> <li>Save the learned vectors (e.g., 300-dimensional arrays).</li> <li>Each word is represented as a numerical vector capturing meaning:</li> </ul> </li> </ol> <blockquote> <p>“king” → [0.21, 0.35, -0.14, …]</p> <p>“queen” → [0.19, 0.36, -0.12, …]</p> </blockquote> <h3 id="representation-of-sentences-meaning-beyond-words">Representation of Sentences: Meaning Beyond Words</h3> <p>After converting each word into numbers, the next step is to understand how words combine to form the meaning of a sentence.</p> <p>Words depend on context — the same word can mean different things. For example:</p> <ul> <li>In “apple pie,” apple means food.</li> <li>In “Apple released a new iPhone,” it means the company.</li> </ul> <p>While embeddings capture word meaning, we also need to capture how words relate to each other in a sentence. For instance, “The king ate an apple” and “The queen ate a fruit” express similar ideas even though they use different words.</p> <p>Some simple approaches include:</p> <ul> <li>Averaging word embeddings: take the mean of all word vectors in a sentence.</li> <li>Weighted averaging: give more importance to key words (e.g., nouns or verbs).</li> <li>Concatenation: join word vectors in order (valid for short phrases).</li> </ul> <p>These basic methods ignore word order and context. A slight improvement over simple averaging is the <strong>moving average</strong>, which smooths each word’s meaning with that of its nearby words using a sliding window.</p> <p>Formally, for a target word ( w_t ) in a sentence, its contextual representation can be estimated by averaging the embeddings of the words within a surrounding window of size ( W ):</p> \[\tilde{\mathbf{e}}(w_t) = \frac{1}{2W+1}\sum_{j=t-W}^{t+W}\mathbf{e}(w_j)\] <p>This approach captures limited local context by blending information from neighboring words, providing a smoother representation without requiring a complex model.</p> <p>While the moving average captures only local context, it cannot understand word order or long-range meaning. To model how information flows across a sentence, we use sequential models such as Recurrent Neural Networks and their improved form, the Long Short-Term Memory (LSTM) network.</p> <pre><code class="language-mermaid">flowchart LR
+</code></pre>
+            <p class="text-center text-muted">
+              <em
+                >Figure 1. The steps of converting raw text to machine
+                representation.</em
+              >
+            </p>
+            <p>As shown in Figure 1, the steps are as follows:</p>
+            <ol>
+              <li>
+                <strong>Collect and Prepare Text Data</strong>
+                <ul>
+                  <li>
+                    Gather a large text corpus (e.g., Wikipedia, news, or
+                    domain-specific data).
+                  </li>
+                  <li>
+                    Clean the text by removing punctuation, numbers, and special
+                    symbols.
+                  </li>
+                  <li>Convert to lowercase and optionally remove stopwords.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Tokenization</strong>
+                <ul>
+                  <li>
+                    <p>
+                      Split text into smaller units (<strong>tokens</strong>)
+                      such as words, subwords, or characters.
+                    </p>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Tokenization Type</th>
+                          <th>Example Tokens</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Word-level</strong></td>
+                          <td>
+                            <code class="language-plaintext highlighter-rouge"
+                              >["The", "king", "ate", "an", "apple"]</code
+                            >
+                          </td>
+                          <td>
+                            Treats each word as a separate token. Simple and
+                            intuitive, but fails on rare or unseen words.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Character-level</strong></td>
+                          <td>
+                            <code class="language-plaintext highlighter-rouge"
+                              >["T", "h", "e", " ", "k", "i", "n", "g",
+                              ...]</code
+                            >
+                          </td>
+                          <td>
+                            Splits text into individual characters. Helps handle
+                            typos but loses word-level meaning.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Subword-level</strong></td>
+                          <td>
+                            <code class="language-plaintext highlighter-rouge"
+                              >["The", "king", "ate", "an", "app", "le"]</code
+                            >
+                          </td>
+                          <td>
+                            Breaks rare words into frequent parts (e.g.,
+                            <em>“app”</em> + <em>“le”</em>). Handles vocabulary
+                            growth efficiently.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>n-gram tokens</strong></td>
+                          <td>
+                            <em>Bigrams:</em>
+                            <code class="language-plaintext highlighter-rouge"
+                              >["The king", "king ate", "ate an", "an
+                              apple"]</code
+                            >
+                          </td>
+                          <td>
+                            Combines <em>n</em> consecutive words to capture
+                            local context and co-occurrence patterns. Vocabulary
+                            grows quickly as <em>n</em> increases.
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="text-center text-muted">
+                      <em>Table 1. Tokenization of words.</em>
+                    </p>
+                    <p>
+                      Each method reflects a trade-off between granularity (how
+                      small the pieces are) and context capture (how much
+                      relational meaning is retained).
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Build a <strong>vocabulary</strong>, the list of all
+                      unique tokens in the dataset.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Define Context</strong> Decide how words “co-occur” in
+                sentences, for example
+                <ul>
+                  <li>
+                    <strong>Word2Vec:</strong> Uses a sliding context window
+                    around each word.
+                  </li>
+                  <li>
+                    <strong>GloVe:</strong> Builds a co-occurrence matrix
+                    counting how often words appear together.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Train the Embedding Model</strong> Learn numeric
+                representations that capture semantic relationships between
+                words. This means that words with similar meanings are placed
+                close together in vector space. Common algorithms include:
+                <ul>
+                  <li>
+                    Word2Vec: Learns by predicting a word from its surrounding
+                    context using a shallow neural network (CBOW or Skip-gram).
+                  </li>
+                  <li>
+                    GloVe: Learns by reconstructing how frequently words appear
+                    together across the entire text corpus using weighted
+                    least-squares regression.
+                  </li>
+                  <li>
+                    FastText / BERT: Learn richer subword or contextual
+                    embeddings that consider how a word’s meaning changes
+                    depending on the sentence (used in transformer-based
+                    models).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Extract and Store Embeddings</strong>
+                <ul>
+                  <li>
+                    Save the learned vectors (e.g., 300-dimensional arrays).
+                  </li>
+                  <li>
+                    Each word is represented as a numerical vector capturing
+                    meaning:
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <blockquote>
+              <p>“king” → [0.21, 0.35, -0.14, …]</p>
+              <p>“queen” → [0.19, 0.36, -0.12, …]</p>
+            </blockquote>
+            <h3 id="representation-of-sentences-meaning-beyond-words">
+              Representation of Sentences: Meaning Beyond Words
+            </h3>
+            <p>
+              After converting each word into numbers, the next step is to
+              understand how words combine to form the meaning of a sentence.
+            </p>
+            <p>
+              Words depend on context — the same word can mean different things.
+              For example:
+            </p>
+            <ul>
+              <li>In “apple pie,” apple means food.</li>
+              <li>In “Apple released a new iPhone,” it means the company.</li>
+            </ul>
+            <p>
+              While embeddings capture word meaning, we also need to capture how
+              words relate to each other in a sentence. For instance, “The king
+              ate an apple” and “The queen ate a fruit” express similar ideas
+              even though they use different words.
+            </p>
+            <p>Some simple approaches include:</p>
+            <ul>
+              <li>
+                Averaging word embeddings: take the mean of all word vectors in
+                a sentence.
+              </li>
+              <li>
+                Weighted averaging: give more importance to key words (e.g.,
+                nouns or verbs).
+              </li>
+              <li>
+                Concatenation: join word vectors in order (valid for short
+                phrases).
+              </li>
+            </ul>
+            <p>
+              These basic methods ignore word order and context. A slight
+              improvement over simple averaging is the
+              <strong>moving average</strong>, which smooths each word’s meaning
+              with that of its nearby words using a sliding window.
+            </p>
+            <p>
+              Formally, for a target word ( w_t ) in a sentence, its contextual
+              representation can be estimated by averaging the embeddings of the
+              words within a surrounding window of size ( W ):
+            </p>
+            \[\tilde{\mathbf{e}}(w_t) =
+            \frac{1}{2W+1}\sum_{j=t-W}^{t+W}\mathbf{e}(w_j)\]
+            <p>
+              This approach captures limited local context by blending
+              information from neighboring words, providing a smoother
+              representation without requiring a complex model.
+            </p>
+            <p>
+              While the moving average captures only local context, it cannot
+              understand word order or long-range meaning. To model how
+              information flows across a sentence, we use sequential models such
+              as Recurrent Neural Networks and their improved form, the Long
+              Short-Term Memory (LSTM) network.
+            </p>
+            <pre><code class="language-mermaid">flowchart LR
  A[Word Embedding] --&gt; P[Context capture]
  P --&gt; B[sentence Embedding]
-</code></pre> <p class="text-center text-muted"><em>Figure 2. The steps of obtaining a machine representation of sentences.</em></p> <p>Hence, after word embedding, the next step is to model how words relate to one another in a sequence, so that the overall meaning of a sentence or phrase can be understood.</p> <h3 id="metrics-to-measure-sentence-similarity">Metrics to measure sentence similarity</h3> <p>Once sentence embeddings are obtained, the next step is to compare the similarity between two sentences. Several metrics can be used for this purpose, such as cosine similarity, Euclidean distance, or Manhattan distance, each providing a way to measure the degree of semantic similarity between sentence vectors.</p> <pre><code class="language-mermaid">flowchart LR
+</code></pre>
+            <p class="text-center text-muted">
+              <em
+                >Figure 2. The steps of obtaining a machine representation of
+                sentences.</em
+              >
+            </p>
+            <p>
+              Hence, after word embedding, the next step is to model how words
+              relate to one another in a sequence, so that the overall meaning
+              of a sentence or phrase can be understood.
+            </p>
+            <h3 id="metrics-to-measure-sentence-similarity">
+              Metrics to measure sentence similarity
+            </h3>
+            <p>
+              Once sentence embeddings are obtained, the next step is to compare
+              the similarity between two sentences. Several metrics can be used
+              for this purpose, such as cosine similarity, Euclidean distance,
+              or Manhattan distance, each providing a way to measure the degree
+              of semantic similarity between sentence vectors.
+            </p>
+            <pre><code class="language-mermaid">flowchart LR
  A[Sentence 1 Embedding] --&gt; P[Compare Similarity]
  B[Sentence 2 Embedding] --&gt; P
  P --&gt; R[Similarity Score]
-</code></pre> <h2 id="how-we-taught-the-model-to-compare-meaning">How We Taught the Model to Compare Meaning</h2> <p>In this study, we focused on addressing three key challenges:</p> <ul> <li> <p>How to handle cases where sentences contain words <strong>missing from existing dictionaries or pretrained embeddings</strong>.</p> </li> <li> <p>How to <strong>design a pipeline</strong> that uses existing word embeddings and captures <strong>local context</strong> to produce <strong>sentence-level representations</strong> capable of distinguishing whether two sentences convey similar meanings.</p> </li> </ul> <p>We evaluated and compared several modeling strategies:</p> <ol> <li> <p><strong>Classical Machine Learning Baselines</strong> Used handcrafted features derived from <strong>GloVe</strong> or <strong>Word2Vec</strong> embeddings Unknown words were ignored, and classification was performed using: <strong>Logistic Regression</strong>, <strong>Random Forest</strong>, <strong>SVM</strong>, <strong>AdaBoost</strong>, and <strong>XGBoost</strong>.</p> </li> <li> <p><strong>Siamese Manhattan LSTM</strong> Two identical <strong>LSTMs</strong> process the two questions in parallel, and their outputs are compared using the <strong>Manhattan distance</strong>. This model uses <strong>Word2Vec</strong> embeddings with <strong>custom handling for missing words</strong>.</p> </li> <li> <p><strong>Bilateral Multi-Perspective Matching (BiMPM)</strong> An advanced architecture using <strong>bidirectional LSTMs</strong> for contextual encoding. Each word in one question is matched with all words in the other using <strong>multi-perspective cosine similarity</strong>, followed by <strong>aggregation via BiLSTM</strong> and a <strong>softmax classifier</strong>.</p> </li> <li> <p><strong>GloVe + LSTM + CNN + Baseline Features</strong> Combines <strong>GloVe embeddings (trained on 840B tokens)</strong> with multiple feature extraction branches: - <strong>LSTM</strong> with 256 hidden units - <strong>1D CNN</strong> (kernel size = 11, stride = 1, 256 filters, leaky ReLU activation) - <strong>Mean pooling</strong> of embeddings These extracted features are concatenated with baseline features and passed through <strong>five fully connected layers</strong> with dropout and batch normalization.</p> </li> </ol> <p>We used the Kaggle Quora Question Pairs challenge, which contains millions of labeled question pairs (is_duplicate = 0/1) and uses Log Loss as the evaluation metric (computed via Kaggle submission).</p> <p><strong>Results Summary</strong></p> <table> <thead> <tr> <th>Model</th> <th>Log-loss ↓</th> <th>Notes</th> </tr> </thead> <tbody> <tr> <td>Majority baseline</td> <td>0.55</td> <td>Random guess baseline</td> </tr> <tr> <td>XGBoost + baseline features</td> <td>0.38</td> <td>Best traditional</td> </tr> <tr> <td>Siamese LSTM</td> <td>0.40</td> <td>Noise due to unknown-word embedding</td> </tr> <tr> <td>BiMPM</td> <td>0.34</td> <td>Strong contextual model</td> </tr> <tr> <td>GloVe + LSTM + CNN + baseline features</td> <td>0.21</td> <td>Best performing model</td> </tr> </tbody> </table> <h2 id="further-read">Further read</h2> <ul> <li>📄 <a href="/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank">Full Technical Report</a> </li> </ul> </div> </article> <h2>References</h2> <div class="publications"> <ol class="bibliography"></ol> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 Ankit Shrivastava. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: December 24, 2025. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js" integrity="sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A=" crossorigin="anonymous"></script> <script defer src="/assets/js/mermaid-setup.js?38ca0a0126f7328d2d9a46bad640931f" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?53023e960fbc64cccb90d32e9363de2b"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script defer src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js" integrity="sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/pandoc_utils/mathjax-config.js?105bdff03a6d9ae0d665379a20c846da"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script src="/assets/js/addbacktotop.js"></script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> <script src="/assets/js/default.js"></script> <script src="/assets/js/custom/navbar.js"></script> <script src="/assets/js/custom/hero.js"></script> </body> </html>
+</code></pre>
+            <h2 id="how-we-taught-the-model-to-compare-meaning">
+              How We Taught the Model to Compare Meaning
+            </h2>
+            <p>In this study, we focused on addressing three key challenges:</p>
+            <ul>
+              <li>
+                <p>
+                  How to handle cases where sentences contain words
+                  <strong
+                    >missing from existing dictionaries or pretrained
+                    embeddings</strong
+                  >.
+                </p>
+              </li>
+              <li>
+                <p>
+                  How to <strong>design a pipeline</strong> that uses existing
+                  word embeddings and captures <strong>local context</strong> to
+                  produce
+                  <strong>sentence-level representations</strong> capable of
+                  distinguishing whether two sentences convey similar meanings.
+                </p>
+              </li>
+            </ul>
+            <p>We evaluated and compared several modeling strategies:</p>
+            <ol>
+              <li>
+                <p>
+                  <strong>Classical Machine Learning Baselines</strong> Used
+                  handcrafted features derived from <strong>GloVe</strong> or
+                  <strong>Word2Vec</strong> embeddings Unknown words were
+                  ignored, and classification was performed using:
+                  <strong>Logistic Regression</strong>,
+                  <strong>Random Forest</strong>, <strong>SVM</strong>,
+                  <strong>AdaBoost</strong>, and <strong>XGBoost</strong>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Siamese Manhattan LSTM</strong> Two identical
+                  <strong>LSTMs</strong> process the two questions in parallel,
+                  and their outputs are compared using the
+                  <strong>Manhattan distance</strong>. This model uses
+                  <strong>Word2Vec</strong> embeddings with
+                  <strong>custom handling for missing words</strong>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Bilateral Multi-Perspective Matching (BiMPM)</strong>
+                  An advanced architecture using
+                  <strong>bidirectional LSTMs</strong> for contextual encoding.
+                  Each word in one question is matched with all words in the
+                  other using
+                  <strong>multi-perspective cosine similarity</strong>, followed
+                  by <strong>aggregation via BiLSTM</strong> and a
+                  <strong>softmax classifier</strong>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>GloVe + LSTM + CNN + Baseline Features</strong>
+                  Combines
+                  <strong>GloVe embeddings (trained on 840B tokens)</strong>
+                  with multiple feature extraction branches: -
+                  <strong>LSTM</strong> with 256 hidden units -
+                  <strong>1D CNN</strong> (kernel size = 11, stride = 1, 256
+                  filters, leaky ReLU activation) -
+                  <strong>Mean pooling</strong> of embeddings These extracted
+                  features are concatenated with baseline features and passed
+                  through <strong>five fully connected layers</strong> with
+                  dropout and batch normalization.
+                </p>
+              </li>
+            </ol>
+            <p>
+              We used the Kaggle Quora Question Pairs challenge, which contains
+              millions of labeled question pairs (is_duplicate = 0/1) and uses
+              Log Loss as the evaluation metric (computed via Kaggle
+              submission).
+            </p>
+            <p><strong>Results Summary</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Log-loss ↓</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Majority baseline</td>
+                  <td>0.55</td>
+                  <td>Random guess baseline</td>
+                </tr>
+                <tr>
+                  <td>XGBoost + baseline features</td>
+                  <td>0.38</td>
+                  <td>Best traditional</td>
+                </tr>
+                <tr>
+                  <td>Siamese LSTM</td>
+                  <td>0.40</td>
+                  <td>Noise due to unknown-word embedding</td>
+                </tr>
+                <tr>
+                  <td>BiMPM</td>
+                  <td>0.34</td>
+                  <td>Strong contextual model</td>
+                </tr>
+                <tr>
+                  <td>GloVe + LSTM + CNN + baseline features</td>
+                  <td>0.21</td>
+                  <td>Best performing model</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="further-read">Further read</h2>
+            <ul>
+              <li>
+                📄
+                <a
+                  href="/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf"
+                  target="_blank"
+                  >Full Technical Report</a
+                >
+              </li>
+            </ul>
+          </div>
+        </article>
+        <h2>References</h2>
+        <div class="publications"><ol class="bibliography"></ol></div>
+      </div>
+    </div>
+    <footer class="fixed-bottom" role="contentinfo">
+      <div class="container mt-0">
+        © Copyright 2025 Ankit Shrivastava. Powered by
+        <a
+          href="https://jekyllrb.com/"
+          target="_blank"
+          rel="external nofollow noopener"
+          >Jekyll</a
+        >
+        with
+        <a
+          href="https://github.com/alshedivat/al-folio"
+          rel="external nofollow noopener"
+          target="_blank"
+          >al-folio</a
+        >
+        theme. Hosted by
+        <a
+          href="https://pages.github.com/"
+          target="_blank"
+          rel="external nofollow noopener"
+          >GitHub Pages</a
+        >. Last updated: December 24, 2025.
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
+      integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"
+      integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf"
+      type="text/javascript"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js"
+      integrity="sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="/assets/js/mermaid-setup.js?38ca0a0126f7328d2d9a46bad640931f"
+      type="text/javascript"
+    ></script>
+    <script src="/assets/js/tooltips-setup.js?53023e960fbc64cccb90d32e9363de2b"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+      integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"
+      integrity="sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
+    <script
+      defer
+      src="/assets/js/common.js?ae4da0f3477e46c650b14d9c641788c0"
+    ></script>
+    <script
+      defer
+      src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df"
+      type="text/javascript"
+    ></script>
+    <script
+      defer
+      src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+      integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/pandoc_utils/mathjax-config.js?105bdff03a6d9ae0d665379a20c846da"></script>
+    <script
+      defer
+      src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a"
+      type="text/javascript"
+    ></script>
+    <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script>
+    <script src="/assets/js/addbacktotop.js"></script>
+    <script
+      type="module"
+      src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"
+    ></script>
+    <ninja-keys
+      hidebreadcrumbs
+      noautoloadmdicons
+      placeholder="Type to start searching"
+    ></ninja-keys>
+    <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script>
+    <script src="/assets/js/search-data.js"></script>
+    <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script>
+    <script src="/assets/js/default.js"></script>
+    <script src="/assets/js/custom/navbar.js"></script>
+    <script src="/assets/js/custom/hero.js"></script>
+  </body>
+</html>
