@@ -1,5 +1,11 @@
 # Page Statistics
 
+[![GitHub release](https://img.shields.io/github/v/release/ashriva16/al-folio)](https://github.com/ashriva16/al-folio/releases/latest)
+
+[![GitHub license](https://img.shields.io/github/license/ashriva16/al-folio?color=blue)](https://github.com/ashriva16/al-folio/blob/main/LICENSE)
+
+---
+
 ## Lighthouse PageSpeed Insights
 
 ### Desktop
