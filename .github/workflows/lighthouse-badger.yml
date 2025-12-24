@@ -35,8 +35,8 @@ on:
 
 jobs:
   lighthouse-badger-easy:
-    # Keep this workflow scoped to the repo defined in REPO_BRANCH and only when running on gh-pages
-    if: startsWith(env.REPO_BRANCH, format('{0} ', github.repository)) && github.ref == 'refs/heads/gh-pages'
+    # Only run when this workflow is executing on gh-pages
+    if: github.ref == 'refs/heads/gh-pages'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
