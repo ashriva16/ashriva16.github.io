@@ -1,0 +1,1 @@
+window.requestIdleCallback?.(()=>{AOS.init({once:!0})}),document.addEventListener("DOMContentLoaded",function(){AOS.init({duration:600,easing:"ease-out",once:!1,offset:60})});
