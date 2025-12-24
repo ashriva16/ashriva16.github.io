@@ -29,6 +29,9 @@ on:
     - cron: "55 23 * * 0" # weekly
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 ########################################################################
 # THAT'S IT; YOU DON'T HAVE TO DEFINE ANYTHING IN THE FOLLOWING
 ########################################################################
