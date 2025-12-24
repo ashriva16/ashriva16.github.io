@@ -6,9 +6,8 @@ on:
       - gh-pages
   workflow_dispatch:
 
-env:
-  # Default to the repository this workflow lives in; override if needed
-  TARGET_REPO: ${{ github.repository }}
+permissions:
+  contents: write
 
 jobs:
   format:
@@ -21,7 +20,7 @@ jobs:
         with:
           repository: ${{ github.repository }}
           ref: gh-pages
-          token: ${{ secrets.PAGES_REPO_TOKEN }}
+          token: ${{ secrets.PAGES_REPO_TOKEN || github.token }}
 
       - name: Find and Remove </source> Tags
         run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
