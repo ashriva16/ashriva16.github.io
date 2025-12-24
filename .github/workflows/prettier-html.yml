@@ -12,8 +12,8 @@ env:
 
 jobs:
   format:
-    # Only run when triggered in the target repo and on gh-pages
-    if: github.repository == vars.TARGET_REPO && github.ref == 'refs/heads/gh-pages'
+    # Only run when executing on gh-pages
+    if: github.ref == 'refs/heads/gh-pages'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages branch
