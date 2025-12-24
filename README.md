@@ -1,6 +1,8 @@
 # Page Statistics
 
 [![GitHub license](https://img.shields.io/github/license/ashriva16/al-folio?color=blue)](https://github.com/ashriva16/al-folio/blob/main/LICENSE)
+[![Lighthouse Badger](https://github.com/ashriva16/ashriva16.github.io/actions/workflows/lighthouse-badger.yml/badge.svg)](https://github.com/ashriva16/ashriva16.github.io/actions/workflows/lighthouse-badger.yml)
+[![Prettify gh-pages](https://github.com/ashriva16/ashriva16.github.io/actions/workflows/prettier-html.yml/badge.svg)](https://github.com/ashriva16/ashriva16.github.io/actions/workflows/prettier-html.yml)
 
 ---
 
