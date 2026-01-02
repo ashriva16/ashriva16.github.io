@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>High Performance Computing | Ankit Shrivastava</title><link>https://ashriva.in/tags/high-performance-computing/</link><atom:link href="https://ashriva.in/tags/high-performance-computing/index.xml" rel="self" type="application/rss+xml"/><description>High Performance Computing</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2016 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>High Performance Computing</title><link>https://ashriva.in/tags/high-performance-computing/</link></image><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva.in/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/CUDA-76B900?style=flat&amp;logo=nvidia&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;h2 id="the-travelling-salesmans-dilemma"&gt;The Travelling Salesman&amp;rsquo;s Dilemma&lt;/h2&gt;
+&lt;p&gt;Imagine a pizza delivery driver with orders to drop off at 5 different locations across town. The challenge for the driver is to find the most efficient route that covers every stop once.
+This is a classic operations research and computer science puzzle, famously known as the Travelling Salesman Problem (TSP).
+Finding the perfect route for the pizza delivery guy may be easy with just a few stops. Still, as the number of locations grows, it quickly becomes challenging to figure out the best path.&lt;/p&gt;
+&lt;p&gt;The TSP shows up in many industrial and scientific applications whenever efficiency matters. For example&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Manufacturing &amp;amp; Supply Chains&lt;/strong&gt;: Scheduling movement of goods between machines, warehouse picking routes, and distribution planning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Astronomy&lt;/strong&gt;: Telescopes optimize the order of star or planet observations to minimize the time spent repositioning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3D Printing &amp;amp; Chip Design&lt;/strong&gt;: Printers and circuit designers plan paths that reduce wasted motion, speeding up manufacturing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In today&amp;rsquo;s competitive environment, this route optimization isn&amp;rsquo;t just an academic puzzle but also an essential problem for cost optimization, sustainability, and better customer experience. So how do we actually solve such a complex problem?&lt;/p&gt;
+&lt;h2 id="hacking-the-tsp"&gt;Hacking the TSP&lt;/h2&gt;
+&lt;p&gt;A variety of strategies exist to tackle the TSP, such as exact optimization, rule-based heuristics, local search, metaheuristics, and emerging learning-based models.
+Each takes a different path to balance speed and solution quality, as summarized below.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Approach&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;What it Does&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Scalability&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Quality&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Exact Methods&lt;/td&gt;
+&lt;td&gt;Guarantee shortest route (dynamic programming, ILP, Concorde)&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Heuristics&lt;/td&gt;
+&lt;td&gt;Quick rules (e.g., nearest neighbor, Christofides)&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Local Search&lt;/td&gt;
+&lt;td&gt;Improves routes step by step (2-opt, 3-opt, LK)&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;⚠️ &lt;em&gt;(good, but not global)&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Metaheuristics&lt;/td&gt;
+&lt;td&gt;Nature-inspired (GA, SA, ACO, RFD, Tabu)&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Learning-Based&lt;/td&gt;
+&lt;td&gt;AI/ML learns routing patterns (RL, GNNs)&lt;/td&gt;
+&lt;td&gt;✅ &lt;em&gt;(after training)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;⚠️ &lt;em&gt;(still emerging)&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;{: .table .table-hover .table-striped}&lt;/p&gt;
+&lt;p&gt;This spectrum makes clear: there&amp;rsquo;s no one-size-fits-all for TSP.
+The correct method depends on problem size, constraints, and how much perfection you can afford to sacrifice for speed.&lt;/p&gt;
+&lt;h2 id="when-approximate-is-enough"&gt;&amp;ldquo;When Approximate is Enough&amp;rdquo;&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;When a near-optimal solution is sufficient, don&amp;rsquo;t let the pursuit of perfection get in the way of progress&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Of all existing approaches, metaheuristic algorithms scale better in practice because they are highly parallelization-friendly, unlike heuristics and local search, which are inherently more sequential.
+A metaheuristic is a higher-level, problem-independent strategy that guides problem-specific heuristics in the search for good solutions.
+These methods often combine randomness, memory, and adaptive rules to balance exploration and exploitation.
+While many metaheuristics are inspired by natural processes (e.g., evolution, swarm behavior, or physics), others are purely algorithmic.
+They typically produce near-optimal solutions, though they require parameter tuning and often benefit from multiple randomized initial starts.&lt;/p&gt;
+&lt;p&gt;Some of the most common metaheuristic algorithms applied to the TSP include Ant Colony Optimization (ACO), Genetic Algorithms (GA), Simulated Annealing (SA), and Particle Swarm Optimization (PSO). Comparative studies (e.g., zhang2025comparative) report that GA often achieves better computational efficiency, while ACO tends to yield higher-quality tours. However, a drawback of ACO is its tendency to stagnate in local minima. To address this, stutzle1999aco proposed hybridization strategies, and subsequent work introduced the ACO–RFD hybrid, which leverages river flow dynamics to help ACO escape local optima and improve performance.&lt;/p&gt;
+&lt;p&gt;With the rise of GPU computing, large-scale optimization problems can now be tackled more efficiently. We propose that the hybrid ACO–RFD algorithm can be further scaled on GPUs, enabling larger problem instances to be solved with significantly better performance.&lt;/p&gt;
+&lt;h2 id="turbocharging-hybrid-metaheuristics-with-gpus"&gt;Turbocharging Hybrid Metaheuristics with GPUs&lt;/h2&gt;
+&lt;p&gt;In this work, we extended the hybrid Ant Colony Optimization–River Flow Dynamics (ACO–RFD) algorithm for solving the Traveling Salesman Problem (TSP) on GPUs. To achieve this, we introduced an &amp;lsquo;ant-drop&amp;rsquo; entity that fuses ACO&amp;rsquo;s constructive speed with RFD&amp;rsquo;s resilience against local minima. We explored two GPU parallelization strategies: HB1 (task-parallel) and HB2 (combining task- and data-parallelism).&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/ant-rfd-tsp.png"
+alt="overview image"
+class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Overview of proposed approach.
+&lt;/span&gt;
+&lt;p&gt;Key outcomes of our work include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Improved solution quality&lt;/strong&gt; compared to standalone ACO.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Significant GPU speedups&lt;/strong&gt; over serial and prior parallel versions, reaching full multiprocessor occupancy with HB2.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HB2 (data-parallel strategy)&lt;/strong&gt; proved most efficient, benefiting from shared memory usage and memory coalescing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva.in/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat&amp;logo=plotly&amp;logoColor=white"/&gt;
+&lt;/p&gt;
+&lt;p&gt;This work introduces a parallel Galerkin Method of Moments (MoM) framework for accurately evaluating the resistance of large HVDC grounding electrodes.
+Traditional analytical or domain-based numerical methods struggle with the kilometer-scale geometries and soil variability involved in real HVDC installations.
+By discretizing only the electrode surface and employing MPI-based parallel computation, the method achieves high precision with substantially reduced computational cost.
+Validated on star and ring electrode systems, the approach demonstrates excellent agreement with analytical values.
+It achieves a five-to-sixfold speed-up, making it a practical tool for large-scale computational electromagnetics (CEM) problems in power systems.&lt;/p&gt;
+&lt;h2 id="high-voltage-direct-current-transmission-a-superhighway-powering-the-next-generation-of-energy-networks"&gt;High Voltage Direct Current Transmission: A Superhighway Powering the Next Generation of Energy Networks&lt;/h2&gt;
+&lt;p id="fig-retina"&gt;&lt;/p&gt;
+&lt;div class="row justify-content-center my-3"&gt;
+&lt;div class="col-sm-10 col-md-8"&gt;
+&lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
+&lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
+Illustration of an HVDC transmission system. Source: [AllumiaX](https://www.allumiax.com/blog/high-voltage-direct-current-hvdc-transmission).
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The rise of High Voltage Direct Current (HVDC) transmission marks a significant transformation in modern power engineering.
+As electricity generation, transmission, and distribution systems in India and across the world modernize, they demand higher efficiency, reliability, and grid stability.
+HVDC technology directly addresses these challenges by offering precise control of power flow, lower transmission losses, and the ability to stably connect remote networks.&lt;/p&gt;
+&lt;p&gt;HVDC links are primarily employed to transmit electricity from remote hydro, solar, and wind generation sites to major demand centres through long-distance, submarine, and cross-border interconnectors, enabling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stable Power Supply&lt;/strong&gt;: Balances and combines power from multiple generation sources, allowing interconnection between asynchronous and distant regional grids to ensure a continuous and reliable supply even under varying demand or renewable output.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support for Storage and Electrification&lt;/strong&gt;: Enables integration of DC-based microgrids, large-scale energy storage systems, and electric vehicle charging networks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Renewable Integration&lt;/strong&gt;: Efficiently connects remote solar, wind, and hydro generation sites with population and industrial centres, promoting cleaner and sustainable power distribution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="why-dc-for-high-voltage"&gt;Why DC for High Voltage?&lt;/h3&gt;
+&lt;p&gt;Although AC transmission has long dominated power networks due to the simplicity of voltage transformation using conventional transformers.&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Recall — To understand high voltage transmission, consider how power and loss scale with voltage and current&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In high-voltage lines, power follows:&lt;/p&gt;
+$$
+&gt; P = V \times I
+&gt; $$&lt;p&gt;For a given power level, increasing the voltage $V$ reduces the current $I$.
+Since power loss varies as $I^2 R$, &lt;strong&gt;doubling the voltage cuts resistive losses by a factor of four.&lt;/strong&gt;
+{:.callout .callout-note}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;However, AC system efficiency declines over long distances and underwater routes because of several inherent effects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skin Effect: Current tends to flow near the surface of the conductor, effectively increasing resistance and losses.&lt;/li&gt;
+&lt;li&gt;Eddy and Hysteresis Losses: Energy is dissipated in the magnetic materials surrounding AC lines and cores.&lt;/li&gt;
+&lt;li&gt;Reactive and Dielectric Losses: Part of the energy oscillates between electric and magnetic fields instead of being transmitted as useful power.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-12 col-md-10 col-lg-8 mx-auto"&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JH9-0AbR_1U?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption" markdown="1"&gt;
+Watch an overview of HVDC interconnectors — their advantages, challenges, and real-world applications across global power networks.
+&lt;/span&gt;
+&lt;p&gt;These limitations, combined with advancements in semiconductor and power electronic technologies, have made DC transmission inherently more efficient and controllable for long-distance power transfer.
+With the growing adoption of HVDC systems, attention has also turned toward the design and optimization of key components such as converter stations, transmission lines, and &lt;strong&gt;grounding electrodes&lt;/strong&gt; to ensure reliable and efficient operation under diverse conditions.&lt;/p&gt;
+&lt;h2 id="closing-the-loop-the-role-of-grounding-electrodes-in-hvdc"&gt;Closing the Loop: The Role of Grounding Electrodes in HVDC&lt;/h2&gt;
+&lt;p&gt;In any electrical system, current must complete a closed circuit, and it always needs a path to return to its source.
+In HVDC transmission, particularly mono-polar and homopolar systems, this return path is achieved through grounding, using electrodes designed to suit the system configuration and soil conditions.
+These electrodes safely transfer current to or from the earth, maintaining voltage balance and protecting nearby equipment.&lt;/p&gt;
+&lt;p&gt;Electrodes are typically installed several kilometers away from converter stations and arranged in geometries such as vertical rods, rings, or star-shaped networks.
+This layout ensures that the injected or collected current spreads uniformly through the surrounding soil, preventing high potential gradients and minimizing corrosion effects.
+The entire electrode system can extend over 1–3 km in radius or several square kilometers for large-capacity HVDC links, depending on the power rating and local soil resistivity.&lt;/p&gt;
+&lt;p&gt;Traditional analytical and empirical formulas were developed only for simple electrode shapes (like a single vertical rod) and often deviated significantly from measured values.
+Modern HVDC electrodes (rings, stars, or other geometries), however, are large and complex, interacting with vast soil volumes whose resistivity varies with environmental conditions.
+For such systems, 3D modeling with the Finite Element Method (FEM) becomes computationally intensive, motivating the use of more efficient computational electromagnetic methods (CEM) such as the Method of Moments (MoM)..&lt;/p&gt;
+&lt;h2 id="a-parallelized-method-of-moments-for-electrode-design"&gt;A Parallelized Method of Moments for Electrode Design&lt;/h2&gt;
+&lt;p&gt;The Method of Moments (MoM), a boundary-based CEM technique, addresses existing challenges faced with FEM by discretizing only the electrode surface rather than the entire soil domain.
+This significantly reduces computation cost while maintaining high accuracy in modeling self and mutual resistances, air–soil interface effects, and complex geometries.&lt;/p&gt;
+&lt;p&gt;We developed a Galerkin MoM-based computational approach for estimating the resistance of HVDC grounding electrodes.
+By calculating the self and mutual resistances between these segments using Green&amp;rsquo;s functions, the total electrode resistance can be determined with high precision.
+The method was improved further by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using pulse basis functions (instead of delta functions) for better numerical stability,&lt;/li&gt;
+&lt;li&gt;Incorporating the method of images to model the air–soil interface, and&lt;/li&gt;
+&lt;li&gt;Employing parallel computation (MPI) to handle large electrode systems efficiently.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This approach was applied to evaluate real-world electrode configurations such as the six-point star and ring systems used in existing HVDC projects.
+The computed resistances showed excellent agreement with analytical and measured values, while the parallelized implementation achieved a five-to-sixfold reduction in computation time compared to sequential runs.&lt;/p&gt;
+&lt;p&gt;Together, these results demonstrate that the Galerkin-based MoM provides a fast and accurate way to simulate large-scale HVDC grounding systems, making it well-suited for modern electrode design and optimization.&lt;/p&gt;
+&lt;p id="fig-retina"&gt;&lt;/p&gt;
+&lt;div class="row justify-content-center my-3"&gt;
+&lt;div class="col-sm-10 col-md-8"&gt;
+&lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
+&lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
+Ring and star electrode systems with their image conductors. To read in more detail, refer to {%cite muhammed2021parallel --file papers%}.
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

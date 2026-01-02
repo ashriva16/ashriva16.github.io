@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deep Learning | Ankit Shrivastava</title><link>https://ashriva.in/tags/deep-learning/</link><atom:link href="https://ashriva.in/tags/deep-learning/index.xml" rel="self" type="application/rss+xml"/><description>Deep Learning</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Deep Learning</title><link>https://ashriva.in/tags/deep-learning/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva.in/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva.in/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&amp;logo=plotly&amp;logoColor=white"&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&amp;logo=jupyter&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;This project presents a deep learning approach to predict stress hotspots in polycrystalline microstructures. By linking material fingerprints with AI, we demonstrate how convolutional encoder–decoder models can identify failure-prone regions 448 times faster than numerical solvers. This method bridges traditional physical laws with modern machine learning, enabling safer and more reliable material design. The significance of this research lies in its potential to save lives and prevent financial losses from material failures.&lt;/p&gt;
+&lt;h2 id="beyond-design-the-hidden-cost-of-material-failure"&gt;Beyond Design: The Hidden Cost of Material Failure&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;Why it matters:&lt;/strong&gt; From fractured ships to wafer losses worth millions, predicting material behavior saves lives and money.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In engineering — whether in aerospace, semiconductors, or civil structures — it&amp;rsquo;s not only the design that matters, but also how the material itself performs.
+Ignoring material performance can lead to safety issues, high costs, and unexpected downtime.
+For example,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;manufacturing defect in a single gear tooth grounded fleets, caused loss of life, and exposed enormous reputational and financial risk (aerospace_failure).&lt;/li&gt;
+&lt;li&gt;In semiconductors, material defects can cause losses—tens of millions of dollars in wasted wafers (semiconductor_defects).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hence, predicting material behavior is not just a research challenge but a business necessity.&lt;/p&gt;
+&lt;figure class="row justify-content-center my-4"&gt;
+&lt;div class="col-sm-10 col-md-8"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
+&lt;/div&gt;
+&lt;figcaption class="caption" markdown="1"&gt;
+Liberty Ship *Schenectady* fractured from deck to keel.
+Reproduced with permission from (shipfail).
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id="when-material-fingerprints-decide-the-price-of-failure"&gt;When Material Fingerprints Decide the Price of Failure&lt;/h2&gt;
+&lt;p&gt;What really decides whether a material is strong, weak, or durable? The answer lies in its microscopic fingerprints, called microstructures.
+At first glance, a material may look uniform, but hidden inside are patterns far too small to see with the naked eye.
+These patterns emerge from the way atoms, grains, and different regions (phases) are arranged within the material.
+That internal distribution directly shapes the material&amp;rsquo;s strength, durability, and overall performance. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grain size and strength (Hall–Petch relationship): Materials with smaller grains are usually stronger, because grain boundaries act like barriers that block movement inside the material.&lt;/li&gt;
+&lt;li&gt;Mix of regions (phase distribution): The balance between softer and harder regions influences whether a material is rigid, bendable, or brittle.&lt;/li&gt;
+&lt;li&gt;Tiny defects (fracture mechanics): Even minor flaws, such as pores or cracks, can concentrate stress. Over time, these weak spots grow and eventually lead to failure.&lt;/li&gt;
+&lt;li&gt;Grain direction (anisotropy): When grains line up in specific directions, the material becomes stronger one way and weaker another — much like wood, which splits more easily along the grain than across it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The question then becomes: how do we turn these invisible fingerprints into reliable predictions? The answer lies in harnessing the power of artificial intelligence to connect internal structure to observable behavior.&lt;/p&gt;
+&lt;h2 id="bridging-fingerprints-and-behavior-with-ai"&gt;Bridging Fingerprints and Behavior with AI&lt;/h2&gt;
+&lt;p&gt;Engineers and materials scientists have long relied on such physical laws and empirical relationships to connect microstructure with behavior.
+With the advent of Artificial Intelligence (AI), we can now quickly predict material behavior from their structural fingerprints, saving time, cutting costs, and enabling the design of safer and more reliable technologies.
+In this work, we developed a method to &lt;strong&gt;predict peak-stress clusters in polycrystalline microstructures&lt;/strong&gt; subjected to macroscopic strain.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 &lt;strong&gt;Step 1 — Stress field prediction:&lt;/strong&gt; A Convolutional Encoder–Decoder (CED) model was trained on &lt;code&gt;7,000&lt;/code&gt; microstructure samples to predict stress fields.&lt;/li&gt;
+&lt;li&gt;📍 &lt;strong&gt;Step 2 — Peak detection:&lt;/strong&gt; We combined a peak detection algorithm with connected-component labeling to identify stress hotspot clusters in the predicted fields.&lt;/li&gt;
+&lt;li&gt;📊 &lt;strong&gt;Validation:&lt;/strong&gt; The model was tested on &lt;code&gt;2,000&lt;/code&gt; microstructures (each of size &lt;code&gt;128×128&lt;/code&gt; pixels). Predictions were compared against ground-truth numerical simulations using mean squared error for stress fields and cosine similarity for cluster accuracy.&lt;/li&gt;
+&lt;li&gt;⚡ Efficiency: The machine learning approach was found to be &lt;code&gt;~448×&lt;/code&gt; faster than traditional numerical solvers, while maintaining high accuracy in both stress fields and cluster geometry. This remarkable speed and efficiency demonstrate the power of AI in material science.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 This demonstrates how deep learning can serve as a fast, reliable tool for identifying critical stress hotspots in complex material microstructures, with promising applications in material design and failure prevention.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png"
+alt="Proposed encoder decoder architecture with Saliency mapping"
+class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Overview of the approach, refer (doi:10.1177/10812865211055504) for more details.
+&lt;/span&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📂
+&lt;/li&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva.in/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&amp;logo=plotly&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&amp;logo=jupyter&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;Materials don&amp;rsquo;t stay the same after they&amp;rsquo;re made; they evolve under heat, stress, and environment.
+In this work, I explore how we can capture that evolution using microscopic fingerprints, and how dimensionality reduction methods like PCA, autoencoders, and diffusion maps balance accuracy, efficiency, and interpretability.
+The study shows that there is no one-size-fits-all solution. Instead, the choice of method depends on the trade-offs we are willing to make.&lt;/p&gt;
+&lt;h2 id="material-evolution-small-changes-big-consequences"&gt;Material Evolution: Small Changes, Big Consequences&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;⚠️ Why it matters: From turbine failures to battery fires, overlooking how microstructures evolve can turn into safety risks and financial losses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In materials science, it&amp;rsquo;s not only the initial state after manufacturing that matters; it&amp;rsquo;s how the material evolves over time under real-world conditions.
+Suppose we fail to capture this evolution accurately. In that case, engineering designs may appear reliable on paper or even perform well at first. Still, under prolonged use or harsh environments, they can ultimately fail in unexpected and costly ways. Some of the real-world consequences can be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✈️ &lt;strong&gt;Aerospace:&lt;/strong&gt; In jet engines, the internal structure of alloys slowly changes under extreme heat. If not predicted correctly, this weakens critical parts, raising the risk of engine failure and costly fleet downtime.&lt;/li&gt;
+&lt;li&gt;🔋 &lt;strong&gt;Energy storage:&lt;/strong&gt; In batteries, tiny needle-like structures can grow during charging. Left unchecked, they can puncture internal barriers, causing short circuits, fires, and expensive recalls.&lt;/li&gt;
+&lt;li&gt;💾 &lt;strong&gt;Semiconductors:&lt;/strong&gt; In chip manufacturing, thin films can evolve unpredictably during deposition. This leads to yield losses worth tens of millions of dollars in wasted wafers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&amp;rsquo;s why it&amp;rsquo;s critical to characterize materials not only by their properties at a single point in time, but also by how those properties evolve as the material ages or operates in real environments.&lt;/p&gt;
+&lt;h2 id="characterizing-material-evolution-using-fingerprints"&gt;Characterizing Material Evolution using Fingerprints&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;Behind every engine, battery, or chip lies a hidden story: the way its microscopic structures evolve over time.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To truly understand how a material changes under heat, stress, or chemical exposure, we need to study its microscopic fingerprints, the microstructures made up of grains, phases, and defects that govern how the material behaves over time.&lt;/p&gt;
+&lt;p&gt;These microstructures don&amp;rsquo;t stay static; they evolve through processes such as &lt;strong&gt;spinodal decomposition&lt;/strong&gt;, &lt;strong&gt;dendritic growth&lt;/strong&gt;, and &lt;strong&gt;grain growth&lt;/strong&gt;, each of which can significantly alter material performance.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Simulated examples of spinodal decomposition, dendritic growth, and grain evolution.
+&lt;/span&gt;
+&lt;p&gt;By capturing these microscopic fingerprints, we gain a way to describe how materials age, transform, and sometimes fail.
+But microstructure data is massive and complex: millions of pixels, countless patterns, and long timescales.
+To make these fingerprints useful for prediction and decision-making, we need a way to compress them into simpler, more manageable forms without losing the essence of the physics.&lt;/p&gt;
+&lt;h2 id="simplifying-fingerprints-with-dimensionality-reduction"&gt;Simplifying Fingerprints with Dimensionality Reduction&lt;/h2&gt;
+&lt;p&gt;Machine learning has become a powerful tool for connecting processing, structure, and properties by treating microstructure evolution as a pattern recognition problem.
+Instead of working with overwhelming high-dimensional data directly, these methods create low-dimensional fingerprints, or latent variables, that summarize the essential features of microstructural change.&lt;/p&gt;
+&lt;p&gt;A critical aspect of low-dimensional fingerprints is the smoothness of their evolution, which faithfully represents how microstructures change over time.
+This smoothness is essential when treating microstructure evolution as a pattern recognition problem, where models need to capture trends and dynamics rather than just isolated snapshots.&lt;/p&gt;
+&lt;p&gt;In this study, we formally compared principal component analysis, autoencoders, and diffusion maps to evaluate how well they capture microstructure evolution in a low-dimensional representation, using metrics for accuracy, data compression, and latent trajectory smoothness.
+These methods illustrate the core trade-off between compression and trajectory smoothness:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Autoencoders:&lt;/strong&gt; strong reconstructions, high compression, but less smooth trajectories.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diffusion maps:&lt;/strong&gt; smoother trajectories, comparable accuracy, but lower compression.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PCA:&lt;/strong&gt; no significant advantage over the other two.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&lt;strong&gt;Key Takeaway:&lt;/strong&gt;
+⚖️ The value lies not in one perfect method, but in choosing the right balance of accuracy, efficiency, and interpretability for each problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By applying these criteria before deploying downstream machine-learning models, researchers can select dimensionality reduction methods that not only compress data effectively but also preserve the essential physics of microstructure evolution.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Refer to paper (desai2023) for details.
+&lt;/span&gt;
+&lt;h2 id="further-read"&gt;Further Read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📂
+&lt;/li&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva.in/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&amp;logo=plotly&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&amp;logo=jupyter&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;We showed how combining AI with physics-based simulation can accelerate and improve the safety of engineering design.
+Traditional simulations are slow and costly, but AI can learn complex patterns and scale well on GPUs.
+By creating a physics-informed deep learning framework, we improved simulation accuracy while cutting time and data needs.
+This approach helps engineers design reliable structures more quickly and at lower cost.&lt;/p&gt;
+&lt;h2 id="engineering-dynamics-the-key-to-safe-and-smart-design"&gt;Engineering Dynamics: The Key to Safe and Smart Design&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;⚠️ &amp;ldquo;One mistake during design can turn into a billion-dollar loss, or worse, cost lives.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;From tiny semiconductors to massive structures, reliability depends on how they respond over space and time under extreme conditions (their dynamics).
+Engineers rely on computer simulation to anticipate how structures will respond under real-world conditions.
+Without advanced simulation, it is nearly impossible to anticipate how structures respond under rare conditions like extreme winds or earthquakes.
+For example, the Tacoma Narrows Bridge collapse (1940), just months after opening, was caused by a dynamic instability that engineers failed to model.
+The result was the loss of a $6.4M asset (about $120M today), and a turning point that reshaped how infrastructure is designed and tested.
+This shows why precise simulations are essential for making engineering safe and reliable.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-12 col-md-10 col-lg-8 mx-auto"&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KRutAt0FlGA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption" markdown="1"&gt;
+Tacoma Narrows Bridge.
+&lt;/span&gt;
+&lt;h2 id="the-computational-price-of-precision"&gt;The Computational Price of Precision&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;⏳ The more precise the simulation, the heavier the price in time and computing power.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;High-fidelity simulations are powerful, but to capture fine details across space and time, simulations solve complex equations at every time step and every point in a structure.
+Often, the structures under study are massive, and simulations need to capture their behavior across long timescales, making them highly time-consuming and demanding enormous computing power.
+Such simulations can take days or even weeks to complete and often require access to significant computing clusters.
+To manage this, engineers are forced into tradeoffs where they either compromise on accuracy or accept rising costs and delays that slow innovation and decision-making.&lt;/p&gt;
+&lt;div class="row text-center"&gt;
+&lt;div class="col-md-4"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
+width="100%" height="auto"
+style="height:250px; object-fit:contain;"
+title="Aircraft Dynamics" loading="eager"&gt;
+&lt;/div&gt;
+&lt;div class="col-md-4"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
+width="100%" height="auto"
+style="height:250px; object-fit:contain;"
+title="Bridge Dynamics" loading="eager"&gt;
+&lt;/div&gt;
+&lt;div class="col-md-4"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
+width="100%" height="auto"
+style="height:250px; object-fit:contain;"
+title="Building Dynamics" loading="eager"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption" markdown="1"&gt;
+Dynamics simulations of (from left to right): an aircraft wing (dlr_wing), a suspension bridge (strand7_bridge), and a high-rise building (asi_collapse).
+&lt;/span&gt;
+&lt;h2 id="the-future-of-modeling-ai--simulation-together"&gt;The Future of Modeling: AI + Simulation Together&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;🤝 AI brings speed, simulations bring trust; together, they can redefine engineering design.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Recent AI models have demonstrated the ability to learn complex relationships and can scale efficiently with modern GPUs.
+One approach is to train AI models on high-fidelity simulations and then use them as surrogates to replace costly simulations.
+However, pure AI models are often less accurate than the simulations they emulate and may drift from the underlying physics.
+A better option is to integrate AI with simulations in a hybrid approach, where simulations predict solutions at a coarse scale and AI refines them, or AI provides rapid approximations that simulations then correct and enforce with underlying physics.&lt;/p&gt;
+&lt;p&gt;In this work, we built a physics-informed deep learning framework that can take rough, low-resolution simulations and sharpen them in both space and time, without needing expensive high-resolution training data.
+The idea is simple: one network enhances spatial detail, and another improves temporal resolution.
+To keep everything physically consistent, we designed a composite loss that enforces the governing equations, boundary and initial conditions, and consistency across time steps.&lt;/p&gt;
+&lt;p&gt;When applied to elastodynamics, the approach delivered high accuracy while respecting the physics, while reducing computation and data requirements.
+In short, it&amp;rsquo;s a step toward faster, more reliable scientific simulations and design workflows.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
+alt="overview image"
+class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Overview of the approach. Refer to the paper (arora2022spatiotemporalsuperresolutiondynamicalsystems) for details.
+&lt;/span&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
+&lt;ul&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva.in/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/matlab-R2020b"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;Modern ML models depend on vast unlabeled data but often lack reliability without sufficient supervision.
+This work explores how &lt;strong&gt;active learning&lt;/strong&gt; can strengthen &lt;strong&gt;graph-based semi-supervised learning (GSSL)&lt;/strong&gt; by labeling only the most informative samples.
+By combining &lt;strong&gt;uncertainty measures&lt;/strong&gt; with &lt;strong&gt;graph centrality&lt;/strong&gt;, we enable efficient label propagation across large datasets—achieving higher accuracy and stability while significantly reducing labeling cost.&lt;/p&gt;
+&lt;h2 id="big-models-still-need-supervision"&gt;Big Models Still Need Supervision&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;Without supervision, even the most advanced models risk becoming unreliable and unsafe.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Modern machine learning models are extremely data-hungry.
+To train them, engineers use a large collection of unlabelled datasets (billions of web pages, books, articles, images, audio recordings, and even videos).
+Most of these models are trained in an unsupervised manner, where the system learns patterns by predicting a desired output from raw data.
+For sequential models, this could mean predicting the next word in a sentence, the next pixel in an image, or the next sound in a speech clip.
+In the case of generative models, the goal can be to create new images or videos based on a given context.
+However, when these models are applied in real-world settings, they often show severe limitations. For example,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Not aligned with human goals&lt;/strong&gt; - A model trained only on open web data may produce shallow answers that are not useful enough for scientific discussions or technical decision-making&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unsafe or harmful outputs&lt;/strong&gt;: Since it learns from the open web, it could reproduce toxic, biased, or even dangerous information (e.g., how to make weapons, offensive stereotypes).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unreliable reasoning&lt;/strong&gt;: Without guidance, the model might confidently produce wrong or misleading answers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model Bias&lt;/strong&gt;: Models inherit stereotypes and imbalances from internet data, making their outputs unfair or unreliable in sensitive contexts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Without expert supervision, these models risk being unreliable and ineffective in critical real-world applications.&lt;/p&gt;
+&lt;h2 id="when-supervision-becomes-too-expensive"&gt;When Supervision Becomes Too Expensive&lt;/h2&gt;
+&lt;p&gt;Engineers and researchers handle the challenges described above through several additional steps, such as fine-tuning with curated data, reinforcement Learning with human feedback, incorporating safety filters and alignment techniques, and semi-supervised learning (SSL).
+While the first three methods are usually applied after training, SSL can be used earlier, saving the cost of extensive fine-tuning.&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&amp;ldquo;Full labeling is infeasible at scale — efficiency demands methods that learn from a small labeled subset.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ideally, the challenges of reliability and safety can be mitigated by labeling data and guiding the model through supervised learning.
+For example, in medical imaging, doctors can label a small set of retina scans to teach the model what counts as healthy or diseased.
+However, if the volume of data is vast, it becomes impractical to label everything.
+An alternate option is to label only a subset of the data to inform the model.
+This is precisely where SSL comes in.&lt;/p&gt;
+&lt;h2 id="teaching-a-handful-informing-thousands"&gt;Teaching a Handful, Informing Thousands&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&amp;ldquo;Semi-Supervised Learning spreads information from labeled nodes to their neighbors, exploiting structure in the data&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Semi-supervised learning is a machine learning approach that combines a small labeled dataset with a large unlabeled dataset during training.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The labeled examples provide ground truth guidance.&lt;/li&gt;
+&lt;li&gt;The unlabeled data helps the model discover structure and patterns in the overall dataset.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;An essential class of SSL methods represents data as graphs, where label information from a few nodes is propagated through the graph structure to infer the labels of the unlabeled samples.
+This refers to graph-based semi-supervised learning (GSSL) methods, {%cite song2022graph &amp;ndash;file externals%}.
+In this method&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each data point is treated as a node.&lt;/li&gt;
+&lt;li&gt;Edges connect nodes that are similar with weights defining the similarity of features between data points.&lt;/li&gt;
+&lt;li&gt;A few labeled nodes &amp;ldquo;spread&amp;rdquo; their labels through the graph to unlabeled nodes using algorithms such as Label Propagation or Graph Laplacian methods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key idea is that similar nodes should share similar labels.
+Suppose one retina scan is labeled &amp;ldquo;diseased,&amp;rdquo; and it is strongly connected to another scan in the graph.
+In that case, the second scan is likely &amp;ldquo;diseased&amp;rdquo; as well.&lt;/p&gt;
+&lt;p&gt;The main challenge is to select data for labeling in such a way that each labeled example provides the maximum possible information to the model, while keeping the number of labeled samples small.
+This is where active learning comes in.&lt;/p&gt;
+&lt;h2 id="making-smart-choices-for-wider-impact"&gt;Making Smart Choices for Wider Impact&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;Active learning prioritizes the most informative samples for semi-supervised learning&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In our work, we explored how active learning can improve (GSSL).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We started with a small set of labeled data and a much larger pool of unlabeled data.&lt;/li&gt;
+&lt;li&gt;Using active learning, we didn&amp;rsquo;t label randomly. Instead, we developed a way to select the most informative nodes in the graph to label.&lt;/li&gt;
+&lt;li&gt;To measure informativeness, we combined uncertainty (how unsure the model is about a sample) with diversity (whether labeling this sample brings new information, not just redundancy).&lt;/li&gt;
+&lt;li&gt;We also tested different centrality measures (ways to see which nodes are most &amp;ldquo;influential&amp;rdquo; in the graph). In particular, we studied clique-overlap centrality, which captures how well a node connects across different clusters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once we selected and labeled these key nodes, we applied standard GSSL algorithms such as Label Propagation, Local and Global Consistency (LGC), and Modified Adsorption (MAD) to predict labels for the rest of the unlabeled data.&lt;/p&gt;
+&lt;p&gt;From our experiments, a few clear insights emerged:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Active learning helps labeling strategically (instead of randomly) and consistently improves accuracy across datasets.&lt;/li&gt;
+&lt;li&gt;Least-confidence uncertainty worked best among uncertainty measures (entropy, margin, and least confidence), and least confidence gave the most reliable results.&lt;/li&gt;
+&lt;li&gt;Clique-overlap centrality is robust when combined with uncertainty; clique-overlap centrality outperformed other centrality measures (like betweenness, closeness, degree, or PageRank).&lt;/li&gt;
+&lt;li&gt;Best combination: Least-confidence + Clique-overlap centrality gave the most accurate and stable results for GSSL.&lt;/li&gt;
+&lt;li&gt;Label Propagation and MAD performed well on these GSSL algorithms, when used with active learning, gave the lowest error compared to random labeling.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva.in/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;This project explores how machines can understand when two sentences mean the same thing, even if they use different words.
+Using word and sentence embeddings, we built models that capture semantic equivalence beyond simple keyword overlap.
+We compare classical baselines with Siamese LSTM and BiMPM architectures on the Quora Question Pairs dataset.&lt;/p&gt;
+&lt;h2 id="when-meaning-matters-more-than-words"&gt;When Meaning Matters More Than Words&lt;/h2&gt;
+&lt;p&gt;Human language enables people to convey the same meaning (semantic equivalence) in numerous ways, such as through different words, sentence structures, or regional phrasing.
+For instance:&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&amp;ldquo;Which smartphone takes the best photos?&amp;rdquo; &lt;br&gt;
+&amp;ldquo;What phone has the highest camera quality?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Both questions convey the exact intent yet share only a few words in common.
+This variation extends across regions as well:&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;🇬🇧 &amp;ldquo;Can we bring the meeting forward?&amp;rdquo; &lt;br&gt;
+🇺🇸 &amp;ldquo;Can we move the meeting up?&amp;rdquo; &lt;br&gt;
+🇮🇳 &amp;ldquo;Can we prepone the meeting?&amp;rdquo; (Indian English for &amp;lsquo;move earlier&amp;rsquo;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Humans effortlessly recognize these as identical in meaning.
+For machines, however, this semantic equivalence is far from obvious.
+The ability to detect such equivalence offers several key advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Improved Search&lt;/strong&gt;: Groups sentences or documents with the same meaning, making it easier for users to find all relevant answers in one place and helping writers reach a broader audience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Smarter Chatbots&lt;/strong&gt;: Recognizes when users phrase the same question in different ways, enabling more natural and accurate responses.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deeper Language Understanding&lt;/strong&gt;: Supports advanced tasks such as summarization, comparison, and translation by capturing the true meaning behind words and phrases.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The challenge is to build an algorithm that compares &lt;strong&gt;meaning&lt;/strong&gt;, not just match words.&lt;/p&gt;
+&lt;h2 id="comparing-meaning-is-a-two-step-process"&gt;Comparing Meaning is a Two-Step Process&lt;/h2&gt;
+&lt;p&gt;The basic structure of algorithms measuring semantic similarity follows a straightforward process: first, represent the meanings of sentences or phrases in a form that machines can process; second, compare these representations to evaluate similarity.
+This goal has two steps.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Representation: Turning Meaning into Numbers&lt;/u&gt;&lt;/strong&gt;
+Machines don&amp;rsquo;t understand words directly, so the first step is to represent language as numbers.
+This step converts words and sentences into numerical forms that preserve their meaning, often using data from documents, web pages, or dictionaries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;Comparison: Measuring the Similarity Between Meanings&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Comparison concerns how these representations are evaluated to measure similarity.
+It determines whether two sentences express ideas that are close in meaning, even if their words differ.&lt;/p&gt;
+&lt;h3 id="representation-of-words"&gt;Representation of Words&lt;/h3&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;The goal of representation is to convert raw text into numerical form so that machines can capture and reason about meaning.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="mermaid"&gt;flowchart LR
+Text --&gt; P[Preprocess]
+P --&gt; B[Tokenize]
+B --&gt; C[Build context]
+C --&gt; D[Train Embedding]
+D --&gt; O[Embedding]
+&lt;/div&gt;
+&lt;p class="text-center text-muted"&gt;&lt;em&gt;Figure 1. The steps of converting raw text to machine representation.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;As shown in Figure 1, the steps are as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Collect and Prepare Text Data&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gather a large text corpus (e.g., Wikipedia, news, or domain-specific data).&lt;/li&gt;
+&lt;li&gt;Clean the text by removing punctuation, numbers, and special symbols.&lt;/li&gt;
+&lt;li&gt;Convert to lowercase and optionally remove stopwords.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tokenization&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Split text into smaller units (&lt;strong&gt;tokens&lt;/strong&gt;) such as words, subwords, or characters.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tokenization Type&lt;/th&gt;
+&lt;th&gt;Example Tokens&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Word-level&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;[&amp;quot;The&amp;quot;, &amp;quot;king&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;an&amp;quot;, &amp;quot;apple&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Treats each word as a separate token. Simple and intuitive, but fails on rare or unseen words.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Character-level&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;[&amp;quot;T&amp;quot;, &amp;quot;h&amp;quot;, &amp;quot;e&amp;quot;, &amp;quot; &amp;quot;, &amp;quot;k&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;n&amp;quot;, &amp;quot;g&amp;quot;, ...]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Splits text into individual characters. Helps handle typos but loses word-level meaning.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Subword-level&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;[&amp;quot;The&amp;quot;, &amp;quot;king&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;an&amp;quot;, &amp;quot;app&amp;quot;, &amp;quot;le&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Breaks rare words into frequent parts (e.g., &lt;em&gt;&amp;ldquo;app&amp;rdquo;&lt;/em&gt; + &lt;em&gt;&amp;ldquo;le&amp;rdquo;&lt;/em&gt;). Handles vocabulary growth efficiently.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;n-gram tokens&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Bigrams:&lt;/em&gt; &lt;code&gt;[&amp;quot;The king&amp;quot;, &amp;quot;king ate&amp;quot;, &amp;quot;ate an&amp;quot;, &amp;quot;an apple&amp;quot;]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Combines &lt;em&gt;n&lt;/em&gt; consecutive words to capture local context and co-occurrence patterns. Vocabulary grows quickly as &lt;em&gt;n&lt;/em&gt; increases.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p class="text-center text-muted"&gt;&lt;em&gt;Table 1. Tokenization of words.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Each method reflects a trade-off between granularity (how small the pieces are) and context capture (how much relational meaning is retained).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build a &lt;strong&gt;vocabulary&lt;/strong&gt;, the list of all unique tokens in the dataset.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Define Context&lt;/strong&gt;
+Decide how words &amp;ldquo;co-occur&amp;rdquo; in sentences, for example&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Word2Vec:&lt;/strong&gt; Uses a sliding context window around each word.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GloVe:&lt;/strong&gt; Builds a co-occurrence matrix counting how often words appear together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Train the Embedding Model&lt;/strong&gt;
+Learn numeric representations that capture semantic relationships between words.
+This means that words with similar meanings are placed close together in vector space.
+Common algorithms include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Word2Vec: Learns by predicting a word from its surrounding context using a shallow neural network (CBOW or Skip-gram).&lt;/li&gt;
+&lt;li&gt;GloVe: Learns by reconstructing how frequently words appear together across the entire text corpus using weighted least-squares regression.&lt;/li&gt;
+&lt;li&gt;FastText / BERT: Learn richer subword or contextual embeddings that consider how a word&amp;rsquo;s meaning changes depending on the sentence (used in transformer-based models).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Extract and Store Embeddings&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Save the learned vectors (e.g., 300-dimensional arrays).&lt;/li&gt;
+&lt;li&gt;Each word is represented as a numerical vector capturing meaning:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;&amp;ldquo;king&amp;rdquo; → [0.21, 0.35, -0.14, &amp;hellip;]&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;queen&amp;rdquo; → [0.19, 0.36, -0.12, &amp;hellip;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="representation-of-sentences-meaning-beyond-words"&gt;Representation of Sentences: Meaning Beyond Words&lt;/h3&gt;
+&lt;p&gt;After converting each word into numbers, the next step is to understand how words combine to form the meaning of a sentence.&lt;/p&gt;
+&lt;p&gt;Words depend on context — the same word can mean different things.
+For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In &amp;ldquo;apple pie,&amp;rdquo; apple means food.&lt;/li&gt;
+&lt;li&gt;In &amp;ldquo;Apple released a new iPhone,&amp;rdquo; it means the company.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While embeddings capture word meaning, we also need to capture how words relate to each other in a sentence.
+For instance, &amp;ldquo;The king ate an apple&amp;rdquo; and &amp;ldquo;The queen ate a fruit&amp;rdquo; express similar ideas even though they use different words.&lt;/p&gt;
+&lt;p&gt;Some simple approaches include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Averaging word embeddings: take the mean of all word vectors in a sentence.&lt;/li&gt;
+&lt;li&gt;Weighted averaging: give more importance to key words (e.g., nouns or verbs).&lt;/li&gt;
+&lt;li&gt;Concatenation: join word vectors in order (valid for short phrases).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These basic methods ignore word order and context.
+A slight improvement over simple averaging is the &lt;strong&gt;moving average&lt;/strong&gt;, which smooths each word&amp;rsquo;s meaning with that of its nearby words using a sliding window.&lt;/p&gt;
+&lt;p&gt;Formally, for a target word \( w_t \) in a sentence, its contextual representation can be estimated by averaging the embeddings of the words within a surrounding window of size \( W \):&lt;/p&gt;
+$$
+\tilde{\mathbf{e}}(w_t) = \frac{1}{2W+1}\sum_{j=t-W}^{t+W}\mathbf{e}(w_j)
+$$&lt;p&gt;This approach captures limited local context by blending information from neighboring words, providing a smoother representation without requiring a complex model.&lt;/p&gt;
+&lt;p&gt;While the moving average captures only local context, it cannot understand word order or long-range meaning.
+To model how information flows across a sentence, we use sequential models such as Recurrent Neural Networks and their improved form, the Long Short-Term Memory (LSTM) network.&lt;/p&gt;
+&lt;div class="mermaid"&gt;flowchart LR
+A[Word Embedding] --&gt; P[Context capture]
+P --&gt; B[sentence Embedding]
+&lt;/div&gt;
+&lt;p class="text-center text-muted"&gt;&lt;em&gt;Figure 2. The steps of obtaining a machine representation of sentences.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Hence, after word embedding, the next step is to model how words relate to one another in a sequence, so that the overall meaning of a sentence or phrase can be understood.&lt;/p&gt;
+&lt;h3 id="metrics-to-measure-sentence-similarity"&gt;Metrics to measure sentence similarity&lt;/h3&gt;
+&lt;p&gt;Once sentence embeddings are obtained, the next step is to compare the similarity between two sentences.
+Several metrics can be used for this purpose, such as cosine similarity, Euclidean distance, or Manhattan distance, each providing a way to measure the degree of semantic similarity between sentence vectors.&lt;/p&gt;
+&lt;div class="mermaid"&gt;flowchart LR
+A[Sentence 1 Embedding] --&gt; P[Compare Similarity]
+B[Sentence 2 Embedding] --&gt; P
+P --&gt; R[Similarity Score]
+&lt;/div&gt;
+&lt;h2 id="how-we-taught-the-model-to-compare-meaning"&gt;How We Taught the Model to Compare Meaning&lt;/h2&gt;
+&lt;p&gt;In this study, we focused on addressing three key challenges:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How to handle cases where sentences contain words &lt;strong&gt;missing from existing dictionaries or pretrained embeddings&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How to &lt;strong&gt;design a pipeline&lt;/strong&gt; that uses existing word embeddings and captures &lt;strong&gt;local context&lt;/strong&gt; to produce &lt;strong&gt;sentence-level representations&lt;/strong&gt; capable of distinguishing whether two sentences convey similar meanings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We evaluated and compared several modeling strategies:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Classical Machine Learning Baselines&lt;/strong&gt;
+Used handcrafted features derived from &lt;strong&gt;GloVe&lt;/strong&gt; or &lt;strong&gt;Word2Vec&lt;/strong&gt; embeddings
+Unknown words were ignored, and classification was performed using: &lt;strong&gt;Logistic Regression&lt;/strong&gt;, &lt;strong&gt;Random Forest&lt;/strong&gt;, &lt;strong&gt;SVM&lt;/strong&gt;, &lt;strong&gt;AdaBoost&lt;/strong&gt;, and &lt;strong&gt;XGBoost&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Siamese Manhattan LSTM&lt;/strong&gt;
+Two identical &lt;strong&gt;LSTMs&lt;/strong&gt; process the two questions in parallel, and their outputs are compared using the &lt;strong&gt;Manhattan distance&lt;/strong&gt;.
+This model uses &lt;strong&gt;Word2Vec&lt;/strong&gt; embeddings with &lt;strong&gt;custom handling for missing words&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Bilateral Multi-Perspective Matching (BiMPM)&lt;/strong&gt;
+An advanced architecture using &lt;strong&gt;bidirectional LSTMs&lt;/strong&gt; for contextual encoding.
+Each word in one question is matched with all words in the other using &lt;strong&gt;multi-perspective cosine similarity&lt;/strong&gt;, followed by &lt;strong&gt;aggregation via BiLSTM&lt;/strong&gt; and a &lt;strong&gt;softmax classifier&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GloVe + LSTM + CNN + Baseline Features&lt;/strong&gt;
+Combines &lt;strong&gt;GloVe embeddings (trained on 840B tokens)&lt;/strong&gt; with multiple feature extraction branches: - &lt;strong&gt;LSTM&lt;/strong&gt; with 256 hidden units - &lt;strong&gt;1D CNN&lt;/strong&gt; (kernel size = 11, stride = 1, 256 filters, leaky ReLU activation) - &lt;strong&gt;Mean pooling&lt;/strong&gt; of embeddings
+These extracted features are concatenated with baseline features and passed through &lt;strong&gt;five fully connected layers&lt;/strong&gt; with dropout and batch normalization.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We used the Kaggle Quora Question Pairs challenge, which contains millions of labeled question pairs (is_duplicate = 0/1) and uses Log Loss as the evaluation metric (computed via Kaggle submission).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Log-loss ↓&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Majority baseline&lt;/td&gt;
+&lt;td&gt;0.55&lt;/td&gt;
+&lt;td&gt;Random guess baseline&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;XGBoost + baseline features&lt;/td&gt;
+&lt;td&gt;0.38&lt;/td&gt;
+&lt;td&gt;Best traditional&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Siamese LSTM&lt;/td&gt;
+&lt;td&gt;0.40&lt;/td&gt;
+&lt;td&gt;Noise due to unknown-word embedding&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BiMPM&lt;/td&gt;
+&lt;td&gt;0.34&lt;/td&gt;
+&lt;td&gt;Strong contextual model&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GloVe + LSTM + CNN + baseline features&lt;/td&gt;
+&lt;td&gt;0.21&lt;/td&gt;
+&lt;td&gt;Best performing model&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva.in/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&amp;logo=plotly&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&amp;logo=jupyter&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;This work studies how convolutional neural networks (CNNs) use different frequency parts of an image.
+We found that many adversarial weaknesses come from the model&amp;rsquo;s strong use of high-frequency details that humans barely notice.
+Our results show that adversarial attacks mainly change the high-frequency parts of images.
+At the same time, robust or adversarially trained models rely more on low-frequency information.
+This shift makes them more stable and harder to fool.&lt;/p&gt;
+&lt;h2 id="byte-sized-attacks-how-small-changes-break-intelligent-systems"&gt;Byte-sized Attacks: How Small Changes Break Intelligent Systems&lt;/h2&gt;
+&lt;p&gt;In May 2017, the WannaCry ransomware outbreak (a computer virus) swept across the world, infecting over 200,000 computers in more than 150 countries.
+Hospitals, shipping networks, and government agencies were paralyzed overnight.
+The virus was just a few kilobytes of malicious code that exploited a hidden weakness in the Windows OS.
+This shows that complex systems can fail because of tiny, hidden flaws.&lt;/p&gt;
+&lt;p&gt;Now imagine a world where most daily activities are governed by complex AI models.
+What happens when these systems start making wrong, even harmful, predictions or decisions, even though they are trained carefully?
+In one well-known example, researchers showed that by altering just a few bytes in a trained model, a state-of-the-art self-driving car misread a stop sign as &amp;ldquo;Speed Limit 45.&amp;rdquo;
+A small sticker of a few pixels was enough to fool a billion-dollar system (eykholt2018robust).&lt;/p&gt;
+&lt;p&gt;This is why it becomes crucial to understand when and how pre-trained models, despite having multiple safeguards during training, can still be fooled so easily.
+Such investigations fall under the field of adversarial attacks, which study deliberate manipulations designed to expose the hidden weaknesses of AI systems.&lt;/p&gt;
+&lt;h2 id="when-small-noise-fools-big-models"&gt;When Small Noise Fools Big Models&lt;/h2&gt;
+&lt;p&gt;Machine learning models are primarily trained to work on specific problems, under the assumption that the training and test data are generated from the same statistical distribution.
+In Adversarial attacks, a deliberate attempt is made to deceive the models by introducing subtle, often invisible, changes to their input.
+These changes are crafted so carefully that they appear harmless to the human eye.
+Yet, they completely alter how the model interprets the data.&lt;/p&gt;
+&lt;p&gt;A classic demonstration comes from researchers at Google Brain, who showed that adding a barely perceptible noise pattern to a picture of a panda made a highly accurate image classifier label it as a gibbon with over 99% confidence (goodfellow2014explaining).&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/adversarial-cnn.png"
+alt="Adversarial example"
+class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+The classic "panda–gibbon" adversarial example from Goodfellow et al. (2014) (goodfellow2014explaining).
+A small, imperceptible perturbation is added to the original image of a panda.
+To humans, the result looks identical, but the neural network's prediction changes from "panda" to "gibbon".
+This striking example illustrates how tiny, structured noise can completely mislead a deep learning model.
+&lt;/span&gt;
+&lt;div class="mermaid"&gt;graph LR
+A[Input Image, X] --&gt; I[CNN Model] --&gt; B[Classification C;];
+C[Input Image, X + noise] --&gt; D[CNN Model] --&gt; E[Classification D;];
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Workflow of the adversarial attack used in the example above.
+&lt;/span&gt;
+&lt;p&gt;Hence, it is essential to understand how and when these models can be vulnerable so that they can be designed for safety in the future.&lt;/p&gt;
+&lt;h2 id="towards-frequency-based-explanation-for-robust-cnn"&gt;Towards Frequency-Based Explanation for Robust CNN&lt;/h2&gt;
+&lt;p&gt;In our study, we explored why deep neural networks become vulnerable to small, imperceptible perturbations by analyzing their behavior in the frequency domain rather than the traditional pixel (spatial) domain.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-12 col-md-10 col-lg-8 mx-auto"&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dHo9QUm85Ms?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption" markdown="1"&gt;
+Online lecture on our work to better identify algorithms that are vulnerable to these attacks and present explainable options to help design better models. To read in more detail refer (DBLP:journals/corr/abs-2005-03141).
+&lt;/span&gt;
+&lt;p&gt;We showed that adversarial perturbations—whether crafted by white-box or black-box attacks—primarily distort the high-frequency components of an image, which humans hardly perceive.
+Through a series of experiments on CIFAR-10 with ResNet and VGG models, we discovered that standard CNNs rely heavily on these high-frequency features to make predictions.
+This dependence explains why they can be easily fooled by minute, structured noise.&lt;/p&gt;
+&lt;p&gt;To quantify this relationship, we proposed the Occluded Frequency (OF) method, a new way to measure how much each frequency band affects model predictions.
+Our analysis revealed that robustly trained models (via adversarial training) shift their reliance toward low-frequency components, which are more correlated with accurate semantic content and less sensitive to noise.&lt;/p&gt;
+&lt;p&gt;These findings offer a new, interpretable explanation for robustness:&lt;/p&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;A model becomes more resilient when it learns from stable, low-frequency information rather than fragile, high-frequency cues.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This perspective bridges adversarial machine learning and signal processing, providing a frequency-based framework for explaining and improving CNN robustness, an essential step toward transparent and trustworthy AI systems.&lt;/p&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva.in/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&amp;logo=plotly&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&amp;logo=jupyter&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;Early detection of diabetic retinopathy depends on the clarity of retinal images. Yet, many scans suffer from haze, blur, or uneven lighting.
+This study investigates how image enhancement during pre-processing can improve the visibility of retinal lesions for both clinicians and AI models.
+We present a model-independent evaluation framework and introduce the Illuminate–Sharpen method, which enhances image clarity and consistency without requiring labeled data.&lt;/p&gt;
+&lt;h2 id="imprecise-retinal-imaging-limits-diabetic-retinopathy-diagnosis"&gt;Imprecise Retinal Imaging Limits Diabetic Retinopathy Diagnosis&lt;/h2&gt;
+&lt;p&gt;Diabetic retinopathy (DR) is a diabetes related condition that affects the blood vessels in the retina, the light-sensitive tissue at the back of the eye (
+).
+As per a study conducted in 2021, it was estimated that around 9.60 million people in the US are living with DR {%cite lundeen2023prevalence &amp;ndash;file externals%}.
+Worldwide, the prevalence of DR is increasing at an alarming rate.
+The World Health Organization (WHO) has predicted that in India, the number of adults with diabetes will be the highest in the world: From 19 million in 1995 to 80 million in 2030, (
+) {%cite vashist2011role &amp;ndash;file externals%}.
+Timely intervention can reduce severe visual loss by 90% {%cite etdrs1991effects &amp;ndash;file externals%}.
+Doctors often rely on high-quality retinal images to detect early signs of the disease.
+These images are often blurry, poorly illuminated, or uneven in contrast, which can make early signs of the disease easy to miss by both physicians and AI-based diagnostic tools.
+Improving image clarity is therefore not just a technical enhancement, but a crucial step toward saving sight.&lt;/p&gt;
+&lt;h2 id="from-poor-quality-to-clarity-image-enhancement-approaches"&gt;From Poor Quality to Clarity: Image Enhancement Approaches&lt;/h2&gt;
+&lt;p&gt;Retinal fundus images are the foundation for diagnosing DR.
+These color photographs capture the back of the eye, showing blood vessels, the optic disc, and the macula, areas where early signs of damage appear.
+Doctors study these images to identify and grade disease severity based on visible lesions such as microaneurysms, hemorrhages, and exudates as shown in
+.
+The pattern, color, and location of these features help determine whether the disease is mild, moderate, or severe. Regular imaging also allows physicians to track progression over time, guiding timely treatment decisions.&lt;/p&gt;
+&lt;p id="fig-retina"&gt;&lt;/p&gt;
+&lt;div class="row justify-content-center my-3"&gt;
+&lt;div class="col-sm-10 col-md-8"&gt;
+&lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
+&lt;figcaption class="caption d-block text-center mt-2"&gt;
+Annotated retinal fundus image showing key DR lesions.
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Similarly, AI algorithms, both classical and deep learning, are designed to recognize patterns of the lesions in the images that indicate disease.
+By designing algorithms (or training them) on thousands of labeled examples, algorithms can assist doctors by highlighting suspicious regions, flagging subtle changes, or even grading disease automatically.&lt;/p&gt;
+&lt;p&gt;However, the effectiveness of both human and AI algorithms depends heavily on image clarity and consistency.
+Retinal images often suffer from poor quality due to uneven lighting, motion blur, improper focus, or obstructions such as cataracts and small pupils.
+Such issues can hide early signs of disease or lead to errors in diagnosis, reducing overall accuracy.
+Hence, there is a need for image enhancement algorithms in the pre-processing stage to improve image quality, enabling more precise feature detection and more reliable diagnosis.&lt;/p&gt;
+&lt;p&gt;Image enhancement does not in itself perform segmentation, but it ideally improves observability of relevant features.
+Example image enhancement techniques are color illumination, image dehazing, deblurring, and edge detection.&lt;/p&gt;
+&lt;p&gt;While many DR detection and lesion segmentation algorithms have been proposed, there is less emphasis on image enhancement pre-processing and a poor understanding of why one pre-processing technique might be more useful than another.
+This knowledge can help select the most effective enhancement methods based on quality, ensuring consistent image quality, and improving the accuracy of both human and AI-based diagnosis.&lt;/p&gt;
+&lt;h2 id="our-approach-the-illuminatesharpen-method"&gt;Our Approach: The Illuminate–Sharpen Method&lt;/h2&gt;
+&lt;p&gt;In this study, we examined how different enhancement techniques influence the detection of DR lesions in retinal fundus images. Instead of relying on trial-and-error model testing, we developed a theoretical framework to understand why specific pre-processing methods make disease features more visible.
+First, we also introduced simple, model-independent metrics, &lt;strong&gt;consistency score&lt;/strong&gt;(how uniform the enhancement is across images) and &lt;strong&gt;separability score&lt;/strong&gt;(how well diseased and healthy pixels can be distinguished), to measure how effectively an enhancement method reveals disease features without requiring labeled data or complex machine learning models.&lt;/p&gt;
+&lt;p&gt;We also reinterpreted the dehazing model (used initially for natural images) as a general framework for image enhancement, showing that it amplifies differences between pixel colors and improves contrast in medical images.
+Using our image enhancement score, we created a new technique called &lt;strong&gt;Illuminate-Sharpen&lt;/strong&gt;, which brightens and sharpens images to make disease areas more visible.
+Our method outperformed standard techniques such as histogram equalization and contrast stretching.
+It helped make small lesions like microaneurysms easier to detect in the IDRiD dataset.&lt;/p&gt;
+&lt;div class="row justify-content-center my-3"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png"
+alt="overview image"
+class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;span class="caption d-block text-center mt-2"&gt;
+Segmentation results after applying image enhancement methods—enhanced images improve contrast and detail, enabling more precise separation of retinal structures and lesion boundaries.
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

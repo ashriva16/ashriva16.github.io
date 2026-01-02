@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
 
-Sitemap: https://www.ashriva.in/sitemap.xml
+Sitemap: https://ashriva.in/sitemap.xml

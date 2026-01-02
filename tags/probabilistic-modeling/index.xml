@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Probabilistic Modeling | Ankit Shrivastava</title><link>https://ashriva.in/tags/probabilistic-modeling/</link><atom:link href="https://ashriva.in/tags/probabilistic-modeling/index.xml" rel="self" type="application/rss+xml"/><description>Probabilistic Modeling</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Probabilistic Modeling</title><link>https://ashriva.in/tags/probabilistic-modeling/</link></image><item><title>AI for Robust Manufacturing</title><link>https://ashriva.in/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat&amp;logo=plotly&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Jupyter-F37626?style=flat&amp;logo=jupyter&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
+&lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
+&lt;/p&gt;
+&lt;p&gt;This project shows how Bayesian optimization can accelerate semiconductor manufacturing by reducing trial-and-error. By focusing exploration on uncertain yet promising regions, we identified process conditions that produced stable molybdenum (Mo) coatings with both low stress and controlled resistance, even under natural variability. The result: faster, more reliable pathways to robust chip manufacturing.&lt;/p&gt;
+&lt;h2 id="the-challenge-of-semiconductor-material-design"&gt;The Challenge of Semiconductor Material Design&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;In chip manufacturing, even the smallest instability in a layer can ripple into million-dollar losses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;During the manufacturing of semiconductor chips, even the slightest variation in details can determine whether a chip supports the next generation of devices or fails before it leaves the fab.
+Materials used in chips must meet multiple, often conflicting requirements: electrical performance, mechanical stability, manufacturability, and reliability.
+Optimizing for one property in isolation, such as low resistance, can inadvertently worsen another, such as layer instability, which in turn can cause defects or premature failure.&lt;/p&gt;
+&lt;p&gt;When the design criteria aren&amp;rsquo;t appropriately chosen, the costs ripple across entire industries:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;⚡ &lt;strong&gt;Yield crashes in fabs&lt;/strong&gt;: In 2019, TSMC, the world&amp;rsquo;s largest chipmaker, lost an estimated $550 million when a chemical contamination reduced wafer yields across multiple advanced nodes (tsmc2019).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;💾 &lt;strong&gt;Consumer device recalls&lt;/strong&gt;: In 2010, defective chips used in certain Intel chipsets caused data corruption and system instability, forcing Intel into a $700 million recall and replacement program (intel2010).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="finding-the-sweet-spot-smarter-trade-offs-in-chip-manufacturing"&gt;Finding the Sweet Spot: Smarter Trade-offs in Chip Manufacturing&lt;/h2&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;Every knob combination in the fab can yield multiple outcomes; the goal is to find the sweet spot.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Modern semiconductor processes involve multiple interdependent variables, including deposition power and chamber pressure, as well as gas chemistry and temperature.
+Adjusting one knob often changes multiple outcomes, sometimes in conflicting ways.
+For example, in the deposition of molybdenum (Mo) barrier layers, increasing power during sputtering improves conductivity but also raises internal film stress, which can make layers prone to cracking (vink1991).&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
+alt="Cross-section drawing of key atomistic processes involved in sputtering, transport, and film growth"
+class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="caption text-center"&gt;
+Cross-section drawing of key atomistic processes involved in sputtering, transport, and film growth
+&lt;/div&gt;
+&lt;p&gt;Traditionally, engineers have navigated these trade-offs through design of experiments (DoE) or intuition, testing a limited number of process conditions and hoping to find an acceptable balance.
+But as manufacturing complexity grows, this trial-and-error approach has become too slow and too costly. The real challenge is to reduce the search process and find optimum conditions quickly while still ensuring stability and reliability.&lt;/p&gt;
+&lt;h2 id="ai-guided-optimization-for-reliable-semiconductor-coatings"&gt;AI-Guided Optimization for Reliable Semiconductor Coatings&lt;/h2&gt;
+&lt;p&gt;AI is reshaping manufacturing by replacing slow trial-and-error with faster, smarter decision-making.
+In semiconductors, this means finding reliable process conditions with fewer tests and quicker results.&lt;/p&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm mt-3 mt-md-0"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
+alt="overview image"
+class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
+loading="lazy"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="caption"&gt;
+Overview of the approach, refer to paper (10.1116/6.0003418) for details.
+&lt;/span&gt;
+&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
+&lt;p&gt;By learning where it is uncertain, the model knows exactly where to explore next.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this work, we developed an AI model based on a Bayesian optimization framework to fine-tune sputter deposition conditions. Specifically, we optimized power and pressure to balance electrical performance (sheet resistance) and mechanical stability (residual stress) in molybdenum (Mo) thin films, while ensuring robustness against natural process variability. By combining performance and stability in the objective function, the model efficiently explored the design space and identified stable configurations.&lt;/p&gt;
+&lt;p&gt;After each trial, the model predicts which settings are promising and also shows where it is still uncertain.
+This uncertainty is not a drawback; instead, it guides exploration into new regions of the process space while refining areas that already look good.
+In this way, the search quickly converges on the best options without wasting time.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/gp.gif"
+class="img-fluid rounded z-depth-1 w-60 mx-auto d-block"
+alt="Gaussian process fit"
+loading="lazy"&gt;
+&lt;/figure&gt;
+&lt;span class="caption"&gt;
+Gaussian fit over the multi-objective landscape.
+&lt;/span&gt;
+&lt;p&gt;The plots above show how the model learns the landscape:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Predictions reveal likely values for stress and resistance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Uncertainty highlights regions where the model needs more data.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Exploration directs attention to those uncertain areas, while still focusing on the most promising results.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Through this process, we identified deposition conditions that consistently produced low stress and controlled resistance, even under process variability.&lt;/p&gt;
+&lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📂
+&lt;/li&gt;
+&lt;li&gt;📄
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
