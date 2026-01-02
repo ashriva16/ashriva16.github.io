@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Ankit Shrivastava</title><link>https://ashriva16.github.io/projects/</link><atom:link href="https://ashriva16.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>Projects</title><link>https://ashriva16.github.io/projects/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva16.github.io/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva16.github.io/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Ankit Shrivastava</title><link>https://ashriva.in/projects/</link><atom:link href="https://ashriva.in/projects/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Projects</title><link>https://ashriva.in/projects/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva.in/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva.in/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -23,7 +23,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Hence, predicting material behavior is not just a research challenge but a business necessity.&lt;/p&gt;
 &lt;figure class="row justify-content-center my-4"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
 &lt;/div&gt;
 &lt;figcaption class="caption" markdown="1"&gt;
 Liberty Ship *Schenectady* fractured from deck to keel.
@@ -55,7 +55,7 @@ In this work, we developed a method to &lt;strong&gt;predict peak-stress cluster
 &lt;p&gt;👉 This demonstrates how deep learning can serve as a fast, reliable tool for identifying critical stress hotspots in complex material microstructures, with promising applications in material design and failure prevention.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/encoder-decoder.png"
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png"
 alt="Proposed encoder decoder architecture with Saliency mapping"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -70,7 +70,7 @@ Overview of the approach, refer (doi:10.1177/10812865211055504) for more details
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva16.github.io/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva.in/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -104,7 +104,7 @@ Suppose we fail to capture this evolution accurately. In that case, engineering 
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -134,7 +134,7 @@ These methods illustrate the core trade-off between compression and trajectory s
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -147,7 +147,7 @@ Refer to paper (desai2023) for details.
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI for Robust Manufacturing</title><link>https://ashriva16.github.io/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI for Robust Manufacturing</title><link>https://ashriva.in/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -183,7 +183,7 @@ Adjusting one knob often changes multiple outcomes, sometimes in conflicting way
 For example, in the deposition of molybdenum (Mo) barrier layers, increasing power during sputtering improves conductivity but also raises internal film stress, which can make layers prone to cracking (vink1991).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/pvd-bayesopt.jpg"
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
 alt="Cross-section drawing of key atomistic processes involved in sputtering, transport, and film growth"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -199,7 +199,7 @@ But as manufacturing complexity grows, this trial-and-error approach has become 
 In semiconductors, this means finding reliable process conditions with fewer tests and quicker results.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/pvd-bayesopt.jpg"
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -216,7 +216,7 @@ Overview of the approach, refer to paper (10.1116/6.0003418) for details.
 This uncertainty is not a drawback; instead, it guides exploration into new regions of the process space while refining areas that already look good.
 In this way, the search quickly converges on the best options without wasting time.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/gp.gif"
+&lt;img src="https://ashriva.in/assets/img/projects/gp.gif"
 class="img-fluid rounded z-depth-1 w-60 mx-auto d-block"
 alt="Gaussian process fit"
 loading="lazy"&gt;
@@ -243,7 +243,7 @@ Gaussian fit over the multi-objective landscape.
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva16.github.io/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva.in/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -287,19 +287,19 @@ Such simulations can take days or even weeks to complete and often require acces
 To manage this, engineers are forced into tradeoffs where they either compromise on accuracy or accept rising costs and delays that slow innovation and decision-making.&lt;/p&gt;
 &lt;div class="row text-center"&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Aircraft Dynamics" loading="eager"&gt;
 &lt;/div&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Bridge Dynamics" loading="eager"&gt;
 &lt;/div&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Building Dynamics" loading="eager"&gt;
@@ -323,7 +323,7 @@ To keep everything physically consistent, we designed a composite loss that enfo
 In short, it&amp;rsquo;s a step toward faster, more reliable scientific simulations and design workflows.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -339,7 +339,7 @@ Overview of the approach. Refer to the paper (arora2022spatiotemporalsuperresolu
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva16.github.io/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva.in/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/CUDA-76B900?style=flat&amp;logo=nvidia&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -419,7 +419,7 @@ They typically produce near-optimal solutions, though they require parameter tun
 &lt;p&gt;In this work, we extended the hybrid Ant Colony Optimization–River Flow Dynamics (ACO–RFD) algorithm for solving the Traveling Salesman Problem (TSP) on GPUs. To achieve this, we introduced an &amp;lsquo;ant-drop&amp;rsquo; entity that fuses ACO&amp;rsquo;s constructive speed with RFD&amp;rsquo;s resilience against local minima. We explored two GPU parallelization strategies: HB1 (task-parallel) and HB2 (combining task- and data-parallelism).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/ant-rfd-tsp.png"
+&lt;img src="https://ashriva.in/assets/img/projects/ant-rfd-tsp.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"
 loading="lazy"&gt;
@@ -437,8 +437,8 @@ Overview of proposed approach.
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva16.github.io/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva.in/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/matlab-R2020b"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
@@ -519,8 +519,8 @@ This is where active learning comes in.&lt;/p&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva16.github.io/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva.in/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -782,8 +782,8 @@ These extracted features are concatenated with baseline features and passed thro
 &lt;/table&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva16.github.io/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva.in/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -817,7 +817,7 @@ Yet, they completely alter how the model interprets the data.&lt;/p&gt;
 &lt;p&gt;A classic demonstration comes from researchers at Google Brain, who showed that adding a barely perceptible noise pattern to a picture of a panda made a highly accurate image classifier label it as a gibbon with over 99% confidence (goodfellow2014explaining).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/adversarial-cnn.png"
+&lt;img src="https://ashriva.in/assets/img/projects/adversarial-cnn.png"
 alt="Adversarial example"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -863,7 +863,7 @@ Our analysis revealed that robustly trained models (via adversarial training) sh
 &lt;ul&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva16.github.io/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva.in/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
@@ -896,7 +896,7 @@ The pattern, color, and location of these features help determine whether the di
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;
 Annotated retinal fundus image showing key DR lesions.
 &lt;/figcaption&gt;
@@ -922,7 +922,7 @@ Our method outperformed standard techniques such as histogram equalization and c
 It helped make small lesions like microaneurysms easier to detect in the IDRiD dataset.&lt;/p&gt;
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/diagnopathy.png"
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -933,8 +933,8 @@ Segmentation results after applying image enhancement methods—enhanced images 
 &lt;/div&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva16.github.io/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva.in/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -951,7 +951,7 @@ It achieves a five-to-sixfold speed-up, making it a practical tool for large-sca
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Illustration of an HVDC transmission system. Source: [AllumiaX](https://www.allumiax.com/blog/high-voltage-direct-current-hvdc-transmission).
 &lt;/figcaption&gt;
@@ -1024,7 +1024,7 @@ The computed resistances showed excellent agreement with analytical and measured
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Ring and star electrode systems with their image conductors. To read in more detail, refer to {%cite muhammed2021parallel --file papers%}.
 &lt;/figcaption&gt;
@@ -1035,7 +1035,7 @@ Ring and star electrode systems with their image conductors. To read in more det
 &lt;ul&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Numerical Modeling for Fusion Energy</title><link>https://ashriva16.github.io/projects/12_mhd/</link><pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/12_mhd/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Numerical Modeling for Fusion Energy</title><link>https://ashriva.in/projects/12_mhd/</link><pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/12_mhd/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/ParMooN-FEM%20Framework-4B8BBE?style=flat&amp;logoColor=white" alt="ParMooN FEM Framework"/&gt;
 &lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white" alt="MPI"/&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white" alt="C++"/&gt;
@@ -1052,7 +1052,7 @@ It&amp;rsquo;s a collaboration of 35 nations, all working together to unlock cle
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/blanket.png" alt="Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER)" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/blanket.png" alt="Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER)" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER), [Source](http://www.fusion.qst.go.jp/rokkasyo/en/project/blanket.html).
 &lt;/figcaption&gt;
@@ -1077,7 +1077,7 @@ The resulting decline in turbulence can threaten the thermal management of the r
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/Picture11.png" alt="Illustration of Lorentz force acting on a conducting fluid in a magnetic field" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/Picture11.png" alt="Illustration of Lorentz force acting on a conducting fluid in a magnetic field" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 🧲 Illustration of Lorentz force acting on a conducting fluid in a magnetic field {%cite pulugundla2013numerical --file externals%}.
 &lt;/figcaption&gt;
@@ -1091,7 +1091,7 @@ The resulting increase in turbulent mixing enhances heat dissipation and helps r
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/Picture10.png" alt="Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency." loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/Picture10.png" alt="Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency." loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency.
 &lt;/figcaption&gt;
@@ -1130,14 +1130,14 @@ The following are the key &lt;strong&gt;simulation insights&lt;/strong&gt; from 
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-12 col-md-6"&gt;
 &lt;video controls class="w-100 rounded shadow-sm"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/mhd/media1.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/mhd/media1.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;div class="caption text-center mt-2"&gt;Flow 1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="col-12 col-md-6 mt-3 mt-md-0"&gt;
 &lt;video controls class="w-100 rounded shadow-sm"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/mhd/media2.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/mhd/media2.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;div class="caption text-center mt-2"&gt;Flow 2&lt;/div&gt;
@@ -1147,8 +1147,8 @@ Your browser does not support the video tag.
 Such models can guide the design of future fusion reactors by revealing how geometry, magnetic-field strength, and coolant properties together influence heat transfer and reactor safety.&lt;/p&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/mhd/M_Tech_Thesis.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Granular Mechanics with Graph Theory</title><link>https://ashriva16.github.io/projects/13_force_chains/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/13_force_chains/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/mhd/M_Tech_Thesis.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Granular Mechanics with Graph Theory</title><link>https://ashriva.in/projects/13_force_chains/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/13_force_chains/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/LAMMPS-1E90FF?style=flat&amp;logo=atom&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -1164,7 +1164,7 @@ What seemed like stable rock suddenly crumbled into debris, burying the structur
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/force_chains/tunnel_collapse.jpeg" alt="Collapse of the Longxi tunnel at the crossing of the fault" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/force_chains/tunnel_collapse.jpeg" alt="Collapse of the Longxi tunnel at the crossing of the fault" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;Collapse of the Longxi Tunnel at the crossing of the fault (Wenchuan Earthquake, 2008)&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -1175,7 +1175,7 @@ Granular material is composed of countless small particles, such as sand, gravel
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8 col-lg-4"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/force_chains/Granular_matter_examples.png" alt="Granular Materials" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/force_chains/Granular_matter_examples.png" alt="Granular Materials" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;Examples of Granular Materials Source: &lt;a href="https://en.wikipedia.org/wiki/Granular_material#/media/File:Granular_matter_examples.PNG"&gt;wiki&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -1226,14 +1226,14 @@ Together, they illustrate how slight variations in particle arrangement can comp
 &lt;!-- Left video --&gt;
 &lt;div class="col-12 col-md-6 mb-3"&gt;
 &lt;video controls width="100%" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/force_chains/media1.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/force_chains/media1.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;!-- Right video --&gt;
 &lt;div class="col-12 col-md-6 mb-3"&gt;
 &lt;video controls width="100%" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/force_chains/media2.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/force_chains/media2.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;/div&gt;

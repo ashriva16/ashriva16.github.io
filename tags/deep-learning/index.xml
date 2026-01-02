@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deep Learning | Ankit Shrivastava</title><link>https://ashriva16.github.io/tags/deep-learning/</link><atom:link href="https://ashriva16.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml"/><description>Deep Learning</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>Deep Learning</title><link>https://ashriva16.github.io/tags/deep-learning/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva16.github.io/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva16.github.io/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deep Learning | Ankit Shrivastava</title><link>https://ashriva.in/tags/deep-learning/</link><atom:link href="https://ashriva.in/tags/deep-learning/index.xml" rel="self" type="application/rss+xml"/><description>Deep Learning</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Deep Learning</title><link>https://ashriva.in/tags/deep-learning/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva.in/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva.in/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -23,7 +23,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Hence, predicting material behavior is not just a research challenge but a business necessity.&lt;/p&gt;
 &lt;figure class="row justify-content-center my-4"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
 &lt;/div&gt;
 &lt;figcaption class="caption" markdown="1"&gt;
 Liberty Ship *Schenectady* fractured from deck to keel.
@@ -55,7 +55,7 @@ In this work, we developed a method to &lt;strong&gt;predict peak-stress cluster
 &lt;p&gt;👉 This demonstrates how deep learning can serve as a fast, reliable tool for identifying critical stress hotspots in complex material microstructures, with promising applications in material design and failure prevention.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/encoder-decoder.png"
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png"
 alt="Proposed encoder decoder architecture with Saliency mapping"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -70,7 +70,7 @@ Overview of the approach, refer (doi:10.1177/10812865211055504) for more details
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva16.github.io/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva.in/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -104,7 +104,7 @@ Suppose we fail to capture this evolution accurately. In that case, engineering 
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -134,7 +134,7 @@ These methods illustrate the core trade-off between compression and trajectory s
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -147,7 +147,7 @@ Refer to paper (desai2023) for details.
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva16.github.io/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva.in/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -191,19 +191,19 @@ Such simulations can take days or even weeks to complete and often require acces
 To manage this, engineers are forced into tradeoffs where they either compromise on accuracy or accept rising costs and delays that slow innovation and decision-making.&lt;/p&gt;
 &lt;div class="row text-center"&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Aircraft Dynamics" loading="eager"&gt;
 &lt;/div&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Bridge Dynamics" loading="eager"&gt;
 &lt;/div&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Building Dynamics" loading="eager"&gt;
@@ -227,7 +227,7 @@ To keep everything physically consistent, we designed a composite loss that enfo
 In short, it&amp;rsquo;s a step toward faster, more reliable scientific simulations and design workflows.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -243,7 +243,7 @@ Overview of the approach. Refer to the paper (arora2022spatiotemporalsuperresolu
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva16.github.io/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva.in/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/matlab-R2020b"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
@@ -324,8 +324,8 @@ This is where active learning comes in.&lt;/p&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva16.github.io/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva.in/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -587,8 +587,8 @@ These extracted features are concatenated with baseline features and passed thro
 &lt;/table&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva16.github.io/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva.in/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -622,7 +622,7 @@ Yet, they completely alter how the model interprets the data.&lt;/p&gt;
 &lt;p&gt;A classic demonstration comes from researchers at Google Brain, who showed that adding a barely perceptible noise pattern to a picture of a panda made a highly accurate image classifier label it as a gibbon with over 99% confidence (goodfellow2014explaining).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/adversarial-cnn.png"
+&lt;img src="https://ashriva.in/assets/img/projects/adversarial-cnn.png"
 alt="Adversarial example"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -668,7 +668,7 @@ Our analysis revealed that robustly trained models (via adversarial training) sh
 &lt;ul&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva16.github.io/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva.in/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
@@ -701,7 +701,7 @@ The pattern, color, and location of these features help determine whether the di
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;
 Annotated retinal fundus image showing key DR lesions.
 &lt;/figcaption&gt;
@@ -727,7 +727,7 @@ Our method outperformed standard techniques such as histogram equalization and c
 It helped make small lesions like microaneurysms easier to detect in the IDRiD dataset.&lt;/p&gt;
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/diagnopathy.png"
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -738,5 +738,5 @@ Segmentation results after applying image enhancement methods—enhanced images 
 &lt;/div&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>

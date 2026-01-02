@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ankit Shrivastava</title><link>https://ashriva16.github.io/</link><atom:link href="https://ashriva16.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Ankit Shrivastava</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>Ankit Shrivastava</title><link>https://ashriva16.github.io/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva16.github.io/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>Getting Started</title><link>https://ashriva16.github.io/courses/hugo-blox/getting-started/</link><pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/getting-started/</guid><description>&lt;h2 id="quick-start-from-template"&gt;Quick Start from Template&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ankit Shrivastava</title><link>https://ashriva.in/</link><atom:link href="https://ashriva.in/index.xml" rel="self" type="application/rss+xml"/><description>Ankit Shrivastava</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Ankit Shrivastava</title><link>https://ashriva.in/</link></image><item><title>Multi-Modal ML</title><link>https://ashriva.in/projects/1_pvd_multimodal/</link><pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/1_pvd_multimodal/</guid><description>&lt;p&gt;Coming Soong&lt;/p&gt;</description></item><item><title>Getting Started</title><link>https://ashriva.in/courses/hugo-blox/getting-started/</link><pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/getting-started/</guid><description>&lt;h2 id="quick-start-from-template"&gt;Quick Start from Template&lt;/h2&gt;
 &lt;div class="hb-steps"&gt;
 &lt;h3 id="create-a-site"&gt;Create a site&lt;/h3&gt;
 &lt;p&gt;
@@ -27,8 +27,8 @@ class="hb-card group"href="../guide/configuration" &gt;
 class="hb-card group"href="../guide/formatting" &gt;
 &lt;span class="hb-card-title p-4"&gt;
 &lt;svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"&gt;&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/&gt;&lt;/svg&gt;Create content&lt;/span&gt;&lt;/a&gt;
-&lt;/div&gt;</description></item><item><title>Customizing Hugo</title><link>https://ashriva16.github.io/courses/hugo-blox/reference/customization/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/reference/customization/</guid><description>&lt;p&gt;View the full docs at
-&lt;/p&gt;</description></item><item><title>Project Structure</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/project-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/project-structure/</guid><description>&lt;h2 id="folder-structure"&gt;Folder Structure&lt;/h2&gt;
+&lt;/div&gt;</description></item><item><title>Customizing Hugo</title><link>https://ashriva.in/courses/hugo-blox/reference/customization/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/reference/customization/</guid><description>&lt;p&gt;View the full docs at
+&lt;/p&gt;</description></item><item><title>Project Structure</title><link>https://ashriva.in/courses/hugo-blox/guide/project-structure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/project-structure/</guid><description>&lt;h2 id="folder-structure"&gt;Folder Structure&lt;/h2&gt;
 &lt;p&gt;There are &lt;strong&gt;4 main folders for Hugo-based sites&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;content/&lt;/code&gt; for your Markdown-formatted content files (homepage, etc.)
@@ -76,7 +76,7 @@ class="hb-card group"href="../guide/formatting" &gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;My Test&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva16.github.io/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>AI-driven Material Property Prediction</title><link>https://ashriva.in/projects/2_encoder_decoder/</link><pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/2_encoder_decoder/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -101,7 +101,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Hence, predicting material behavior is not just a research challenge but a business necessity.&lt;/p&gt;
 &lt;figure class="row justify-content-center my-4"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png" alt="Failure of large-scale structures due to material defects" class="img-fluid rounded z-depth-1 w-75 mx-auto d-block" loading="lazy"&gt;
 &lt;/div&gt;
 &lt;figcaption class="caption" markdown="1"&gt;
 Liberty Ship *Schenectady* fractured from deck to keel.
@@ -133,7 +133,7 @@ In this work, we developed a method to &lt;strong&gt;predict peak-stress cluster
 &lt;p&gt;👉 This demonstrates how deep learning can serve as a fast, reliable tool for identifying critical stress hotspots in complex material microstructures, with promising applications in material design and failure prevention.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/encoder-decoder.png"
+&lt;img src="https://ashriva.in/assets/img/projects/encoder-decoder.png"
 alt="Proposed encoder decoder architecture with Saliency mapping"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -148,7 +148,7 @@ Overview of the approach, refer (doi:10.1177/10812865211055504) for more details
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Configuration</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/configuration/</guid><description>&lt;p&gt;The configuration of your site can be found in &lt;code&gt;config/_default/&lt;/code&gt;.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>Configuration</title><link>https://ashriva.in/courses/hugo-blox/guide/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/configuration/</guid><description>&lt;p&gt;The configuration of your site can be found in &lt;code&gt;config/_default/&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="full-documentation"&gt;Full Documentation&lt;/h2&gt;
 &lt;p&gt;See
 &lt;/p&gt;
@@ -179,7 +179,7 @@ Overview of the approach, refer (doi:10.1177/10812865211055504) for more details
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;My Page&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nt"&gt;toc&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva16.github.io/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>AI Abstractions of Material Evolution</title><link>https://ashriva.in/projects/3_latent_evolution/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/3_latent_evolution/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -213,7 +213,7 @@ Suppose we fail to capture this evolution accurately. In that case, engineering 
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="Simulated examples of spinodal decomposition, dendritic growth, and grain evolution" loading="lazy"&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -243,7 +243,7 @@ These methods illustrate the core trade-off between compression and trajectory s
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/latent-evolution.png" alt="overview image" loading="lazy"&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -256,7 +256,7 @@ Refer to paper (desai2023) for details.
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI for Robust Manufacturing</title><link>https://ashriva16.github.io/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI for Robust Manufacturing</title><link>https://ashriva.in/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -292,7 +292,7 @@ Adjusting one knob often changes multiple outcomes, sometimes in conflicting way
 For example, in the deposition of molybdenum (Mo) barrier layers, increasing power during sputtering improves conductivity but also raises internal film stress, which can make layers prone to cracking (vink1991).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/pvd-bayesopt.jpg"
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
 alt="Cross-section drawing of key atomistic processes involved in sputtering, transport, and film growth"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -308,7 +308,7 @@ But as manufacturing complexity grows, this trial-and-error approach has become 
 In semiconductors, this means finding reliable process conditions with fewer tests and quicker results.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/pvd-bayesopt.jpg"
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -325,7 +325,7 @@ Overview of the approach, refer to paper (10.1116/6.0003418) for details.
 This uncertainty is not a drawback; instead, it guides exploration into new regions of the process space while refining areas that already look good.
 In this way, the search quickly converges on the best options without wasting time.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/gp.gif"
+&lt;img src="https://ashriva.in/assets/img/projects/gp.gif"
 class="img-fluid rounded z-depth-1 w-60 mx-auto d-block"
 alt="Gaussian process fit"
 loading="lazy"&gt;
@@ -352,7 +352,7 @@ Gaussian fit over the multi-objective landscape.
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva16.github.io/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>AI for Faster Physics Simulations</title><link>https://ashriva.in/projects/5_spatio_temporal/</link><pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/5_spatio_temporal/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -396,19 +396,19 @@ Such simulations can take days or even weeks to complete and often require acces
 To manage this, engineers are forced into tradeoffs where they either compromise on accuracy or accept rising costs and delays that slow innovation and decision-making.&lt;/p&gt;
 &lt;div class="row text-center"&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Aircraft Dynamics" loading="eager"&gt;
 &lt;/div&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Bridge Dynamics" loading="eager"&gt;
 &lt;/div&gt;
 &lt;div class="col-md-4"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 width="100%" height="auto"
 style="height:250px; object-fit:contain;"
 title="Building Dynamics" loading="eager"&gt;
@@ -432,7 +432,7 @@ To keep everything physically consistent, we designed a composite loss that enfo
 In short, it&amp;rsquo;s a step toward faster, more reliable scientific simulations and design workflows.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/spatio-temporal.png"
+&lt;img src="https://ashriva.in/assets/img/projects/spatio-temporal.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -448,7 +448,7 @@ Overview of the approach. Refer to the paper (arora2022spatiotemporalsuperresolu
 &lt;/li&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva16.github.io/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva.in/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/CUDA-76B900?style=flat&amp;logo=nvidia&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -528,7 +528,7 @@ They typically produce near-optimal solutions, though they require parameter tun
 &lt;p&gt;In this work, we extended the hybrid Ant Colony Optimization–River Flow Dynamics (ACO–RFD) algorithm for solving the Traveling Salesman Problem (TSP) on GPUs. To achieve this, we introduced an &amp;lsquo;ant-drop&amp;rsquo; entity that fuses ACO&amp;rsquo;s constructive speed with RFD&amp;rsquo;s resilience against local minima. We explored two GPU parallelization strategies: HB1 (task-parallel) and HB2 (combining task- and data-parallelism).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/ant-rfd-tsp.png"
+&lt;img src="https://ashriva.in/assets/img/projects/ant-rfd-tsp.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"
 loading="lazy"&gt;
@@ -546,8 +546,8 @@ Overview of proposed approach.
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva16.github.io/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Active Semi-Supervised Learning</title><link>https://ashriva.in/projects/7_graph_ssl/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/7_graph_ssl/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/matlab-R2020b"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/Linux-FCC624?style=flat&amp;logo=linux&amp;logoColor=black"/&gt;
@@ -628,8 +628,8 @@ This is where active learning comes in.&lt;/p&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva16.github.io/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/graph_ssl/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Semantic Similarity Using NLP</title><link>https://ashriva.in/projects/8_siames_lstm/</link><pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/8_siames_lstm/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -891,8 +891,8 @@ These extracted features are concatenated with baseline features and passed thro
 &lt;/table&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva16.github.io/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/siamese_lstm/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Explaining Adversarial Attacks on CNN</title><link>https://ashriva.in/projects/9_adversarial_cnn/</link><pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/9_adversarial_cnn/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -926,7 +926,7 @@ Yet, they completely alter how the model interprets the data.&lt;/p&gt;
 &lt;p&gt;A classic demonstration comes from researchers at Google Brain, who showed that adding a barely perceptible noise pattern to a picture of a panda made a highly accurate image classifier label it as a gibbon with over 99% confidence (goodfellow2014explaining).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/adversarial-cnn.png"
+&lt;img src="https://ashriva.in/assets/img/projects/adversarial-cnn.png"
 alt="Adversarial example"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -972,7 +972,7 @@ Our analysis revealed that robustly trained models (via adversarial training) sh
 &lt;ul&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva16.github.io/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Enhancing Retinal Image Clarity</title><link>https://ashriva.in/projects/10_diagnopathy/</link><pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/10_diagnopathy/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat&amp;logo=scipy&amp;logoColor=white"/&gt;
@@ -1005,7 +1005,7 @@ The pattern, color, and location of these features help determine whether the di
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png" alt="Annotated retinal fundus image" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;
 Annotated retinal fundus image showing key DR lesions.
 &lt;/figcaption&gt;
@@ -1031,7 +1031,7 @@ Our method outperformed standard techniques such as histogram equalization and c
 It helped make small lesions like microaneurysms easier to detect in the IDRiD dataset.&lt;/p&gt;
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/diagnopathy.png"
+&lt;img src="https://ashriva.in/assets/img/projects/diagnopathy.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -1042,8 +1042,8 @@ Segmentation results after applying image enhancement methods—enhanced images 
 &lt;/div&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva16.github.io/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/diagnopathy/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva.in/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -1060,7 +1060,7 @@ It achieves a five-to-sixfold speed-up, making it a practical tool for large-sca
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Illustration of an HVDC transmission system. Source: [AllumiaX](https://www.allumiax.com/blog/high-voltage-direct-current-hvdc-transmission).
 &lt;/figcaption&gt;
@@ -1133,7 +1133,7 @@ The computed resistances showed excellent agreement with analytical and measured
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Ring and star electrode systems with their image conductors. To read in more detail, refer to {%cite muhammed2021parallel --file papers%}.
 &lt;/figcaption&gt;
@@ -1144,7 +1144,7 @@ Ring and star electrode systems with their image conductors. To read in more det
 &lt;ul&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Numerical Modeling for Fusion Energy</title><link>https://ashriva16.github.io/projects/12_mhd/</link><pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/12_mhd/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;/ul&gt;</description></item><item><title>Numerical Modeling for Fusion Energy</title><link>https://ashriva.in/projects/12_mhd/</link><pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/12_mhd/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/ParMooN-FEM%20Framework-4B8BBE?style=flat&amp;logoColor=white" alt="ParMooN FEM Framework"/&gt;
 &lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white" alt="MPI"/&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white" alt="C++"/&gt;
@@ -1161,7 +1161,7 @@ It&amp;rsquo;s a collaboration of 35 nations, all working together to unlock cle
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/blanket.png" alt="Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER)" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/blanket.png" alt="Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER)" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER), [Source](http://www.fusion.qst.go.jp/rokkasyo/en/project/blanket.html).
 &lt;/figcaption&gt;
@@ -1186,7 +1186,7 @@ The resulting decline in turbulence can threaten the thermal management of the r
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/Picture11.png" alt="Illustration of Lorentz force acting on a conducting fluid in a magnetic field" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/Picture11.png" alt="Illustration of Lorentz force acting on a conducting fluid in a magnetic field" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 🧲 Illustration of Lorentz force acting on a conducting fluid in a magnetic field {%cite pulugundla2013numerical --file externals%}.
 &lt;/figcaption&gt;
@@ -1200,7 +1200,7 @@ The resulting increase in turbulent mixing enhances heat dissipation and helps r
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/Picture10.png" alt="Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency." loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/Picture10.png" alt="Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency." loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency.
 &lt;/figcaption&gt;
@@ -1239,14 +1239,14 @@ The following are the key &lt;strong&gt;simulation insights&lt;/strong&gt; from 
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-12 col-md-6"&gt;
 &lt;video controls class="w-100 rounded shadow-sm"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/mhd/media1.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/mhd/media1.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;div class="caption text-center mt-2"&gt;Flow 1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="col-12 col-md-6 mt-3 mt-md-0"&gt;
 &lt;video controls class="w-100 rounded shadow-sm"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/mhd/media2.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/mhd/media2.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;div class="caption text-center mt-2"&gt;Flow 2&lt;/div&gt;
@@ -1256,8 +1256,8 @@ Your browser does not support the video tag.
 Such models can guide the design of future fusion reactors by revealing how geometry, magnetic-field strength, and coolant properties together influence heat transfer and reactor safety.&lt;/p&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/mhd/M_Tech_Thesis.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Granular Mechanics with Graph Theory</title><link>https://ashriva16.github.io/projects/13_force_chains/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/13_force_chains/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/mhd/M_Tech_Thesis.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Granular Mechanics with Graph Theory</title><link>https://ashriva.in/projects/13_force_chains/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/13_force_chains/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/LAMMPS-1E90FF?style=flat&amp;logo=atom&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -1273,7 +1273,7 @@ What seemed like stable rock suddenly crumbled into debris, burying the structur
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/force_chains/tunnel_collapse.jpeg" alt="Collapse of the Longxi tunnel at the crossing of the fault" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/force_chains/tunnel_collapse.jpeg" alt="Collapse of the Longxi tunnel at the crossing of the fault" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;Collapse of the Longxi Tunnel at the crossing of the fault (Wenchuan Earthquake, 2008)&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -1284,7 +1284,7 @@ Granular material is composed of countless small particles, such as sand, gravel
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8 col-lg-4"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/force_chains/Granular_matter_examples.png" alt="Granular Materials" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/force_chains/Granular_matter_examples.png" alt="Granular Materials" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;Examples of Granular Materials Source: &lt;a href="https://en.wikipedia.org/wiki/Granular_material#/media/File:Granular_matter_examples.PNG"&gt;wiki&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -1335,14 +1335,14 @@ Together, they illustrate how slight variations in particle arrangement can comp
 &lt;!-- Left video --&gt;
 &lt;div class="col-12 col-md-6 mb-3"&gt;
 &lt;video controls width="100%" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/force_chains/media1.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/force_chains/media1.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;!-- Right video --&gt;
 &lt;div class="col-12 col-md-6 mb-3"&gt;
 &lt;video controls width="100%" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/force_chains/media2.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/force_chains/media2.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;/div&gt;
@@ -1360,7 +1360,7 @@ In simple terms, a stronger attraction between particles made the material more 
 &lt;ul&gt;
 &lt;li&gt;📄
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>The Roles of Size, Packing, and Cohesion in the Emergence of Force Chains in Granular Packings</title><link>https://ashriva16.github.io/publications/force-chains-granular-packings-2025/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/force-chains-granular-packings-2025/</guid><description/></item><item><title>Organizer — ML for accelerating material characterization and design</title><link>https://ashriva16.github.io/events/minisymp-wccm-2024/</link><pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/minisymp-wccm-2024/</guid><description/></item><item><title>Will be giving an invited talk at Oak Ridge National Laboratory – MiC Seminar: Enabling Material Discovery: Harnessing Multimodal Machine Learning Algorithms for Inverse Design</title><link>https://ashriva16.github.io/blog/news-2024-06-15-10/</link><pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2024-06-15-10/</guid><description>&lt;p&gt;Will be giving an invited talk at Oak Ridge National Laboratory – MiC Seminar: Enabling Material Discovery: Harnessing Multimodal Machine Learning Algorithms for Inverse Design&lt;/p&gt;</description></item><item><title>Organizer — ML insights from heterogeneous materials data</title><link>https://ashriva16.github.io/events/minisymp-mom-2024-2/</link><pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/minisymp-mom-2024-2/</guid><description/></item><item><title>Will be giving an invited talk at IACM Workshop in Kitakyushu, Japan: Multimodal machine learning with small datasets for process-structure-property modeling</title><link>https://ashriva16.github.io/blog/news-2024-05-20-13/</link><pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2024-05-20-13/</guid><description>&lt;p&gt;Will be giving an invited talk at IACM Workshop in Kitakyushu, Japan: Multimodal machine learning with small datasets for process-structure-property modeling&lt;/p&gt;</description></item><item><title>Organizer — Analysis and design of complex materials via numerical methods and ML</title><link>https://ashriva16.github.io/events/minisymp-mom-2024-1/</link><pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/minisymp-mom-2024-1/</guid><description/></item><item><title>Session Chair — Data Sciences and Related Methods</title><link>https://ashriva16.github.io/events/session-chair-mom2024/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/session-chair-mom2024/</guid><description/></item><item><title>Co-organizing Minisymposium at WCCM 2024: Machine learning algorithms for accelerating material characterization, discovery, design, and manufacturing processes</title><link>https://ashriva16.github.io/blog/news-2024-04-10-12/</link><pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2024-04-10-12/</guid><description>&lt;p&gt;Co-organizing Minisymposium at WCCM 2024: Machine learning algorithms for accelerating material characterization, discovery, design, and manufacturing processes&lt;/p&gt;</description></item><item><title>Chaired Session at SIAM Mathematics of Materials 2024: Session on Data Sciences and Related Methods</title><link>https://ashriva16.github.io/blog/news-2024-04-08-11/</link><pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2024-04-08-11/</guid><description>&lt;p&gt;Chaired Session at SIAM Mathematics of Materials 2024: Session on Data Sciences and Related Methods&lt;/p&gt;</description></item><item><title>Bayesian Optimization for Stable Properties Amid Processing Fluctuations in Sputter Deposition</title><link>https://ashriva16.github.io/publications/bayesian-optimization-sputter-deposition-2024/</link><pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/bayesian-optimization-sputter-deposition-2024/</guid><description/></item><item><title>Co-organizing Minisymposium at SIAM Mathematics of Materials: ML for insights from heterogeneous materials data</title><link>https://ashriva16.github.io/blog/news-2024-04-01-9/</link><pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2024-04-01-9/</guid><description>&lt;p&gt;Co-organizing Minisymposium at SIAM Mathematics of Materials: ML for insights from heterogeneous materials data&lt;/p&gt;</description></item><item><title>Article accepted in Journal of Applied Mechanics (2025): Force Chains in Granular Packings: The Roles of Size, Packing, and Cohesion</title><link>https://ashriva16.github.io/blog/news-2024-03-01-8/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2024-03-01-8/</guid><description>&lt;p&gt;Article accepted in Journal of Applied Mechanics (2025): Force Chains in Granular Packings: The Roles of Size, Packing, and Cohesion&lt;/p&gt;</description></item><item><title>Guest Lecture — Machine learning algorithms for Inverse design.</title><link>https://ashriva16.github.io/events/machine-learning-algorithms-for-inverse-design/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/machine-learning-algorithms-for-inverse-design/</guid><description/></item><item><title>Talk — Enabling Material Discovery: Harnessing Multimodal Machine Learning Algorithms for Inverse Design.</title><link>https://ashriva16.github.io/events/enabling-material-discovery-harnessing-multimodal-machine-learning-algorithms-for-inverse-design/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/enabling-material-discovery-harnessing-multimodal-machine-learning-algorithms-for-inverse-design/</guid><description/></item><item><title>Talk — Mulitmodal machine learning with small datasets for process strcture property modeling</title><link>https://ashriva16.github.io/events/mulitmodal-machine-learning-with-small-datasets-for-process-strcture-property-modeling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/mulitmodal-machine-learning-with-small-datasets-for-process-strcture-property-modeling/</guid><description/></item><item><title>Talk — Overcoming challenges of scarce and multimodal data in material design with machine learning</title><link>https://ashriva16.github.io/events/overcoming-challenges-of-scarce-and-multimodal-data-in-material-design-with-machine-learning/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/overcoming-challenges-of-scarce-and-multimodal-data-in-material-design-with-machine-learning/</guid><description/></item><item><title>Trade-offs in the Latent Representation of Microstructure Evolution</title><link>https://ashriva16.github.io/publications/latent-representation-microstructure-evolution-2024/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/latent-representation-microstructure-evolution-2024/</guid><description/></item><item><title>Paper accepted at NeurIPS Workshop on ML for Scientific Discovery: Mechanistic ML and Digital Engineering</title><link>https://ashriva16.github.io/blog/news-2023-11-20-7/</link><pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2023-11-20-7/</guid><description>&lt;p&gt;Paper accepted at NeurIPS Workshop on ML for Scientific Discovery: Mechanistic ML and Digital Engineering&lt;/p&gt;</description></item><item><title>Embed Media</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/media/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/media/</guid><description>&lt;p&gt;
+&lt;/ul&gt;</description></item><item><title>The Roles of Size, Packing, and Cohesion in the Emergence of Force Chains in Granular Packings</title><link>https://ashriva.in/publications/force-chains-granular-packings-2025/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/force-chains-granular-packings-2025/</guid><description/></item><item><title>Organizer — ML for accelerating material characterization and design</title><link>https://ashriva.in/events/minisymp-wccm-2024/</link><pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/minisymp-wccm-2024/</guid><description/></item><item><title>Will be giving an invited talk at Oak Ridge National Laboratory – MiC Seminar: Enabling Material Discovery: Harnessing Multimodal Machine Learning Algorithms for Inverse Design</title><link>https://ashriva.in/blog/news-2024-06-15-10/</link><pubDate>Sat, 15 Jun 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2024-06-15-10/</guid><description>&lt;p&gt;Will be giving an invited talk at Oak Ridge National Laboratory – MiC Seminar: Enabling Material Discovery: Harnessing Multimodal Machine Learning Algorithms for Inverse Design&lt;/p&gt;</description></item><item><title>Organizer — ML insights from heterogeneous materials data</title><link>https://ashriva.in/events/minisymp-mom-2024-2/</link><pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/minisymp-mom-2024-2/</guid><description/></item><item><title>Will be giving an invited talk at IACM Workshop in Kitakyushu, Japan: Multimodal machine learning with small datasets for process-structure-property modeling</title><link>https://ashriva.in/blog/news-2024-05-20-13/</link><pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2024-05-20-13/</guid><description>&lt;p&gt;Will be giving an invited talk at IACM Workshop in Kitakyushu, Japan: Multimodal machine learning with small datasets for process-structure-property modeling&lt;/p&gt;</description></item><item><title>Organizer — Analysis and design of complex materials via numerical methods and ML</title><link>https://ashriva.in/events/minisymp-mom-2024-1/</link><pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/minisymp-mom-2024-1/</guid><description/></item><item><title>Session Chair — Data Sciences and Related Methods</title><link>https://ashriva.in/events/session-chair-mom2024/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/session-chair-mom2024/</guid><description/></item><item><title>Co-organizing Minisymposium at WCCM 2024: Machine learning algorithms for accelerating material characterization, discovery, design, and manufacturing processes</title><link>https://ashriva.in/blog/news-2024-04-10-12/</link><pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2024-04-10-12/</guid><description>&lt;p&gt;Co-organizing Minisymposium at WCCM 2024: Machine learning algorithms for accelerating material characterization, discovery, design, and manufacturing processes&lt;/p&gt;</description></item><item><title>Chaired Session at SIAM Mathematics of Materials 2024: Session on Data Sciences and Related Methods</title><link>https://ashriva.in/blog/news-2024-04-08-11/</link><pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2024-04-08-11/</guid><description>&lt;p&gt;Chaired Session at SIAM Mathematics of Materials 2024: Session on Data Sciences and Related Methods&lt;/p&gt;</description></item><item><title>Bayesian Optimization for Stable Properties Amid Processing Fluctuations in Sputter Deposition</title><link>https://ashriva.in/publications/bayesian-optimization-sputter-deposition-2024/</link><pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/bayesian-optimization-sputter-deposition-2024/</guid><description/></item><item><title>Co-organizing Minisymposium at SIAM Mathematics of Materials: ML for insights from heterogeneous materials data</title><link>https://ashriva.in/blog/news-2024-04-01-9/</link><pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2024-04-01-9/</guid><description>&lt;p&gt;Co-organizing Minisymposium at SIAM Mathematics of Materials: ML for insights from heterogeneous materials data&lt;/p&gt;</description></item><item><title>Article accepted in Journal of Applied Mechanics (2025): Force Chains in Granular Packings: The Roles of Size, Packing, and Cohesion</title><link>https://ashriva.in/blog/news-2024-03-01-8/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2024-03-01-8/</guid><description>&lt;p&gt;Article accepted in Journal of Applied Mechanics (2025): Force Chains in Granular Packings: The Roles of Size, Packing, and Cohesion&lt;/p&gt;</description></item><item><title>Guest Lecture — Machine learning algorithms for Inverse design.</title><link>https://ashriva.in/events/machine-learning-algorithms-for-inverse-design/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/machine-learning-algorithms-for-inverse-design/</guid><description/></item><item><title>Talk — Enabling Material Discovery: Harnessing Multimodal Machine Learning Algorithms for Inverse Design.</title><link>https://ashriva.in/events/enabling-material-discovery-harnessing-multimodal-machine-learning-algorithms-for-inverse-design/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/enabling-material-discovery-harnessing-multimodal-machine-learning-algorithms-for-inverse-design/</guid><description/></item><item><title>Talk — Mulitmodal machine learning with small datasets for process strcture property modeling</title><link>https://ashriva.in/events/mulitmodal-machine-learning-with-small-datasets-for-process-strcture-property-modeling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/mulitmodal-machine-learning-with-small-datasets-for-process-strcture-property-modeling/</guid><description/></item><item><title>Talk — Overcoming challenges of scarce and multimodal data in material design with machine learning</title><link>https://ashriva.in/events/overcoming-challenges-of-scarce-and-multimodal-data-in-material-design-with-machine-learning/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/overcoming-challenges-of-scarce-and-multimodal-data-in-material-design-with-machine-learning/</guid><description/></item><item><title>Trade-offs in the Latent Representation of Microstructure Evolution</title><link>https://ashriva.in/publications/latent-representation-microstructure-evolution-2024/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/latent-representation-microstructure-evolution-2024/</guid><description/></item><item><title>Paper accepted at NeurIPS Workshop on ML for Scientific Discovery: Mechanistic ML and Digital Engineering</title><link>https://ashriva.in/blog/news-2023-11-20-7/</link><pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2023-11-20-7/</guid><description>&lt;p&gt;Paper accepted at NeurIPS Workshop on ML for Scientific Discovery: Mechanistic ML and Digital Engineering&lt;/p&gt;</description></item><item><title>Embed Media</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/media/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/media/</guid><description>&lt;p&gt;
 is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -1453,12 +1453,12 @@ data.head()
 &lt;span class="inline-block pr-1"&gt;
 &lt;span style="height: 1em; transform: translateY(0.1em);"&gt;python&lt;/span&gt;
 &lt;/span&gt; Python&lt;/p&gt;
-&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-"&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;</description></item><item><title>Experience</title><link>https://ashriva16.github.io/experience/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/experience/</guid><description/></item><item><title>Will be presenting at USNCCM 2023: Modeling process-structure-property relationships in Mo thin films from multimodal data</title><link>https://ashriva16.github.io/blog/news-2023-08-01-6/</link><pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2023-08-01-6/</guid><description>&lt;p&gt;Will be presenting at USNCCM 2023: Modeling process-structure-property relationships in Mo thin films from multimodal data&lt;/p&gt;</description></item><item><title>Conference Paper Accepted at AAAI Workshop: Spatio-temporal super-resolution using physics-informed deep learning</title><link>https://ashriva16.github.io/blog/news-2023-04-01-5/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2023-04-01-5/</guid><description>&lt;p&gt;Conference Paper Accepted at AAAI Workshop: Spatio-temporal super-resolution using physics-informed deep learning&lt;/p&gt;</description></item><item><title>Published in Acta Materialia: Trade-offs in the latent representation of microstructure evolution</title><link>https://ashriva16.github.io/blog/news-2023-02-01-4/</link><pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2023-02-01-4/</guid><description>&lt;p&gt;Published in Acta Materialia: Trade-offs in the latent representation of microstructure evolution&lt;/p&gt;</description></item><item><title>Organizer — ML and numerical methods for engineering design</title><link>https://ashriva16.github.io/events/minisymp-mml-de-2023/</link><pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/minisymp-mml-de-2023/</guid><description/></item><item><title>Talk — Analyzing latent dimensional representations of microstructure evolution</title><link>https://ashriva16.github.io/events/analyzing-latent-dimensional-representations-of-microstructure-evolution/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/analyzing-latent-dimensional-representations-of-microstructure-evolution/</guid><description/></item><item><title>Talk — Bayesian optimization-assisted sputter deposition of Molybdenum thin films</title><link>https://ashriva16.github.io/events/bayesian-optimization-assisted-sputter-deposition-of-molybdenum-thin-films/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/bayesian-optimization-assisted-sputter-deposition-of-molybdenum-thin-films/</guid><description/></item><item><title>Talk — Modeling process structure property relationships in Mo thin films from multi-modal data using machine learning</title><link>https://ashriva16.github.io/events/modeling-process-structure-property-relationships-in-mo-thin-films-from-multi-modal-data-using-machine-learning/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/modeling-process-structure-property-relationships-in-mo-thin-films-from-multi-modal-data-using-machine-learning/</guid><description/></item><item><title>Talk — Spatio-temporal super-resolution of dynamical systems using physics-informed deep-learning</title><link>https://ashriva16.github.io/events/spatio-temporal-super-resolution-of-dynamical-systems-using-physics-informed-deep-learning/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/spatio-temporal-super-resolution-of-dynamical-systems-using-physics-informed-deep-learning/</guid><description/></item><item><title>Spatio-Temporal Super-Resolution of Dynamical Systems Using Physics-Informed Deep Learning</title><link>https://ashriva16.github.io/publications/spatio-temporal-super-resolution-pinn-2022/</link><pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/spatio-temporal-super-resolution-pinn-2022/</guid><description/></item><item><title>Will be giving an invited talk at Air Force Research Lab: Predicting stress hotspots using deep learning</title><link>https://ashriva16.github.io/blog/news-2022-11-15-3/</link><pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2022-11-15-3/</guid><description>&lt;p&gt;Will be giving an invited talk at Air Force Research Lab: Predicting stress hotspots using deep learning&lt;/p&gt;</description></item><item><title>Predicting Peak Stresses in Microstructured Materials Using Convolutional Encoder–Decoder Learning</title><link>https://ashriva16.github.io/publications/predicting-peak-stresses-microstructured-materials-2022/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/predicting-peak-stresses-microstructured-materials-2022/</guid><description/></item><item><title>Will be giving an invited talk at Brown University Crunch Seminar: Deep learning for microstructural stress prediction</title><link>https://ashriva16.github.io/blog/news-2021-11-10-2/</link><pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2021-11-10-2/</guid><description>&lt;p&gt;Will be giving an invited talk at Brown University Crunch Seminar: Deep learning for microstructural stress prediction&lt;/p&gt;</description></item><item><title>Published in Mathematics and Mechanics of Solids: CNNs for peak stress prediction in microstructured materials</title><link>https://ashriva16.github.io/blog/news-2021-07-01-1/</link><pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/blog/news-2021-07-01-1/</guid><description>&lt;p&gt;Published in Mathematics and Mechanics of Solids: CNNs for peak stress prediction in microstructured materials&lt;/p&gt;</description></item><item><title>A Parallel Galerkin's Moment-Based Method for Finding the Resistance of HVDC Grounding Electrode</title><link>https://ashriva16.github.io/publications/parallel-galerkin-hvdc-grounding-electrode-2021/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/parallel-galerkin-hvdc-grounding-electrode-2021/</guid><description/></item><item><title>Talk — Predicting microstructure from physical vapor deposition process conditions using machine learning.</title><link>https://ashriva16.github.io/events/predicting-microstructure-from-physical-vapor-deposition-process-conditions-using-machine-learning/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/predicting-microstructure-from-physical-vapor-deposition-process-conditions-using-machine-learning/</guid><description/></item><item><title>Talk — Predicting stress hotspots in polycrystalline materials from microstructural features using deep learning</title><link>https://ashriva16.github.io/events/predicting-stress-hotspots-in-polycrystalline-materials-from-microstructural-features-using-deep-learning/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/predicting-stress-hotspots-in-polycrystalline-materials-from-microstructural-features-using-deep-learning/</guid><description/></item><item><title>Towards Frequency-Based Explanation for Robust CNN</title><link>https://ashriva16.github.io/publications/frequency-based-explanation-robust-cnn-2020/</link><pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/publications/frequency-based-explanation-robust-cnn-2020/</guid><description/></item><item><title>Talk — Identifying microstructural features that drive stress hot-spots using a data mining approach</title><link>https://ashriva16.github.io/events/identifying-microstructural-features-that-drive-stress-hot-spots-using-a-data-mining-approach/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/identifying-microstructural-features-that-drive-stress-hot-spots-using-a-data-mining-approach/</guid><description/></item><item><title>Talk — Predicting Stress Hotspots Inside Microstructures Using Deep Learning</title><link>https://ashriva16.github.io/events/predicting-stress-hotspots-inside-microstructures-using-deep-learning/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/predicting-stress-hotspots-inside-microstructures-using-deep-learning/</guid><description/></item><item><title>Talk — Identifying microstructural features that drive stress hotspots using a data mining approach</title><link>https://ashriva16.github.io/events/identifying-microstructural-features-that-drive-stress-hotspots-using-a-data-mining-approach/</link><pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/events/identifying-microstructural-features-that-drive-stress-hotspots-using-a-data-mining-approach/</guid><description/></item><item><title>Buttons</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/button/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/button/</guid><description>&lt;p&gt;A modern, customizable button shortcode with gradient styling, icons, and smart link handling.&lt;/p&gt;
+&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-"&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;</description></item><item><title>Experience</title><link>https://ashriva.in/experience/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/experience/</guid><description/></item><item><title>Will be presenting at USNCCM 2023: Modeling process-structure-property relationships in Mo thin films from multimodal data</title><link>https://ashriva.in/blog/news-2023-08-01-6/</link><pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2023-08-01-6/</guid><description>&lt;p&gt;Will be presenting at USNCCM 2023: Modeling process-structure-property relationships in Mo thin films from multimodal data&lt;/p&gt;</description></item><item><title>Conference Paper Accepted at AAAI Workshop: Spatio-temporal super-resolution using physics-informed deep learning</title><link>https://ashriva.in/blog/news-2023-04-01-5/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2023-04-01-5/</guid><description>&lt;p&gt;Conference Paper Accepted at AAAI Workshop: Spatio-temporal super-resolution using physics-informed deep learning&lt;/p&gt;</description></item><item><title>Published in Acta Materialia: Trade-offs in the latent representation of microstructure evolution</title><link>https://ashriva.in/blog/news-2023-02-01-4/</link><pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2023-02-01-4/</guid><description>&lt;p&gt;Published in Acta Materialia: Trade-offs in the latent representation of microstructure evolution&lt;/p&gt;</description></item><item><title>Organizer — ML and numerical methods for engineering design</title><link>https://ashriva.in/events/minisymp-mml-de-2023/</link><pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/minisymp-mml-de-2023/</guid><description/></item><item><title>Talk — Analyzing latent dimensional representations of microstructure evolution</title><link>https://ashriva.in/events/analyzing-latent-dimensional-representations-of-microstructure-evolution/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/analyzing-latent-dimensional-representations-of-microstructure-evolution/</guid><description/></item><item><title>Talk — Bayesian optimization-assisted sputter deposition of Molybdenum thin films</title><link>https://ashriva.in/events/bayesian-optimization-assisted-sputter-deposition-of-molybdenum-thin-films/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/bayesian-optimization-assisted-sputter-deposition-of-molybdenum-thin-films/</guid><description/></item><item><title>Talk — Modeling process structure property relationships in Mo thin films from multi-modal data using machine learning</title><link>https://ashriva.in/events/modeling-process-structure-property-relationships-in-mo-thin-films-from-multi-modal-data-using-machine-learning/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/modeling-process-structure-property-relationships-in-mo-thin-films-from-multi-modal-data-using-machine-learning/</guid><description/></item><item><title>Talk — Spatio-temporal super-resolution of dynamical systems using physics-informed deep-learning</title><link>https://ashriva.in/events/spatio-temporal-super-resolution-of-dynamical-systems-using-physics-informed-deep-learning/</link><pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/spatio-temporal-super-resolution-of-dynamical-systems-using-physics-informed-deep-learning/</guid><description/></item><item><title>Spatio-Temporal Super-Resolution of Dynamical Systems Using Physics-Informed Deep Learning</title><link>https://ashriva.in/publications/spatio-temporal-super-resolution-pinn-2022/</link><pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/spatio-temporal-super-resolution-pinn-2022/</guid><description/></item><item><title>Will be giving an invited talk at Air Force Research Lab: Predicting stress hotspots using deep learning</title><link>https://ashriva.in/blog/news-2022-11-15-3/</link><pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2022-11-15-3/</guid><description>&lt;p&gt;Will be giving an invited talk at Air Force Research Lab: Predicting stress hotspots using deep learning&lt;/p&gt;</description></item><item><title>Predicting Peak Stresses in Microstructured Materials Using Convolutional Encoder–Decoder Learning</title><link>https://ashriva.in/publications/predicting-peak-stresses-microstructured-materials-2022/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/predicting-peak-stresses-microstructured-materials-2022/</guid><description/></item><item><title>Will be giving an invited talk at Brown University Crunch Seminar: Deep learning for microstructural stress prediction</title><link>https://ashriva.in/blog/news-2021-11-10-2/</link><pubDate>Wed, 10 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2021-11-10-2/</guid><description>&lt;p&gt;Will be giving an invited talk at Brown University Crunch Seminar: Deep learning for microstructural stress prediction&lt;/p&gt;</description></item><item><title>Published in Mathematics and Mechanics of Solids: CNNs for peak stress prediction in microstructured materials</title><link>https://ashriva.in/blog/news-2021-07-01-1/</link><pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/blog/news-2021-07-01-1/</guid><description>&lt;p&gt;Published in Mathematics and Mechanics of Solids: CNNs for peak stress prediction in microstructured materials&lt;/p&gt;</description></item><item><title>A Parallel Galerkin's Moment-Based Method for Finding the Resistance of HVDC Grounding Electrode</title><link>https://ashriva.in/publications/parallel-galerkin-hvdc-grounding-electrode-2021/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/parallel-galerkin-hvdc-grounding-electrode-2021/</guid><description/></item><item><title>Talk — Predicting microstructure from physical vapor deposition process conditions using machine learning.</title><link>https://ashriva.in/events/predicting-microstructure-from-physical-vapor-deposition-process-conditions-using-machine-learning/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/predicting-microstructure-from-physical-vapor-deposition-process-conditions-using-machine-learning/</guid><description/></item><item><title>Talk — Predicting stress hotspots in polycrystalline materials from microstructural features using deep learning</title><link>https://ashriva.in/events/predicting-stress-hotspots-in-polycrystalline-materials-from-microstructural-features-using-deep-learning/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/predicting-stress-hotspots-in-polycrystalline-materials-from-microstructural-features-using-deep-learning/</guid><description/></item><item><title>Towards Frequency-Based Explanation for Robust CNN</title><link>https://ashriva.in/publications/frequency-based-explanation-robust-cnn-2020/</link><pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/publications/frequency-based-explanation-robust-cnn-2020/</guid><description/></item><item><title>Talk — Identifying microstructural features that drive stress hot-spots using a data mining approach</title><link>https://ashriva.in/events/identifying-microstructural-features-that-drive-stress-hot-spots-using-a-data-mining-approach/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/identifying-microstructural-features-that-drive-stress-hot-spots-using-a-data-mining-approach/</guid><description/></item><item><title>Talk — Predicting Stress Hotspots Inside Microstructures Using Deep Learning</title><link>https://ashriva.in/events/predicting-stress-hotspots-inside-microstructures-using-deep-learning/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/predicting-stress-hotspots-inside-microstructures-using-deep-learning/</guid><description/></item><item><title>Talk — Identifying microstructural features that drive stress hotspots using a data mining approach</title><link>https://ashriva.in/events/identifying-microstructural-features-that-drive-stress-hotspots-using-a-data-mining-approach/</link><pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate><guid>https://ashriva.in/events/identifying-microstructural-features-that-drive-stress-hotspots-using-a-data-mining-approach/</guid><description/></item><item><title>Buttons</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/button/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/button/</guid><description>&lt;p&gt;A modern, customizable button shortcode with gradient styling, icons, and smart link handling.&lt;/p&gt;
 &lt;h2 id="basic-usage"&gt;Basic Usage&lt;/h2&gt;
 &lt;div class="text-left"&gt;
 &lt;a
 id="button-351ac412531c23e422b81c6422c17da5"
-href="https://ashriva16.github.io/contact"
+href="https://ashriva.in/contact"
 class="inline-flex items-center gap-2 font-medium no-underline transition-all duration-300 ease-out transform-gpu focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none bg-gradient-to-br from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 active:from-primary-700 active:to-primary-800 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] focus:ring-primary-500/50 px-4 py-2 text-base rounded-lg"
 role="button"
 aria-label="Contact Us"
@@ -1720,7 +1720,7 @@ aria-label="Pill Button"
 &lt;div class="text-center"&gt;
 &lt;a
 id="button-62059f8d62052633590d3f60ec092595"
-href="https://ashriva16.github.io/signup"
+href="https://ashriva.in/signup"
 class="inline-flex items-center gap-2 font-medium no-underline transition-all duration-300 ease-out transform-gpu focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none bg-gradient-to-br from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 active:from-primary-700 active:to-primary-800 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] focus:ring-primary-500/50 px-6 py-3 text-lg rounded-lg"
 role="button"
 aria-label="Get Started Today"
@@ -1754,7 +1754,7 @@ aria-label="View on GitHub"
 &lt;div class="text-left"&gt;
 &lt;a
 id="button-72ec86801f391f16b84b269ade9d2995"
-href="https://ashriva16.github.io/files/document.pdf"
+href="https://ashriva.in/files/document.pdf"
 class="inline-flex items-center gap-2 font-medium no-underline transition-all duration-300 ease-out transform-gpu focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none bg-gradient-to-br from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 active:from-secondary-700 active:to-secondary-800 text-white shadow-lg shadow-secondary-500/25 hover:shadow-xl hover:shadow-secondary-500/30 hover:scale-105 active:scale-95 focus:ring-secondary-500/50 px-4 py-2 text-base rounded-full"
 role="button"
 aria-label="Download PDF"
@@ -1856,7 +1856,7 @@ aria-label="Download PDF"
 &lt;li&gt;Keyboard focus indicators&lt;/li&gt;
 &lt;li&gt;High contrast focus rings&lt;/li&gt;
 &lt;li&gt;Disabled state handling&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Callouts</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/callout/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/callout/</guid><description>&lt;p&gt;Hugo Blox supports GitHub and Obsidian-style Markdown callouts for maximum compatibility and content portability.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>Callouts</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/callout/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/callout/</guid><description>&lt;p&gt;Hugo Blox supports GitHub and Obsidian-style Markdown callouts for maximum compatibility and content portability.&lt;/p&gt;
 &lt;p&gt;Callouts are a useful feature to draw attention to important or related content such as notes, hints, or warnings in your articles.&lt;/p&gt;
 &lt;h2 id="usage"&gt;Usage&lt;/h2&gt;
 &lt;h3 id="basic-callout-types"&gt;Basic Callout Types&lt;/h3&gt;
@@ -2143,7 +2143,7 @@ data-callout-metadata=""&gt;
 &lt;li&gt;&lt;strong&gt;Customizable&lt;/strong&gt;: Semantic CSS classes and data attributes for easy styling&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Complete&lt;/strong&gt;: All 15+ Obsidian callout types supported&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Multilingual&lt;/strong&gt;: Callout titles are automatically translated based on your site&amp;rsquo;s language (and can be customized in the language packs)&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Cards</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/cards/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/cards/</guid><description>&lt;p&gt;A Hugo extension to create cards. Cards can be shown as links or as plain text.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>Cards</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/cards/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/cards/</guid><description>&lt;p&gt;A Hugo extension to create cards. Cards can be shown as links or as plain text.&lt;/p&gt;
 &lt;h2 id="usage"&gt;Usage&lt;/h2&gt;
 &lt;div class="hb-cards mt-4 grid gap-4 not-prose" style="--hb-cols: 1;"&gt;
 &lt;a
@@ -2186,10 +2186,10 @@ class="hb-card group"&gt;
 &lt;td&gt;URL&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Internationalization (i18n)</title><link>https://ashriva16.github.io/courses/hugo-blox/reference/i18n/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/reference/i18n/</guid><description>&lt;p&gt;Hugo Blox enables you to easily edit the interface text as well as translating your site into multiple languages using Hugo&amp;rsquo;s
+&lt;/table&gt;</description></item><item><title>Internationalization (i18n)</title><link>https://ashriva.in/courses/hugo-blox/reference/i18n/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/reference/i18n/</guid><description>&lt;p&gt;Hugo Blox enables you to easily edit the interface text as well as translating your site into multiple languages using Hugo&amp;rsquo;s
 feature.&lt;/p&gt;
 &lt;p&gt;View the full docs at
-&lt;/p&gt;</description></item><item><title>Spoilers</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/toggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/toggle/</guid><description>&lt;p&gt;A Hugo shortcode to toggle collapsible content.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Spoilers</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/toggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/toggle/</guid><description>&lt;p&gt;A Hugo shortcode to toggle collapsible content.&lt;/p&gt;
 &lt;h2 id="example"&gt;Example&lt;/h2&gt;
 &lt;details class="spoiler " id="spoiler-0"&gt;
 &lt;summary class="cursor-pointer"&gt;Click to view the spoiler&lt;/summary&gt;
@@ -2206,7 +2206,7 @@ feature.&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Markdown is **supported**.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; /spoiler &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Steps</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/steps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/steps/</guid><description>&lt;p&gt;Display a series of steps, such as for a tutorial.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Steps</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/steps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/steps/</guid><description>&lt;p&gt;Display a series of steps, such as for a tutorial.&lt;/p&gt;
 &lt;h2 id="example"&gt;Example&lt;/h2&gt;
 &lt;div class="hb-steps"&gt;
 &lt;h3 id="step-1"&gt;Step 1&lt;/h3&gt;

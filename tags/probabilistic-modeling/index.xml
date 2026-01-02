@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Probabilistic Modeling | Ankit Shrivastava</title><link>https://ashriva16.github.io/tags/probabilistic-modeling/</link><atom:link href="https://ashriva16.github.io/tags/probabilistic-modeling/index.xml" rel="self" type="application/rss+xml"/><description>Probabilistic Modeling</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>Probabilistic Modeling</title><link>https://ashriva16.github.io/tags/probabilistic-modeling/</link></image><item><title>AI for Robust Manufacturing</title><link>https://ashriva16.github.io/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Probabilistic Modeling | Ankit Shrivastava</title><link>https://ashriva.in/tags/probabilistic-modeling/</link><atom:link href="https://ashriva.in/tags/probabilistic-modeling/index.xml" rel="self" type="application/rss+xml"/><description>Probabilistic Modeling</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Probabilistic Modeling</title><link>https://ashriva.in/tags/probabilistic-modeling/</link></image><item><title>AI for Robust Manufacturing</title><link>https://ashriva.in/projects/4_pvd_bayesopt/</link><pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/4_pvd_bayesopt/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&amp;logo=pytorch&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/NumPy-013243?style=flat&amp;logo=numpy&amp;logoColor=white"/&gt;
@@ -34,7 +34,7 @@ Adjusting one knob often changes multiple outcomes, sometimes in conflicting way
 For example, in the deposition of molybdenum (Mo) barrier layers, increasing power during sputtering improves conductivity but also raises internal film stress, which can make layers prone to cracking (vink1991).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/pvd-bayesopt.jpg"
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
 alt="Cross-section drawing of key atomistic processes involved in sputtering, transport, and film growth"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -50,7 +50,7 @@ But as manufacturing complexity grows, this trial-and-error approach has become 
 In semiconductors, this means finding reliable process conditions with fewer tests and quicker results.&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/pvd-bayesopt.jpg"
+&lt;img src="https://ashriva.in/assets/img/projects/pvd-bayesopt.jpg"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-75 mx-auto d-block"
 loading="lazy"&gt;
@@ -67,7 +67,7 @@ Overview of the approach, refer to paper (10.1116/6.0003418) for details.
 This uncertainty is not a drawback; instead, it guides exploration into new regions of the process space while refining areas that already look good.
 In this way, the search quickly converges on the best options without wasting time.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/gp.gif"
+&lt;img src="https://ashriva.in/assets/img/projects/gp.gif"
 class="img-fluid rounded z-depth-1 w-60 mx-auto d-block"
 alt="Gaussian process fit"
 loading="lazy"&gt;

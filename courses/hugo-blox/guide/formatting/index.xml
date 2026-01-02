@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Formatting | Ankit Shrivastava</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/</link><atom:link href="https://ashriva16.github.io/courses/hugo-blox/guide/formatting/index.xml" rel="self" type="application/rss+xml"/><description>Formatting</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>Formatting</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/</link></image><item><title>Embed Media</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/media/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/media/</guid><description>&lt;p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Formatting | Ankit Shrivastava</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/</link><atom:link href="https://ashriva.in/courses/hugo-blox/guide/formatting/index.xml" rel="self" type="application/rss+xml"/><description>Formatting</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 24 Oct 2023 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Formatting</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/</link></image><item><title>Embed Media</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/media/</link><pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/media/</guid><description>&lt;p&gt;
 is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -91,12 +91,12 @@ data.head()
 &lt;span class="inline-block pr-1"&gt;
 &lt;span style="height: 1em; transform: translateY(0.1em);"&gt;python&lt;/span&gt;
 &lt;/span&gt; Python&lt;/p&gt;
-&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-"&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;</description></item><item><title>Buttons</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/button/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/button/</guid><description>&lt;p&gt;A modern, customizable button shortcode with gradient styling, icons, and smart link handling.&lt;/p&gt;
+&lt;h2 id="did-you-find-this-page-helpful-consider-sharing-it-"&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;</description></item><item><title>Buttons</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/button/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/button/</guid><description>&lt;p&gt;A modern, customizable button shortcode with gradient styling, icons, and smart link handling.&lt;/p&gt;
 &lt;h2 id="basic-usage"&gt;Basic Usage&lt;/h2&gt;
 &lt;div class="text-left"&gt;
 &lt;a
 id="button-351ac412531c23e422b81c6422c17da5"
-href="https://ashriva16.github.io/contact"
+href="https://ashriva.in/contact"
 class="inline-flex items-center gap-2 font-medium no-underline transition-all duration-300 ease-out transform-gpu focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none bg-gradient-to-br from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 active:from-primary-700 active:to-primary-800 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] focus:ring-primary-500/50 px-4 py-2 text-base rounded-lg"
 role="button"
 aria-label="Contact Us"
@@ -358,7 +358,7 @@ aria-label="Pill Button"
 &lt;div class="text-center"&gt;
 &lt;a
 id="button-62059f8d62052633590d3f60ec092595"
-href="https://ashriva16.github.io/signup"
+href="https://ashriva.in/signup"
 class="inline-flex items-center gap-2 font-medium no-underline transition-all duration-300 ease-out transform-gpu focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none bg-gradient-to-br from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 active:from-primary-700 active:to-primary-800 text-white shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] focus:ring-primary-500/50 px-6 py-3 text-lg rounded-lg"
 role="button"
 aria-label="Get Started Today"
@@ -392,7 +392,7 @@ aria-label="View on GitHub"
 &lt;div class="text-left"&gt;
 &lt;a
 id="button-72ec86801f391f16b84b269ade9d2995"
-href="https://ashriva16.github.io/files/document.pdf"
+href="https://ashriva.in/files/document.pdf"
 class="inline-flex items-center gap-2 font-medium no-underline transition-all duration-300 ease-out transform-gpu focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-zinc-900 disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none bg-gradient-to-br from-secondary-500 to-secondary-600 hover:from-secondary-600 hover:to-secondary-700 active:from-secondary-700 active:to-secondary-800 text-white shadow-lg shadow-secondary-500/25 hover:shadow-xl hover:shadow-secondary-500/30 hover:scale-105 active:scale-95 focus:ring-secondary-500/50 px-4 py-2 text-base rounded-full"
 role="button"
 aria-label="Download PDF"
@@ -494,7 +494,7 @@ aria-label="Download PDF"
 &lt;li&gt;Keyboard focus indicators&lt;/li&gt;
 &lt;li&gt;High contrast focus rings&lt;/li&gt;
 &lt;li&gt;Disabled state handling&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Callouts</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/callout/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/callout/</guid><description>&lt;p&gt;Hugo Blox supports GitHub and Obsidian-style Markdown callouts for maximum compatibility and content portability.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>Callouts</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/callout/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/callout/</guid><description>&lt;p&gt;Hugo Blox supports GitHub and Obsidian-style Markdown callouts for maximum compatibility and content portability.&lt;/p&gt;
 &lt;p&gt;Callouts are a useful feature to draw attention to important or related content such as notes, hints, or warnings in your articles.&lt;/p&gt;
 &lt;h2 id="usage"&gt;Usage&lt;/h2&gt;
 &lt;h3 id="basic-callout-types"&gt;Basic Callout Types&lt;/h3&gt;
@@ -781,7 +781,7 @@ data-callout-metadata=""&gt;
 &lt;li&gt;&lt;strong&gt;Customizable&lt;/strong&gt;: Semantic CSS classes and data attributes for easy styling&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Complete&lt;/strong&gt;: All 15+ Obsidian callout types supported&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Multilingual&lt;/strong&gt;: Callout titles are automatically translated based on your site&amp;rsquo;s language (and can be customized in the language packs)&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Cards</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/cards/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/cards/</guid><description>&lt;p&gt;A Hugo extension to create cards. Cards can be shown as links or as plain text.&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>Cards</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/cards/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/cards/</guid><description>&lt;p&gt;A Hugo extension to create cards. Cards can be shown as links or as plain text.&lt;/p&gt;
 &lt;h2 id="usage"&gt;Usage&lt;/h2&gt;
 &lt;div class="hb-cards mt-4 grid gap-4 not-prose" style="--hb-cols: 1;"&gt;
 &lt;a
@@ -824,7 +824,7 @@ class="hb-card group"&gt;
 &lt;td&gt;URL&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>Spoilers</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/toggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/toggle/</guid><description>&lt;p&gt;A Hugo shortcode to toggle collapsible content.&lt;/p&gt;
+&lt;/table&gt;</description></item><item><title>Spoilers</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/toggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/toggle/</guid><description>&lt;p&gt;A Hugo shortcode to toggle collapsible content.&lt;/p&gt;
 &lt;h2 id="example"&gt;Example&lt;/h2&gt;
 &lt;details class="spoiler " id="spoiler-0"&gt;
 &lt;summary class="cursor-pointer"&gt;Click to view the spoiler&lt;/summary&gt;
@@ -841,7 +841,7 @@ class="hb-card group"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Markdown is **supported**.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; /spoiler &amp;gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Steps</title><link>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/steps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/courses/hugo-blox/guide/formatting/steps/</guid><description>&lt;p&gt;Display a series of steps, such as for a tutorial.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Steps</title><link>https://ashriva.in/courses/hugo-blox/guide/formatting/steps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ashriva.in/courses/hugo-blox/guide/formatting/steps/</guid><description>&lt;p&gt;Display a series of steps, such as for a tutorial.&lt;/p&gt;
 &lt;h2 id="example"&gt;Example&lt;/h2&gt;
 &lt;div class="hb-steps"&gt;
 &lt;h3 id="step-1"&gt;Step 1&lt;/h3&gt;

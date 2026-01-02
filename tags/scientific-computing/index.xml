@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scientific Computing | Ankit Shrivastava</title><link>https://ashriva16.github.io/tags/scientific-computing/</link><atom:link href="https://ashriva16.github.io/tags/scientific-computing/index.xml" rel="self" type="application/rss+xml"/><description>Scientific Computing</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>Scientific Computing</title><link>https://ashriva16.github.io/tags/scientific-computing/</link></image><item><title>Numerical Modeling for Fusion Energy</title><link>https://ashriva16.github.io/projects/12_mhd/</link><pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/12_mhd/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scientific Computing | Ankit Shrivastava</title><link>https://ashriva.in/tags/scientific-computing/</link><atom:link href="https://ashriva.in/tags/scientific-computing/index.xml" rel="self" type="application/rss+xml"/><description>Scientific Computing</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>Scientific Computing</title><link>https://ashriva.in/tags/scientific-computing/</link></image><item><title>Numerical Modeling for Fusion Energy</title><link>https://ashriva.in/projects/12_mhd/</link><pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/12_mhd/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/ParMooN-FEM%20Framework-4B8BBE?style=flat&amp;logoColor=white" alt="ParMooN FEM Framework"/&gt;
 &lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white" alt="MPI"/&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white" alt="C++"/&gt;
@@ -15,7 +15,7 @@ It&amp;rsquo;s a collaboration of 35 nations, all working together to unlock cle
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/blanket.png" alt="Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER)" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/blanket.png" alt="Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER)" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Schematic Diagram of The International Thermonuclear Experimental Fusion Reactor (ITER), [Source](http://www.fusion.qst.go.jp/rokkasyo/en/project/blanket.html).
 &lt;/figcaption&gt;
@@ -40,7 +40,7 @@ The resulting decline in turbulence can threaten the thermal management of the r
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/Picture11.png" alt="Illustration of Lorentz force acting on a conducting fluid in a magnetic field" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/Picture11.png" alt="Illustration of Lorentz force acting on a conducting fluid in a magnetic field" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 🧲 Illustration of Lorentz force acting on a conducting fluid in a magnetic field {%cite pulugundla2013numerical --file externals%}.
 &lt;/figcaption&gt;
@@ -54,7 +54,7 @@ The resulting increase in turbulent mixing enhances heat dissipation and helps r
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/mhd/Picture10.png" alt="Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency." loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/mhd/Picture10.png" alt="Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency." loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Concept of using an obstacle inside the liquid-metal channel to enhance turbulence and improve heat-transfer efficiency.
 &lt;/figcaption&gt;
@@ -93,14 +93,14 @@ The following are the key &lt;strong&gt;simulation insights&lt;/strong&gt; from 
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-12 col-md-6"&gt;
 &lt;video controls class="w-100 rounded shadow-sm"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/mhd/media1.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/mhd/media1.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;div class="caption text-center mt-2"&gt;Flow 1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="col-12 col-md-6 mt-3 mt-md-0"&gt;
 &lt;video controls class="w-100 rounded shadow-sm"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/mhd/media2.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/mhd/media2.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;div class="caption text-center mt-2"&gt;Flow 2&lt;/div&gt;
@@ -110,8 +110,8 @@ Your browser does not support the video tag.
 Such models can guide the design of future fusion reactors by revealing how geometry, magnetic-field strength, and coolant properties together influence heat transfer and reactor safety.&lt;/p&gt;
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/mhd/M_Tech_Thesis.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Granular Mechanics with Graph Theory</title><link>https://ashriva16.github.io/projects/13_force_chains/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/13_force_chains/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/mhd/M_Tech_Thesis.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Granular Mechanics with Graph Theory</title><link>https://ashriva.in/projects/13_force_chains/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/13_force_chains/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/LAMMPS-1E90FF?style=flat&amp;logo=atom&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -127,7 +127,7 @@ What seemed like stable rock suddenly crumbled into debris, burying the structur
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/force_chains/tunnel_collapse.jpeg" alt="Collapse of the Longxi tunnel at the crossing of the fault" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/force_chains/tunnel_collapse.jpeg" alt="Collapse of the Longxi tunnel at the crossing of the fault" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;Collapse of the Longxi Tunnel at the crossing of the fault (Wenchuan Earthquake, 2008)&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -138,7 +138,7 @@ Granular material is composed of countless small particles, such as sand, gravel
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8 col-lg-4"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/reports/force_chains/Granular_matter_examples.png" alt="Granular Materials" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/reports/force_chains/Granular_matter_examples.png" alt="Granular Materials" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2"&gt;Examples of Granular Materials Source: &lt;a href="https://en.wikipedia.org/wiki/Granular_material#/media/File:Granular_matter_examples.PNG"&gt;wiki&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/div&gt;
@@ -189,14 +189,14 @@ Together, they illustrate how slight variations in particle arrangement can comp
 &lt;!-- Left video --&gt;
 &lt;div class="col-12 col-md-6 mb-3"&gt;
 &lt;video controls width="100%" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/force_chains/media1.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/force_chains/media1.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;!-- Right video --&gt;
 &lt;div class="col-12 col-md-6 mb-3"&gt;
 &lt;video controls width="100%" style="max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);"&gt;
-&lt;source src="https://ashriva16.github.io/assets/reports/force_chains/media2.webm" type="video/webm"&gt;
+&lt;source src="https://ashriva.in/assets/reports/force_chains/media2.webm" type="video/webm"&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
 &lt;/div&gt;

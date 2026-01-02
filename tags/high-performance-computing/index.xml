@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>High Performance Computing | Ankit Shrivastava</title><link>https://ashriva16.github.io/tags/high-performance-computing/</link><atom:link href="https://ashriva16.github.io/tags/high-performance-computing/index.xml" rel="self" type="application/rss+xml"/><description>High Performance Computing</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2016 00:00:00 +0000</lastBuildDate><image><url>https://ashriva16.github.io/media/icon_hu_982c5d63a71b2961.png</url><title>High Performance Computing</title><link>https://ashriva16.github.io/tags/high-performance-computing/</link></image><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva16.github.io/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>High Performance Computing | Ankit Shrivastava</title><link>https://ashriva.in/tags/high-performance-computing/</link><atom:link href="https://ashriva.in/tags/high-performance-computing/index.xml" rel="self" type="application/rss+xml"/><description>High Performance Computing</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2016 00:00:00 +0000</lastBuildDate><image><url>https://ashriva.in/media/icon_hu_982c5d63a71b2961.png</url><title>High Performance Computing</title><link>https://ashriva.in/tags/high-performance-computing/</link></image><item><title>Metaheuristics Optimization on CUDA</title><link>https://ashriva.in/projects/6_ant_rfd_tsp/</link><pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/6_ant_rfd_tsp/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/CUDA-76B900?style=flat&amp;logo=nvidia&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -78,7 +78,7 @@ They typically produce near-optimal solutions, though they require parameter tun
 &lt;p&gt;In this work, we extended the hybrid Ant Colony Optimization–River Flow Dynamics (ACO–RFD) algorithm for solving the Traveling Salesman Problem (TSP) on GPUs. To achieve this, we introduced an &amp;lsquo;ant-drop&amp;rsquo; entity that fuses ACO&amp;rsquo;s constructive speed with RFD&amp;rsquo;s resilience against local minima. We explored two GPU parallelization strategies: HB1 (task-parallel) and HB2 (combining task- and data-parallelism).&lt;/p&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm mt-3 mt-md-0"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/ant-rfd-tsp.png"
+&lt;img src="https://ashriva.in/assets/img/projects/ant-rfd-tsp.png"
 alt="overview image"
 class="img-fluid rounded z-depth-1 w-50 mx-auto d-block"
 loading="lazy"&gt;
@@ -96,8 +96,8 @@ Overview of proposed approach.
 &lt;h2 id="further-read"&gt;Further read&lt;/h2&gt;
 &lt;!-- - 📂 [GitHub Repository](https://github.com/ashriva16/Peak_Stress_in_Microstructures) --&gt;
 &lt;ul&gt;
-&lt;li&gt;📄 &lt;a href="https://ashriva16.github.io/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva16.github.io/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva16.github.io/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
+&lt;li&gt;📄 &lt;a href="https://ashriva.in/assets/js/pdfjs/web/viewer.html?file=/assets/reports/ant_rfd_tsp/report.pdf" target="_blank"&gt;Full Technical Report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Scalable Computing for HVDC Grounding</title><link>https://ashriva.in/projects/11_electromagnetism/</link><pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate><guid>https://ashriva.in/projects/11_electromagnetism/</guid><description>&lt;p align="center" style="display:inline-flex; flex-wrap:wrap; gap:6px;"&gt;
 &lt;img src="https://img.shields.io/badge/C++-00599C?style=flat&amp;logo=c%2B%2B&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/MPI-0081CB?style=flat&amp;logo=openmpi&amp;logoColor=white"/&gt;
 &lt;img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white"/&gt;
@@ -114,7 +114,7 @@ It achieves a five-to-sixfold speed-up, making it a practical tool for large-sca
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="HVDC" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Illustration of an HVDC transmission system. Source: [AllumiaX](https://www.allumiax.com/blog/high-voltage-direct-current-hvdc-transmission).
 &lt;/figcaption&gt;
@@ -187,7 +187,7 @@ The computed resistances showed excellent agreement with analytical and measured
 &lt;div class="row justify-content-center my-3"&gt;
 &lt;div class="col-sm-10 col-md-8"&gt;
 &lt;figure class="img-fluid rounded z-depth-1 shadow-sm w-100 mx-auto d-block"&gt;
-&lt;img src="https://ashriva16.github.io/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
+&lt;img src="https://ashriva.in/assets/img/projects/electromagnetism.webp" alt="Ring and star electrode with the image conductors" loading="lazy"&gt;
 &lt;figcaption class="caption d-block text-center mt-2" markdown="1"&gt;
 Ring and star electrode systems with their image conductors. To read in more detail, refer to {%cite muhammed2021parallel --file papers%}.
 &lt;/figcaption&gt;
